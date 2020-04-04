@@ -4,16 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
 
-    <!-- Compressed CSS -->
-    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.2/dist/css/foundation.min.css"> -->
     <link rel="stylesheet" href="css/styles.min.css">
     <link rel="stylesheet" href="css/app.min.css">
 </head>
 <body>
     
     <div class="grid-container">
-        <div class="grid-x grid-margin-x">
+        <div class="grid-x grid-padding-x">
             <div class="cell small-1">cell 1</div>
             <div class="cell small-1">cell 2 </div>
             <div class="cell small-1">cell 3</div>
@@ -28,14 +27,59 @@
             <div class="cell small-1">cell 12</div>
         </div>
     </div>
+
+
     <div class="grid-container">
-        <div class="grid-x grid-margin-x">
-            <div class="cell small-4">cell 1</div>
-            <div class="cell small-4">cell 2 </div>
-            <div class="cell small-4">cell 1</div>
+        <div class="grid-x grid-padding-x">
+            <div class="cell large-12">
+                <h1>Карточка товара</h1>
+            </div>
+        </div>
+        <div class="grid-x grid-padding-x large-up-4">
+            <div class="cell">
+                <div class="card">
+                    <div class="card-section">
+                        <a href="#" class="card-section__image">
+                            <img src="/images/content/cards/card1.png" alt="">
+                            <div class="card-section__hit">
+                                Хит продаж!
+                            </div>
+                        </a>
+                        <a href="#" class="card-section__category">Гели для моделирования</a>
+                        <a href="#" class="card-section__title">
+                            Express, однофазный гель
+                        </a>
+
+                        <div class="card-section__bottom">
+                            <div class="card-section__price">
+                                <div class="card-section__price-old">
+                                    1 200 ₽
+                                </div>
+                                <div class="card-section__price-new">
+                                    890 ₽
+                                </div>
+                            </div>
+
+                            <div class="card-section__buttons">
+                                <button class="card-section__button compare"><i class="icon-compare"></i></button>
+                                <button class="card-section__button favorite"><i class="icon-favorite"></i></button>
+                                <button class="card-section__button plus"><i class="icon-plus"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cell">
+                <div class="callout">2</div>
+            </div>
+            <div class="cell">
+                <div class="callout">3</div>
+            </div>
+            <div class="cell">
+                <div class="callout">4</div>
+            </div>
         </div>
     </div>
-    
       
       
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
