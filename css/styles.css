@@ -1,0 +1,10 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.grid-container {
+  max-width: 72rem;
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
