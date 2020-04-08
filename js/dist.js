@@ -20,4 +20,9 @@ $(document).ready(function() {
             //? $(this).children('i').removeClass('icon-plus').addClass('icon-check')
         })
     
+    //!  аталог
+        // ставим заголовки брендов автоматом
+        $('.title').text(function() {
+            $(this).text($(this).parent().attr('id'));
+        });
 });
