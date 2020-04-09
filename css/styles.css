@@ -1156,6 +1156,12 @@ a {
   font-size: 13px;
   line-height: 20px;
   margin-right: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .subsribe__text img {
@@ -1201,4 +1207,126 @@ a {
   right: 0;
   color: #911C2C;
   padding: 12px;
+}
+
+.footer__logo .header__logo-link {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.footer__contacts {
+  margin-top: 1rem;
+}
+
+.footer__list {
+  list-style-type: none;
+  margin: 0;
+}
+
+.footer__list-title {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  color: #3F4351;
+  margin-top: 6.5px;
+  margin-bottom: 22px;
+}
+
+.footer__list-item {
+  margin-bottom: 1rem;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 15px;
+}
+
+.footer__list-item:last-child {
+  margin-bottom: 0;
+}
+
+.footer__list-link {
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 15px;
+  color: #3F4351;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.footer__list-link:hover, .footer__list-link.red {
+  color: #911C2C;
+}
+
+.footer__list-link i {
+  color: #DBDBDB;
+  margin-right: 12px;
+  font-size: 17px;
+}
+
+.footer__bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 15px;
+}
+
+.footer__wrapper {
+  margin-top: 24px;
+  margin-bottom: 42px;
+}
+
+.sitemap__block {
+  margin-right: 2rem;
+}
+
+.sitemap__link {
+  color: #911C2C;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.sitemap__link i {
+  font-size: 16px;
+  margin-right: 6px;
+}
+
+.copyright {
+  color: #8D92A3;
+}
+
+.copyright__item {
+  margin-bottom: 1rem;
+}
+
+.copyright__item a {
+  color: #7465CB;
+}
+
+.copyright__item a:hover {
+  color: #911C2C;
+}
+
+.copyright__item:last-child {
+  margin-bottom: 0;
+}
+
+@media screen and (max-width: 64rem) {
+  .grid-container {
+    max-width: 53rem;
+  }
+  .subsribe__wrapper {
+    -webkit-box-pack: left;
+        -ms-flex-pack: left;
+            justify-content: left;
+  }
+  .footer__contacts .footer__list {
+    margin-bottom: 2rem;
+  }
 }
