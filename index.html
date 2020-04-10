@@ -49,7 +49,6 @@
                                     </ul>
                                 </li>
                             </ul>
-    
                         </div>
                     </div>
                     <div class="header__top-search">
@@ -74,7 +73,8 @@
                         </a>
                     </div>
                     <div class="header__menu">
-                        <ul class="dropdown menu" data-dropdown-menu>
+                        <!-- desktop nav -->
+                        <ul class="dropdown menu show-for-large" data-dropdown-menu>
                             <li>
                                 <a href="#">О компании</a>
                                 <ul class="menu">
@@ -101,8 +101,28 @@
                                     <!-- ... -->
                                 </ul>
                             </li>
-
                         </ul>
+                        <!-- mobile nav -->
+                        <ul class="dropdown menu hide-for-large" data-dropdown-menu>
+                            <li>
+                                <a href="#">О компании</a>
+                                <ul class="menu">
+                                    <li><a href="#">Item 1A</a></li>
+                                    <li><a href="#">Item 1A</a></li>
+                                    <li><a href="#">Item 1A</a></li>
+                                    <!-- ... -->
+                                </ul>
+                            </li>
+                            <li><a href="#">Новости</a></li>
+                            <li>
+                                <a href="#">Еще</a>
+                                <ul class="menu">
+                                    <li><a href="#">Item 1A</a></li>
+                                    <!-- ... -->
+                                </ul>
+                            </li>
+                        </ul>
+
                     </div>
                     <div class="header__sign">
                         <button class="sign__button" type="button" data-toggle="sign-up">Регистрация</button>
@@ -185,6 +205,7 @@
                     <div class="catalog">
                         
                         <ul class="menu">
+                            <li class="hide-for-large"><a href="#" class="catalog__item"><i class="icon-burger"></i> Весь каталог</a></li>
                             <li><button class="button catalog__item" type="button" data-toggle="brands-tab">Бренды</button></li>
                             <li><button class="button catalog__item" type="button" data-toggle="gel-tab">Гель-лаки</button></li>
                             <li><a href="#" class="catalog__item">Маникюр</a></li>
@@ -314,6 +335,33 @@
                     </div>
                     <!--! /Main catalog -->
 
+                    <!-- Mobile Menu -->
+
+                    <div class="menu__mobile">
+                        <button class="button" type="button" data-toggle="mobile-menu"><i class="icon-burger"></i> Меню</button>
+
+                        <div class="dropdown-pane" id="mobile-menu" data-dropdown data-auto-focus="true">
+                        Example form in a dropdown.
+                        <form>
+                            <div class="grid-container">
+                            <div class="grid-x grid-margin-x">
+                                <div class="cell medium-6">
+                                <label>Name
+                                    <input type="text" placeholder="Kirk, James T.">
+                                </label>
+                                </div>
+                                <div class="cell medium-6">
+                                <label>Rank
+                                    <input type="text" placeholder="Captain">
+                                </label>
+                                </div>
+                            </div>
+                            </div>
+                        </form>
+                        </div>
+                    </div>
+
+                    <!-- /Mobile Menu -->
                     <div class="widgets">
                         <div class="widget">
                             <a href="#">
@@ -342,16 +390,16 @@
 
     <!-- Компонент футера -->
     <footer>
-        <div class="subsribe">
+        <div class="subscribe">
             <div class="grid-container">
-                <div class="grid-x grid-padding-x">
-                    <div class="subsribe__wrapper">
-                        <div class="subsribe__text">
+                <div class="grid-x">
+                    <div class="subscribe__wrapper">
+                        <div class="subscribe__text">
                             <img src="/images/footer/subscribe.png" alt="">
                             <span>Будьте в курсе всех наших акций и событий с подпиской на рассылку!</span>
                         </div>
-                        <div class="subsribe__block">
-                            <form action="#" class="subsribe__form">
+                        <div class="subscribe__block">
+                            <form action="#" class="subscribe__form">
                                 <input type="email" name="" id="" class="input-custom" placeholder="Ваш e-mail...">
                                 <button type="submit" class="input-custom__button"><i class="icon-go-right"></i></button>
                             </form>
@@ -361,7 +409,7 @@
             </div>        
         </div>
         <div class="grid-container">
-            <div class="grid-x grid-padding-x footer__wrapper">
+            <div class="grid-x grid-padding-x footer__wrapper hide-for-small-only">
                 <div class="cell large-6 medium-4">
                     <div class="footer__logo">
                         <a href="#" class="header__logo-link">
@@ -422,9 +470,45 @@
                     </ul>
                 </div>
             </div>
+            <div class="grid-x grid-padding-x footer__wrapper-mobile show-for-small-only">
+                <ul class="vertical menu accordion-menu" data-accordion-menu data-multi-open="false">
+                    <li><a href="#"><i class="icon-burger"></i> Каталог товаров</a></li>
+                    <li><a href="#">Бренды</a></li>
+                    <li>
+                        <a href="#">О компании</a>
+                        <ul class="menu vertical">
+                            <li><a href="#">Item 1A</a></li>
+                            <li><a href="#">Item 1B</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Покупателям</a>
+                        <ul class="menu vertical">
+                            <li><a href="#">Item 1A</a></li>
+                            <li><a href="#">Item 1B</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Учебный центр</a>
+                        <ul class="menu vertical">
+                            <li><a href="#">Item 1A</a></li>
+                            <li><a href="#">Item 1B</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Контакты</a></li>
+                    <li><a href="#" class="sitemap"><i class="icon-map"></i> Карта сайта</a></li>
+                </ul>
+            </div>
             <div class="grid-x grid-padding-x">
                 <div class="cell large-12">
                     <div class="footer__bottom">
+                        <div class="footer__phone">
+                            <i class="icon-phone"></i>
+                            <div class="footer__phone-text">
+                                Интернет-магазин:
+                                <a href="#">8 914 222 33 44</a>
+                            </div>
+                        </div>
                         <div class="sitemap__block">
                             <a href="#" class="sitemap__link"><i class="icon-map"></i> Карта сайта</a>
                         </div>
