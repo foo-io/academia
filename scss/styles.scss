@@ -9,6 +9,9 @@ $tansition-setting: all 0.3s ease-out;
 a {
     transition: $tansition-setting;
 }
+.modal-active {
+    overflow: hidden;
+}
 .card-section {
     display: flex;
     flex-direction: column;
@@ -273,7 +276,7 @@ a {
     &__menu {
         margin-right: auto;
         height: 63px;
-        overflow: hidden;
+        //overflow: hidden;
 
         .dropdown.menu {
             a {
@@ -594,6 +597,14 @@ a {
     .menu {
         height: 54px;
         overflow: hidden;
+
+        li {
+            &:first-child,
+            &:nth-child(2) {
+                margin-left: -16px;
+            }
+        }
+
     }
     .catalog__item {
         background-color: transparent;
@@ -716,13 +727,6 @@ a {
                 }
                 
 
-            }
-        }
-    }
-    .menu {
-        li {
-            &:first-child {
-                margin-left: -16px;
             }
         }
     }
@@ -1007,7 +1011,9 @@ a {
         }
     }
 }
-
+.menu__mobile {
+    display: none;
+}
 // замена иконки dropdown & accordion
 .accordion-menu {
     .is-accordion-submenu-parent:not(.has-submenu-toggle)>a::after {
@@ -1050,6 +1056,15 @@ a {
     }
 }
 
+@media screen and (max-width: 1123px) {
+    .header__menu {
+        .dropdown.menu {
+            li:last-child {
+                display: none;
+            }
+        }
+    }
+}
 @media screen and (max-width: 64rem) {
     .grid-container {
         max-width: 53rem;
@@ -1064,8 +1079,17 @@ a {
             }
         }
     }
+    .catalog {
+        .menu {
+            li {
+                &:nth-child(2) {
+                    margin-left: 0;
+                }
+            }
+        }
+    }
 }
-@media (max-width: 48rem) {
+@media screen and (max-width: 48rem) {
     .header {
         &__top,
         &__menu {

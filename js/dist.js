@@ -1,4 +1,15 @@
 ﻿$(document).foundation();
+
+function closeOutsideClick(element, closeElement) {
+    $(document).mouseup(function (e){ // событие клика по веб-документу
+        var div = $(element); // тут указываем ID элемента
+        if (!div.is(e.target) // если клик был не по нашему блоку
+            && div.has(e.target).length === 0) { // и не по его дочерним элементам
+            $(closeElement).foundation('close');
+        }
+    });
+}
+
 $(document).ready(function() {
     
     //! �������� �������
@@ -25,4 +36,22 @@ $(document).ready(function() {
         $('.title').text(function() {
             $(this).text($(this).parent().attr('id'));
         });
+
+    //! выпадашка мобменю
+        // $('.menu__mobile>button').click(function (e) { 
+        //     $('body').toggleClass('modal-active');
+        // });
+
+        // $(document).mouseup(function (){ // событие клика по веб-документу
+        //     var div = $('div.dropdown-pane.is-open'); // тут указываем ID элемента
+        //     if (!div.is(e.target) // если клик был не по нашему блоку
+        //         && div.has(e.target).length === 0) { // и не по его дочерним элементам
+        //             $('#mobile-menu').foundation('close');
+        //     }
+        // });
+        //"menu__mobile click to found toggle
+        $('.menu__mobile>button').click(function () { 
+            //$('#mobile-menu').foundation('open');
+        });
+        //closeOutsideClick('.dropdown-pane.is-open', '#mobile-menu');
 });
