@@ -6,6 +6,7 @@
     <title>Document</title>
     <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
 
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <link rel="stylesheet" href="css/app.min.css">
     <link rel="stylesheet" href="css/styles.min.css">
 
@@ -128,7 +129,7 @@
                         <button class="sign__button" type="button" data-toggle="sign-up">Регистрация</button>
                         <div class="sign__delimeter"></div>
                         <button class="sign__button" type="button" data-toggle="sign-in"><i class="icon-user"></i> Войти</button>
-                        
+                        <a href="#" class="sign__button mobile__auth"><i class="icon-user"></i> Войти</a>
                         <div class="dropdown-pane sign__container" id="sign-up" data-dropdown data-auto-focus="true" data-position="bottom" data-alignment="right" data-parent-class="header__sign">
                             <div class="sign__container-title">Регистрация</div>
                             <form>
@@ -341,23 +342,33 @@
                         <button class="button" type="button" data-toggle="mobile-menu"><i class="icon-burger"></i> Меню</button>
 
                         <div class="dropdown-pane" id="mobile-menu" data-dropdown>
-                        Example form in a dropdown.
-                        <form>
-                            <div class="grid-container">
-                            <div class="grid-x grid-margin-x">
-                                <div class="cell medium-6">
-                                <label>Name
-                                    <input type="text" placeholder="Kirk, James T.">
-                                </label>
-                                </div>
-                                <div class="cell medium-6">
-                                <label>Rank
-                                    <input type="text" placeholder="Captain">
-                                </label>
-                                </div>
+                            <div class="accordion-menu__wrapper">
+                                <ul class="vertical menu accordion-menu accordion-menu__mobile-menu" data-accordion-menu data-multi-open="false">
+                                    <li><a href="#">Каталог товаров</a></li>
+                                    <li><a href="#">Бренды</a></li>
+                                    <li>
+                                        <a href="#">Покупателям</a>
+                                        <ul class="menu vertical nested">
+                                            <li><a href="#">Личный кабинет</a></li>
+                                            <li><a href="#">Способы оплаты</a></li>
+                                            <li><a href="#">Доставка</a></li>
+                                            <li><a href="#">Обмен, возврат</a></li>
+                                            <li><a href="#">Пользовательское соглашение</a></li>
+                                            <li><a href="#">Политика конфиденциальности</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">Новости</a></li>
+                                    <li><a href="#">Салон</a></li>
+                                    <li><a href="#">Оптовикам</a></li>
+                                    <li>
+                                        <a href="#">О компании</a>
+                                        <ul class="menu vertical nested">
+                                            <li><a href="#">Item 1A</a></li>
+                                            <li><a href="#">Item 1B</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
                             </div>
-                            </div>
-                        </form>
                         </div>
                     </div>
 
@@ -387,6 +398,528 @@
         </div>
     </header>
     <!-- / Компонент хедера -->
+
+    <main>
+        <!-- Баннеры на главной -->
+            <section class="section__banner">
+                <div class="grid-container">
+                    <div class="grid-x grid-padding-x">
+                        <div class="cell large-7 medium-7">
+                            <div class="banner">
+                                <div class="banner__image">
+                                    <img src="/images/content/banner/1.jpg" alt="Banner 1">
+                                </div>
+                                <div class="banner__info">
+                                    <a href="#" class="banner__link">Только до конца марта: скидка на все гель-лаки до 20%</a>
+                                    <div class="banner__slider">
+                                        slider
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cell large-5 medium-5">
+                            <div class="grid-y grid-padding-x">
+                                <div class="cell">
+                                    <div class="banner banner__small">
+                                        <div class="banner__image">
+                                            <img src="/images/content/banner/2.jpg" alt="Banner 1">
+                                        </div>
+                                        <div class="banner__info">
+                                            <a href="#" class="banner__link">Новое поступление: обзор в блоге нашей компании</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="cell">
+                                    <div class="banner banner__small">
+                                        <div class="banner__image">
+                                            <img src="/images/content/banner/3.jpg" alt="Banner 1">
+                                        </div>
+                                        <div class="banner__info">
+                                            <a href="#" class="banner__link">Как выбрать подходящее профессиональное оборудование?</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>            
+            </section>
+        <!-- /Баннеры на главной -->
+
+        <!-- Блок табов на главной -->
+            <section class="section__tabs">
+                <div class="grid-container">
+                    <div class="grid-x grid-padding-x">
+                        <div class="cell">
+                            <!-- Таб на главной -->
+            
+                            <div class="tabs__main">
+                                <ul class="tabs" data-tabs id="tabs-main">
+                                    <li class="tabs-title is-active"><a href="#hits" aria-selected="true">Хиты продаж</a></li>
+                                    <li class="tabs-title"><a data-tabs-target="stocks" href="#stocks">Акции</a></li>
+                                    <li class="tabs-title"><a data-tabs-target="latest" href="#latest">Новинки</a></li>
+                                </ul>
+                
+                                <div class="tabs-content" data-tabs-content="tabs-main">
+                                    <div class="tabs-panel is-active" id="hits">
+
+                                        <div class="grid-x grid-padding-x large-up-4 medium-up-3 slider-tabs">
+                                            <div class="cell">
+                                                <div class="card">
+                                                    <div class="card-section">
+                                                        <a href="#" class="card-section__image">
+                                                            <img src="/images/content/cards/card1.png" alt="">
+                                                            <div class="card-section__hit">
+                                                                Хит продаж!
+                                                            </div>
+                                                            <div class="card-section__warning">
+                                                                <div class="card-section__warning-text compare-add">
+                                                                    Добавлено в Сравнение!
+                                                                </div>
+                                                                <div class="card-section__warning-text cart-add">
+                                                                    Добавлено в Корзину!
+                                                                </div>
+                                                                <div class="card-section__warning-text favorite-add">
+                                                                    Добавлено в Избранное!
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                        <div class="card-section__content">
+                                                            <a href="#" class="card-section__category">Гели для моделирования</a>
+                                                            <a href="#" class="card-section__title">
+                                                                Express, однофазный гель
+                                                            </a>
+                                    
+                                                            <div class="card-section__bottom">
+                                                                <div class="card-section__price">
+                                                                    <div class="card-section__price-old">
+                                                                        1 200 ₽
+                                                                    </div>
+                                                                    <div class="card-section__price-new">
+                                                                        890 ₽
+                                                                    </div>
+                                                                </div>
+                                    
+                                                                <div class="card-section__buttons">
+                                                                    <button class="card-section__button compare"><i class="icon-compare"></i></button>
+                                                                    <button class="card-section__button favorite"><i class="icon-favorite"></i></button>
+                                                                    <button class="card-section__button plus"><i class="icon-plus"></i></button>
+                                                                </div>
+                                                            </div>
+                                    
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="cell">
+                                                <div class="card">
+                                                    <div class="card-section">
+                                                        <a href="#" class="card-section__image">
+                                                            <img src="/images/content/cards/card1.png" alt="">
+                                                            <div class="card-section__hit">
+                                                                Хит продаж!
+                                                            </div>
+                                                            <div class="card-section__warning">
+                                                                <div class="card-section__warning-text compare-add">
+                                                                    Добавлено в Сравнение!
+                                                                </div>
+                                                                <div class="card-section__warning-text cart-add">
+                                                                    Добавлено в Корзину!
+                                                                </div>
+                                                                <div class="card-section__warning-text favorite-add">
+                                                                    Добавлено в Избранное!
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                        <div class="card-section__content">
+                                                            <a href="#" class="card-section__category">Гели для моделирования</a>
+                                                            <a href="#" class="card-section__title">
+                                                                Express, однофазный гель
+                                                            </a>
+                                    
+                                                            <div class="card-section__bottom">
+                                                                <div class="card-section__price">
+                                                                    <div class="card-section__price-old">
+                                                                        1 200 ₽
+                                                                    </div>
+                                                                    <div class="card-section__price-new">
+                                                                        890 ₽
+                                                                    </div>
+                                                                </div>
+                                    
+                                                                <div class="card-section__buttons">
+                                                                    <button class="card-section__button compare"><i class="icon-compare"></i></button>
+                                                                    <button class="card-section__button favorite"><i class="icon-favorite"></i></button>
+                                                                    <button class="card-section__button plus"><i class="icon-plus"></i></button>
+                                                                </div>
+                                                            </div>
+                                    
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="cell">
+                                                <div class="card">
+                                                    <div class="card-section">
+                                                        <a href="#" class="card-section__image">
+                                                            <img src="/images/content/cards/card1.png" alt="">
+                                                            <div class="card-section__hit">
+                                                                Хит продаж!
+                                                            </div>
+                                                            <div class="card-section__warning">
+                                                                <div class="card-section__warning-text compare-add">
+                                                                    Добавлено в Сравнение!
+                                                                </div>
+                                                                <div class="card-section__warning-text cart-add">
+                                                                    Добавлено в Корзину!
+                                                                </div>
+                                                                <div class="card-section__warning-text favorite-add">
+                                                                    Добавлено в Избранное!
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                        <div class="card-section__content">
+                                                            <a href="#" class="card-section__category">Гели для моделирования</a>
+                                                            <a href="#" class="card-section__title">
+                                                                Express, однофазный гель
+                                                            </a>
+                                    
+                                                            <div class="card-section__bottom">
+                                                                <div class="card-section__price">
+                                                                    <div class="card-section__price-old">
+                                                                        1 200 ₽
+                                                                    </div>
+                                                                    <div class="card-section__price-new">
+                                                                        890 ₽
+                                                                    </div>
+                                                                </div>
+                                    
+                                                                <div class="card-section__buttons">
+                                                                    <button class="card-section__button compare"><i class="icon-compare"></i></button>
+                                                                    <button class="card-section__button favorite"><i class="icon-favorite"></i></button>
+                                                                    <button class="card-section__button plus"><i class="icon-plus"></i></button>
+                                                                </div>
+                                                            </div>
+                                    
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="cell">
+                                                <div class="card">
+                                                    <div class="card-section">
+                                                        <a href="#" class="card-section__image">
+                                                            <img src="/images/content/cards/card1.png" alt="">
+                                                            <div class="card-section__hit">
+                                                                Хит продаж!
+                                                            </div>
+                                                            <div class="card-section__warning">
+                                                                <div class="card-section__warning-text compare-add">
+                                                                    Добавлено в Сравнение!
+                                                                </div>
+                                                                <div class="card-section__warning-text cart-add">
+                                                                    Добавлено в Корзину!
+                                                                </div>
+                                                                <div class="card-section__warning-text favorite-add">
+                                                                    Добавлено в Избранное!
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                        <div class="card-section__content">
+                                                            <a href="#" class="card-section__category">Гели для моделирования</a>
+                                                            <a href="#" class="card-section__title">
+                                                                Express, однофазный гель
+                                                            </a>
+                                    
+                                                            <div class="card-section__bottom">
+                                                                <div class="card-section__price">
+                                                                    <div class="card-section__price-old">
+                                                                        1 200 ₽
+                                                                    </div>
+                                                                    <div class="card-section__price-new">
+                                                                        890 ₽
+                                                                    </div>
+                                                                </div>
+                                    
+                                                                <div class="card-section__buttons">
+                                                                    <button class="card-section__button compare"><i class="icon-compare"></i></button>
+                                                                    <button class="card-section__button favorite"><i class="icon-favorite"></i></button>
+                                                                    <button class="card-section__button plus"><i class="icon-plus"></i></button>
+                                                                </div>
+                                                            </div>
+                                    
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="cell">
+                                                <div class="card">
+                                                    <div class="card-section">
+                                                        <a href="#" class="card-section__image">
+                                                            <img src="/images/content/cards/card1.png" alt="">
+                                                            <div class="card-section__hit">
+                                                                Хит продаж!
+                                                            </div>
+                                                            <div class="card-section__warning">
+                                                                <div class="card-section__warning-text compare-add">
+                                                                    Добавлено в Сравнение!
+                                                                </div>
+                                                                <div class="card-section__warning-text cart-add">
+                                                                    Добавлено в Корзину!
+                                                                </div>
+                                                                <div class="card-section__warning-text favorite-add">
+                                                                    Добавлено в Избранное!
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                        <div class="card-section__content">
+                                                            <a href="#" class="card-section__category">Гели для моделирования</a>
+                                                            <a href="#" class="card-section__title">
+                                                                Express, однофазный гель
+                                                            </a>
+                                    
+                                                            <div class="card-section__bottom">
+                                                                <div class="card-section__price">
+                                                                    <div class="card-section__price-old">
+                                                                        1 200 ₽
+                                                                    </div>
+                                                                    <div class="card-section__price-new">
+                                                                        890 ₽
+                                                                    </div>
+                                                                </div>
+                                    
+                                                                <div class="card-section__buttons">
+                                                                    <button class="card-section__button compare"><i class="icon-compare"></i></button>
+                                                                    <button class="card-section__button favorite"><i class="icon-favorite"></i></button>
+                                                                    <button class="card-section__button plus"><i class="icon-plus"></i></button>
+                                                                </div>
+                                                            </div>
+                                    
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="cell">
+                                                <div class="card">
+                                                    <div class="card-section">
+                                                        <a href="#" class="card-section__image">
+                                                            <img src="/images/content/cards/card1.png" alt="">
+                                                            <div class="card-section__hit">
+                                                                Хит продаж!
+                                                            </div>
+                                                            <div class="card-section__warning">
+                                                                <div class="card-section__warning-text compare-add">
+                                                                    Добавлено в Сравнение!
+                                                                </div>
+                                                                <div class="card-section__warning-text cart-add">
+                                                                    Добавлено в Корзину!
+                                                                </div>
+                                                                <div class="card-section__warning-text favorite-add">
+                                                                    Добавлено в Избранное!
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                        <div class="card-section__content">
+                                                            <a href="#" class="card-section__category">Гели для моделирования</a>
+                                                            <a href="#" class="card-section__title">
+                                                                Express, однофазный гель
+                                                            </a>
+                                    
+                                                            <div class="card-section__bottom">
+                                                                <div class="card-section__price">
+                                                                    <div class="card-section__price-old">
+                                                                        1 200 ₽
+                                                                    </div>
+                                                                    <div class="card-section__price-new">
+                                                                        890 ₽
+                                                                    </div>
+                                                                </div>
+                                    
+                                                                <div class="card-section__buttons">
+                                                                    <button class="card-section__button compare"><i class="icon-compare"></i></button>
+                                                                    <button class="card-section__button favorite"><i class="icon-favorite"></i></button>
+                                                                    <button class="card-section__button plus"><i class="icon-plus"></i></button>
+                                                                </div>
+                                                            </div>
+                                    
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="cell">
+                                                <div class="card">
+                                                    <div class="card-section">
+                                                        <a href="#" class="card-section__image">
+                                                            <img src="/images/content/cards/card1.png" alt="">
+                                                            <div class="card-section__hit">
+                                                                Хит продаж!
+                                                            </div>
+                                                            <div class="card-section__warning">
+                                                                <div class="card-section__warning-text compare-add">
+                                                                    Добавлено в Сравнение!
+                                                                </div>
+                                                                <div class="card-section__warning-text cart-add">
+                                                                    Добавлено в Корзину!
+                                                                </div>
+                                                                <div class="card-section__warning-text favorite-add">
+                                                                    Добавлено в Избранное!
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                        <div class="card-section__content">
+                                                            <a href="#" class="card-section__category">Гели для моделирования</a>
+                                                            <a href="#" class="card-section__title">
+                                                                Express, однофазный гель
+                                                            </a>
+                                    
+                                                            <div class="card-section__bottom">
+                                                                <div class="card-section__price">
+                                                                    <div class="card-section__price-old">
+                                                                        1 200 ₽
+                                                                    </div>
+                                                                    <div class="card-section__price-new">
+                                                                        890 ₽
+                                                                    </div>
+                                                                </div>
+                                    
+                                                                <div class="card-section__buttons">
+                                                                    <button class="card-section__button compare"><i class="icon-compare"></i></button>
+                                                                    <button class="card-section__button favorite"><i class="icon-favorite"></i></button>
+                                                                    <button class="card-section__button plus"><i class="icon-plus"></i></button>
+                                                                </div>
+                                                            </div>
+                                    
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="cell">
+                                                <div class="card">
+                                                    <div class="card-section">
+                                                        <a href="#" class="card-section__image">
+                                                            <img src="/images/content/cards/card1.png" alt="">
+                                                            <div class="card-section__hit">
+                                                                Хит продаж!
+                                                            </div>
+                                                            <div class="card-section__warning">
+                                                                <div class="card-section__warning-text compare-add">
+                                                                    Добавлено в Сравнение!
+                                                                </div>
+                                                                <div class="card-section__warning-text cart-add">
+                                                                    Добавлено в Корзину!
+                                                                </div>
+                                                                <div class="card-section__warning-text favorite-add">
+                                                                    Добавлено в Избранное!
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                        <div class="card-section__content">
+                                                            <a href="#" class="card-section__category">Гели для моделирования</a>
+                                                            <a href="#" class="card-section__title">
+                                                                Express, однофазный гель
+                                                            </a>
+                                    
+                                                            <div class="card-section__bottom">
+                                                                <div class="card-section__price">
+                                                                    <div class="card-section__price-old">
+                                                                        1 200 ₽
+                                                                    </div>
+                                                                    <div class="card-section__price-new">
+                                                                        890 ₽
+                                                                    </div>
+                                                                </div>
+                                    
+                                                                <div class="card-section__buttons">
+                                                                    <button class="card-section__button compare"><i class="icon-compare"></i></button>
+                                                                    <button class="card-section__button favorite"><i class="icon-favorite"></i></button>
+                                                                    <button class="card-section__button plus"><i class="icon-plus"></i></button>
+                                                                </div>
+                                                            </div>
+                                    
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="grid-x grid-padding-x">
+                                            <div class="cell">
+                                                <!-- Кнопка "Все товары" -->
+                                
+                                                    <div class="all">
+                                                        <a href="#" class="all__link">Все товары</a>
+                                                    </div>
+                                
+                                                <!-- /Кнопка "Все товары" -->
+                                
+                                            </div>
+                                        </div>
+                                
+                                    </div>
+                                    <div class="tabs-panel" id="stocks">
+                                        Акции
+                                    </div>
+                                    <div class="tabs-panel" id="latest">
+                                        Новинки
+                                    </div>
+                                </div>
+                            </div>
+            
+                            <!-- /Таб на главной -->
+            
+                        </div>
+                    </div>
+                </div>
+            
+            </section>
+        <!-- /Блок табов на главной -->
+
+        <!-- Блок с инфой -->
+            <section class="section__info">
+                <div class="grid-container">
+                    <div class="grid-x grid-padding-x">
+                        <div class="cell large-6">
+                            <div class="info__title">Способы оплаты:</div>
+                            <div class="info__wrapper">
+                                <div class="info__item">
+                                    <div class="info__item-num">1</div>
+                                    <div class="info__item-block">
+                                        <div class="info__item-title">Картой на сайте</div>
+                                        <div class="info__item-text">Вы можете сразу оплатить свои покупки банковской картой при оформлении заказа.</div>
+                                    </div>
+                                </div>
+                                <div class="info__item">
+                                    <div class="info__item-num">2</div>
+                                    <div class="info__item-block">
+                                        <div class="info__item-title">При получении заказа</div>
+                                        <div class="info__item-text">Оплата курьеру наличными или банковской при получении заказа.</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cell large-6">
+                            <div class="info__title">Доставка:</div>
+                            <div class="info__wrapper">
+                                <div class="info__item">
+                                    <div class="info__item-num">1</div>
+                                    <div class="info__item-block">
+                                        <div class="info__item-title">Доставка курьером</div>
+                                        <div class="info__item-text">Вы можете оформить доставку своего заказа к себе домой или в офис.</div>
+                                    </div>
+                                </div>
+                                <div class="info__item">
+                                    <div class="info__item-num">2</div>
+                                    <div class="info__item-block">
+                                        <div class="info__item-title">Самовывоз</div>
+                                        <div class="info__item-text">Самовывоз товара из нашего магазина.</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        <!-- /Блок с инфой -->
+    </main>
 
     <!-- Компонент футера -->
     <footer>
@@ -549,6 +1082,57 @@
         </div>
     </div>
 
+    <div class="grid-container">
+        <div class="grid-x grid-padding-x">
+            <div class="cell large-12">
+                <h1>Кнопочки</h1>
+            </div>
+        </div>
+        <div class="grid-x grid-padding-x">
+            <div class="cell">
+                <!-- Кнопка "Все товары" -->
+
+                    <div class="all">
+                        <a href="#" class="all__link">Все товары</a>
+                    </div>
+
+                <!-- /Кнопка "Все товары" -->
+
+            </div>
+        </div>
+    </div>
+
+    <div class="grid-container">
+        <div class="grid-x grid-padding-x">
+            <div class="cell large-12">
+                <h1>Табы</h1>
+            </div>
+        </div>
+        <div class="grid-x grid-padding-x">
+            <div class="cell">
+                <!-- Таб на главной -->
+
+                <div class="tabs__main">
+                    <ul class="tabs" data-tabs id="example-tabs">
+                        <li class="tabs-title is-active"><a href="#panel1" aria-selected="true">Tab 1</a></li>
+                        <li class="tabs-title"><a data-tabs-target="panel2" href="#panel2">Tab 2</a></li>
+                    </ul>
+    
+                    <div class="tabs-content" data-tabs-content="example-tabs">
+                        <div class="tabs-panel is-active" id="panel1">
+                            <p>Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat nisl ut dapibus.</p>
+                        </div>
+                        <div class="tabs-panel" id="panel2">
+                            <p>Suspendisse dictum feugiat nisl ut dapibus.  Vivamus hendrerit arcu sed erat molestie vehicula. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor.  Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- /Таб на главной -->
+
+            </div>
+        </div>
+    </div>
 
     <div class="grid-container">
         <div class="grid-x grid-padding-x">
@@ -803,11 +1387,46 @@
             </div>
         </div>
     </div>
-      
-      
+
+    //slider
+    <section class="sslider">
+        <div>
+          <img src="http://placehold.it/350x100?text=1">
+        </div>
+        <div>
+          <img src="http://placehold.it/350x100?text=2">
+        </div>
+        <div>
+          <img src="http://placehold.it/350x100?text=3">
+        </div>
+        <div>
+          <img src="http://placehold.it/350x100?text=4">
+        </div>
+        <div>
+          <img src="http://placehold.it/350x100?text=5">
+        </div>
+        <div>
+          <img src="http://placehold.it/350x100?text=6">
+        </div>
+        <div>
+          <img src="http://placehold.it/350x100?text=7">
+        </div>
+        <div>
+          <img src="http://placehold.it/350x100?text=8">
+        </div>
+        <div>
+          <img src="http://placehold.it/350x100?text=9">
+        </div>
+        <div>
+          <img src="http://placehold.it/350x100?text=10">
+        </div>
+      </section>
+
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <!-- Compressed JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.2/dist/js/foundation.min.js"></script>
+    <!-- Slick JS -->
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="/js/dist.js"></script>
 </body>
 </html>

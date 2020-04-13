@@ -1,11 +1,51 @@
 ﻿$(document).foundation();
-
-function closeOutsideClick(element, closeElement) {
+        // slick slider
+        slick_slider();
+        $(window).resize(slick_slider);
+        
+        
+        function slick_slider() {
+            var wrapper = $(".slider-tabs");
+            if ($(".slick-initialized").length) {
+                wrapper.slick('unslick');
+            }
+            wrapper.slick({
+                mobileFirst: true,
+                infinite: false,
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                arrows: false,
+                responsive: [{
+                    breakpoint: 640,
+                    settings: "unslick"
+                },
+                {
+                    breakpoint: 540,
+                    settings: {
+                        
+                        slidesToShow: 2,
+                        slidesToScroll: 1,
+                    }
+                },
+                {
+                    breakpoint: 320,
+                    settings: {
+                        
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                    }
+                }
+                ]
+            });
+        }
+function closeOutsideClick(element, button, closeElement) {
     $(document).mouseup(function (e){ // событие клика по веб-документу
         var div = $(element); // тут указываем ID элемента
         if (!div.is(e.target) // если клик был не по нашему блоку
-            && div.has(e.target).length === 0) { // и не по его дочерним элементам
-            $(closeElement).foundation('close');
+            && div.has(e.target).length === 0
+            && !$(button).is(e.target)) { // и не по его дочерним элементам
+                $(closeElement).foundation('close');
+                //
         }
     });
 }
@@ -38,20 +78,37 @@ $(document).ready(function() {
         });
 
     //! выпадашка мобменю
-        // $('.menu__mobile>button').click(function (e) { 
-        //     $('body').toggleClass('modal-active');
-        // });
-
-        // $(document).mouseup(function (){ // событие клика по веб-документу
-        //     var div = $('div.dropdown-pane.is-open'); // тут указываем ID элемента
-        //     if (!div.is(e.target) // если клик был не по нашему блоку
-        //         && div.has(e.target).length === 0) { // и не по его дочерним элементам
-        //             $('#mobile-menu').foundation('close');
-        //     }
-        // });
-        //"menu__mobile click to found toggle
-        $('.menu__mobile>button').click(function () { 
-            //$('#mobile-menu').foundation('open');
+        $('.menu__mobile>button').click(function (e) {
+            $('body').toggleClass('modal-active');
+            if ($(this).html() == '<i class="icon-burger"></i> Меню')
+                $(this).html('<i class="icon-close"></i> Закрыть')
+            else
+                $(this).html('<i class="icon-burger"></i> Меню');
         });
-        //closeOutsideClick('.dropdown-pane.is-open', '#mobile-menu');
+        
+        $(document).mouseup(function (e){ // событие клика по веб-документу
+            var div = $('div.dropdown-pane.is-open'); // тут указываем ID элемента
+            if (!div.is(e.target) // если клик был не по нашему блоку
+                && div.has(e.target).length === 0
+                && !$('.menu__mobile>button').is(e.target)) { // и не по его дочерним элементам
+                    $('#mobile-menu').foundation('close');
+                    if ($('.menu__mobile div.dropdown-pane.is-open')) {
+                        $('body').removeClass('modal-active');
+                    }
+                    if ($('.menu__mobile>button').html() == '<i class="icon-close"></i> Закрыть')
+                        $('.menu__mobile>button').html('<i class="icon-burger"></i> Меню')
+
+                    
+            }
+        });
+        //"menu__mobile click to found toggle
+        // $('.menu__mobile>button.hover').click(function () {
+        //     $('#mobile-menu').foundation('close');
+        // });
+        //closeOutsideClick('.dropdown-pane.is-open', '.menu__mobile>button', '#mobile-menu');
+        closeOutsideClick('.dropdown-pane.is-open', '.header__sign>button', '#sign-up');
+        closeOutsideClick('.dropdown-pane.is-open', '.header__sign>button', '#sign-in');
+
+
+
 });
