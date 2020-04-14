@@ -15,6 +15,8 @@
                 slidesToShow: 3,
                 slidesToScroll: 1,
                 arrows: false,
+                prevArrow: '<button type="button" class="slick-prev"><i class="icon-slider-left"></button>',
+                nextArrow: '<button type="button" class="slick-next"><i class="icon-slider-right"></i></button>',
                 responsive: [{
                     breakpoint: 640,
                     settings: "unslick"
@@ -22,17 +24,17 @@
                 {
                     breakpoint: 540,
                     settings: {
-                        
                         slidesToShow: 2,
                         slidesToScroll: 1,
+                        arrows: true,
                     }
                 },
                 {
                     breakpoint: 320,
                     settings: {
-                        
                         slidesToShow: 1,
                         slidesToScroll: 1,
+                        arrows: true,
                     }
                 }
                 ]
@@ -109,6 +111,76 @@ $(document).ready(function() {
         closeOutsideClick('.dropdown-pane.is-open', '.header__sign>button', '#sign-up');
         closeOutsideClick('.dropdown-pane.is-open', '.header__sign>button', '#sign-in');
 
+        // слайдер-баннер на главной
+        $('.banner-slider').slick({
+            dots: true,
+            appendDots: '.slider__dots',
+            arrows: false,
+            infinite: true,
+            speed: 500,
+            fade: true,
+            cssEase: 'linear',
+            //autoplay: true,
+            autoplayspeed: 2000,
+          });
 
-
+          
 });
+
+// $(document).ready(function() {
+//     var time = 2;
+//     var $slick, isPause, tick, percentTime = 0;
+  
+//     $slick = $('.banner-slider');
+//     $slick.slick({
+//       draggable: true,
+//       arrows: false,
+//       adaptiveHeight: false,
+//       dots: true,
+//       appendDots: '.slider__dots',
+
+//       mobileFirst: true,
+//       pauseOnDotsHover: true
+//     });
+//     $slick.on({
+//       mouseenter: function() {
+//         isPause = true;
+//       },
+//       mouseleave: function() {
+//         isPause = false;
+//         startProgressbar();
+//       },
+//       mousedown: function() {
+//         $rbar.fadeOut('slow');
+//         percentTime = 0;
+//       },
+//     //   afterChange: function(event, slick, currentSlide, nextSlide) {
+//     //     $('.circle-tx').text(((currentSlide ? currentSlide : 0) + 1) + '/' + slick.slideCount);
+//     //   }
+//     });
+  
+//     function startProgressbar() {
+//       clearTimeout(tick);
+//       isPause = false;
+//       tick = setInterval(interval, 20);
+//       $rbar.fadeIn('slow');
+//     }
+//     var $rbar = $('.circle-go');
+//     var rlen = 2 * Math.PI * $rbar.attr('r');
+  
+//     function interval() {
+//       if (isPause === false) {
+//         percentTime += 1 / (time + 0.1);
+//         $rbar.css({
+//           strokeDasharray: rlen,
+//           strokeDashoffset: rlen * (1 - percentTime / 100)
+//         });
+//         if (percentTime >= 100) {
+//           $slick.slick('slickNext');
+//           percentTime = 0;
+//           startProgressbar();
+//         }
+//       }
+//     }
+//     startProgressbar();
+//   });
