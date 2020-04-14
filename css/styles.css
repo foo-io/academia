@@ -1532,6 +1532,7 @@ body,
 }
 
 .tabs__main .tabs-content {
+  background: transparent;
   border: none;
 }
 
@@ -1675,15 +1676,53 @@ section {
 
 .banner-slider .slick-dots {
   position: absolute;
-  bottom: 0;
+  bottom: 2.5rem;
+  left: 2rem;
+  list-style-type: none;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
-.banner-slider .slick-dots .slick-active {
-  background: url(/images/content/banner/circle.svg);
+.banner-slider .slick-dots li {
+  margin-right: 1rem;
+}
+
+.banner-slider .slick-dots li button {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  border: 1px solid #C5C5C5;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  color: #A8A8A8;
+  outline: none;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+.banner-slider .slick-dots li button:hover {
+  color: #FFF;
+  border-color: #FFF;
+}
+
+.banner-slider .slick-dots .slick-active button {
+  color: #FFF;
+  border-color: #FFF;
 }
 
 .banner-slider .banner__info {
   margin-bottom: 4rem;
+}
+
+.banner-slider .banner.slick-active .banner__image img {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: all 5s linear;
+  transition: all 5s linear;
 }
 
 .slider__dots {
@@ -2000,9 +2039,17 @@ section {
   }
   .section__tabs {
     padding-bottom: 4rem;
+    padding-top: 0;
   }
   .section__tabs .tabs__main .medium-up-3 .cell {
     display: block;
+  }
+  .banner-slider .slick-dots {
+    bottom: 1rem;
+    left: calc(50% - 144px / 2);
+  }
+  .banner-slider .banner__info {
+    margin-bottom: 3rem;
   }
 }
 

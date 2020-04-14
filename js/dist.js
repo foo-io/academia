@@ -114,13 +114,13 @@ $(document).ready(function() {
         // слайдер-баннер на главной
         $('.banner-slider').slick({
             dots: true,
-            appendDots: '.slider__dots',
+            //appendDots: '.slider__dots',
             arrows: false,
             infinite: true,
             speed: 500,
             fade: true,
             cssEase: 'linear',
-            //autoplay: true,
+            autoplay: true,
             autoplayspeed: 2000,
           });
 
