@@ -112,75 +112,95 @@ $(document).ready(function() {
         closeOutsideClick('.dropdown-pane.is-open', '.header__sign>button', '#sign-in');
 
         // слайдер-баннер на главной
-        $('.banner-slider').slick({
-            dots: true,
-            //appendDots: '.slider__dots',
-            arrows: false,
-            infinite: true,
-            speed: 500,
-            fade: true,
-            cssEase: 'linear',
-            autoplay: true,
-            autoplayspeed: 2000,
-          });
+        // $('.banner-slider').slick({
+        //     dots: true,
+        //     //appendDots: '.slider__dots',
+        //     arrows: false,
+        //     infinite: true,
+        //     speed: 500,
+        //     fade: true,
+        //     cssEase: 'linear',
+        //     autoplay: true,
+        //     autoplayspeed: 2000,
+        //   });
 
-          
-});
+        // progressbar.js@1.0.0 version is used
+        // Docs: http://progressbarjs.readthedocs.org/en/1.0.0/
 
-// $(document).ready(function() {
-//     var time = 2;
-//     var $slick, isPause, tick, percentTime = 0;
-  
-//     $slick = $('.banner-slider');
-//     $slick.slick({
-//       draggable: true,
-//       arrows: false,
-//       adaptiveHeight: false,
-//       dots: true,
-//       appendDots: '.slider__dots',
+        // var bar = new ProgressBar.Circle('.circle', {
+        //     strokeWidth: 6,
+        //     easing: 'easeInOut',
+        //     duration: 1400,
+        //     color: '#FFEA82',
+        //     trailColor: '#eee',
+        //     trailWidth: 1,
+        //     svgStyle: null
+        // });
+        
+        // bar.animate(1.0);  // Number from 0.0 to 1.0
+        // // Animate to 100% and back to 0%
+        // function loop(cb) {
+        //     bar.animate(1, function() {
+        //     bar.animate(0);
+        //     }); 
+        // }
+        
+        // // Loop the animation forever
+        // setInterval(loop, 1000);
+        });
 
-//       mobileFirst: true,
-//       pauseOnDotsHover: true
-//     });
-//     $slick.on({
-//       mouseenter: function() {
-//         isPause = true;
-//       },
-//       mouseleave: function() {
-//         isPause = false;
-//         startProgressbar();
-//       },
-//       mousedown: function() {
-//         $rbar.fadeOut('slow');
-//         percentTime = 0;
-//       },
-//     //   afterChange: function(event, slick, currentSlide, nextSlide) {
-//     //     $('.circle-tx').text(((currentSlide ? currentSlide : 0) + 1) + '/' + slick.slideCount);
-//     //   }
-//     });
+
+$(document).ready(function() {
+    var time = 2;
+    var $slick, isPause, tick, percentTime = 0;
   
-//     function startProgressbar() {
-//       clearTimeout(tick);
-//       isPause = false;
-//       tick = setInterval(interval, 20);
-//       $rbar.fadeIn('slow');
-//     }
-//     var $rbar = $('.circle-go');
-//     var rlen = 2 * Math.PI * $rbar.attr('r');
+    $slick = $('.banner-slider');
+    $slick.slick({
+      draggable: true,
+      arrows: false,
+      adaptiveHeight: false,
+      dots: true,
+      //appendDots: '.slider__dots',
+
+      mobileFirst: true,
+      pauseOnDotsHover: true
+    });
+    $slick.on({
+      mouseenter: function() {
+        isPause = true;
+      },
+      mouseleave: function() {
+        isPause = false;
+        startProgressbar();
+      },
+      mousedown: function() {
+        $rbar.fadeOut('slow');
+        percentTime = 0;
+      },
+    });
   
-//     function interval() {
-//       if (isPause === false) {
-//         percentTime += 1 / (time + 0.1);
-//         $rbar.css({
-//           strokeDasharray: rlen,
-//           strokeDashoffset: rlen * (1 - percentTime / 100)
-//         });
-//         if (percentTime >= 100) {
-//           $slick.slick('slickNext');
-//           percentTime = 0;
-//           startProgressbar();
-//         }
-//       }
-//     }
-//     startProgressbar();
-//   });
+    function startProgressbar() {
+      clearTimeout(tick);
+      isPause = false;
+      tick = setInterval(interval, 20);
+      $rbar.fadeIn('slow');
+    }
+    var $rbar = $('.circle-go');
+    var rlen = 2 * Math.PI * $rbar.attr('r');
+  
+    function interval() {
+      if (isPause === false) {
+        percentTime += 1 / (time + 0.1);
+        $rbar.css({
+          strokeDasharray: rlen,
+          strokeDashoffset: rlen * (1 - percentTime / 100)
+        });
+        if (percentTime >= 100) {
+          $slick.slick('slickNext');
+          percentTime = 0;
+          startProgressbar();
+        }
+      }
+    }
+    startProgressbar();
+  });

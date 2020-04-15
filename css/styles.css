@@ -1687,6 +1687,7 @@ section {
 
 .banner-slider .slick-dots li {
   margin-right: 1rem;
+  position: relative;
 }
 
 .banner-slider .slick-dots li button {
@@ -1711,7 +1712,11 @@ section {
 
 .banner-slider .slick-dots .slick-active button {
   color: #FFF;
-  border-color: #FFF;
+  border-color: transparent;
+}
+
+.banner-slider .slick-dots .slick-active button:hover {
+  border-color: transparent;
 }
 
 .banner-slider .banner__info {
@@ -1733,39 +1738,29 @@ section {
 }
 
 .progress-round__wrap {
-  width: 110px;
-  height: 110px;
+  width: 34px;
+  height: 34px;
   position: absolute;
-  left: 0;
-  top: 0;
+  left: -1px;
+  top: -1px;
   pointer-events: none;
   text-align: center;
+  display: none;
 }
 
-.circle-bg {
-  fill: rgba(255, 255, 255, 0);
-  stroke: rgba(0, 0, 0, 0.05);
-  stroke-width: 0;
-  stroke-linecap: butt;
+.progress-round__wrap.show {
+  display: block;
 }
 
 .circle-go {
   fill: rgba(255, 255, 255, 0);
-  stroke: rgba(90, 230, 240, 0.75);
-  stroke-width: 2;
+  stroke: #FFF;
+  stroke-width: 1;
   stroke-linecap: round;
   -webkit-transform-origin: center;
           transform-origin: center;
   -webkit-transform: rotate(-90deg);
           transform: rotate(-90deg);
-}
-
-.circle-tx {
-  fill: rgba(255, 255, 255, 0.6);
-  stroke: rgba(0, 0, 0, 0.3);
-  stroke-width: 1;
-  font: bold 50px 'Arial';
-  text-anchor: middle;
 }
 
 .slick-slide {
