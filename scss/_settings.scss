@@ -144,23 +144,23 @@ $header-font-style: normal;
 $font-family-monospace: Consolas, 'Liberation Mono', Courier, monospace;
 $header-color: inherit;
 $header-lineheight: 1.4;
-$header-margin-bottom: 0.5rem;
+$header-margin-bottom: 0;
 $header-styles: (
   small: (
-    'h1': ('font-size': 24),
-    'h2': ('font-size': 20),
-    'h3': ('font-size': 19),
-    'h4': ('font-size': 18),
-    'h5': ('font-size': 17),
-    'h6': ('font-size': 16),
+    'h1': ('font-size': 18),
+    'h2': ('font-size': 16),
+    'h3': ('font-size': 14),
+    'h4': ('font-size': 12),
+    'h5': ('font-size': 12),
+    'h6': ('font-size': 12),
   ),
   medium: (
-    'h1': ('font-size': 48),
-    'h2': ('font-size': 40),
-    'h3': ('font-size': 31),
-    'h4': ('font-size': 25),
-    'h5': ('font-size': 20),
-    'h6': ('font-size': 16),
+    'h1': ('font-size': 24),
+    'h2': ('font-size': 18),
+    'h3': ('font-size': 16),
+    'h4': ('font-size': 14),
+    'h5': ('font-size': 12),
+    'h6': ('font-size': 10),
   ),
 );
 $header-text-rendering: optimizeLegibility;
@@ -277,17 +277,17 @@ $badge-font-size: 0.6rem;
 // 10. Breadcrumbs
 // ---------------
 
-$breadcrumbs-margin: 0 0 $global-margin 0;
-$breadcrumbs-item-font-size: rem-calc(11);
-$breadcrumbs-item-color: $primary-color;
-$breadcrumbs-item-color-current: $black;
+$breadcrumbs-margin: 0;
+$breadcrumbs-item-font-size: rem-calc(14);
+$breadcrumbs-item-color: #8D92A3;
+$breadcrumbs-item-color-current: #8D92A3;
 $breadcrumbs-item-color-disabled: $medium-gray;
-$breadcrumbs-item-margin: 0.75rem;
-$breadcrumbs-item-uppercase: true;
+$breadcrumbs-item-margin: rem-calc(13);
+$breadcrumbs-item-uppercase: false;
 $breadcrumbs-item-separator: true;
-$breadcrumbs-item-separator-item: '/';
+$breadcrumbs-item-separator-item: '\e914';
 $breadcrumbs-item-separator-item-rtl: '\\';
-$breadcrumbs-item-separator-color: $medium-gray;
+$breadcrumbs-item-separator-color: #8D92A3;
 
 // 11. Button
 // ----------
@@ -430,7 +430,6 @@ $flexbox-responsive-breakpoints: true;
 
 // 20. Forms
 // ---------
-
 $fieldset-border: 1px solid $medium-gray;
 $fieldset-padding: rem-calc(20);
 $fieldset-margin: rem-calc(18 0);
@@ -443,32 +442,71 @@ $input-prefix-color: $black;
 $input-prefix-background: $light-gray;
 $input-prefix-border: 1px solid $medium-gray;
 $input-prefix-padding: 1rem;
-$form-label-color: $black;
-$form-label-font-size: rem-calc(14);
-$form-label-font-weight: $global-weight-normal;
-$form-label-line-height: 1.8;
+$form-label-color: #3F4351;
+$form-label-font-size: rem-calc(16);
+$form-label-font-weight: 600;
+$form-label-line-height: rem-calc(19);
 $select-background: $white;
 $select-triangle-color: $dark-gray;
 $select-radius: $global-radius;
-$input-color: $black;
-$input-placeholder-color: $medium-gray;
+$input-color: #3F4351;
+$input-placeholder-color: #8D92A3;
 $input-font-family: inherit;
-$input-font-size: rem-calc(16);
-$input-font-weight: $global-weight-normal;
-$input-line-height: $global-lineheight;
-$input-background: $white;
-$input-background-focus: $white;
-$input-background-disabled: $light-gray;
-$input-border: 1px solid $medium-gray;
-$input-border-focus: 1px solid $dark-gray;
-$input-padding: $form-spacing / 2;
-$input-shadow: inset 0 1px 2px rgba($black, 0.1);
-$input-shadow-focus: 0 0 5px $medium-gray;
+$input-font-size: rem-calc(14);
+$input-font-weight: 500;
+$input-line-height: 1.6;
+$input-background: #F9F9F9;
+$input-background-focus: #F9F9F9;
+$input-background-disabled: #F9F9F9;
+$input-border: 1px solid #D5E1E8;
+$input-border-focus: 1px solid #911C2C;;
+$input-padding: rem-calc(13) rem-calc(16);
+$input-shadow: none;
+$input-shadow-focus: none;
 $input-cursor-disabled: not-allowed;
-$input-transition: box-shadow 0.5s, border-color 0.25s ease-in-out;
+$input-transition: border-color 0.25s ease-in-out;
 $input-number-spinners: true;
-$input-radius: $global-radius;
-$form-button-radius: $global-radius;
+$input-radius: rem-calc(30);
+$form-button-radius: rem-calc(30);
+
+// $fieldset-border: 1px solid $medium-gray;
+// $fieldset-padding: rem-calc(20);
+// $fieldset-margin: rem-calc(18 0);
+// $legend-padding: rem-calc(0 3);
+// $form-spacing: rem-calc(16);
+// $helptext-color: $black;
+// $helptext-font-size: rem-calc(13);
+// $helptext-font-style: italic;
+// $input-prefix-color: $black;
+// $input-prefix-background: $light-gray;
+// $input-prefix-border: 1px solid $medium-gray;
+// $input-prefix-padding: 1rem;
+// $form-label-color: $black;
+// $form-label-font-size: rem-calc(14);
+// $form-label-font-weight: $global-weight-normal;
+// $form-label-line-height: 1.8;
+// $select-background: $white;
+// $select-triangle-color: $dark-gray;
+// $select-radius: $global-radius;
+// $input-color: $black;
+// $input-placeholder-color: $medium-gray;
+// $input-font-family: inherit;
+// $input-font-size: rem-calc(16);
+// $input-font-weight: $global-weight-normal;
+// $input-line-height: $global-lineheight;
+// $input-background: $white;
+// $input-background-focus: $white;
+// $input-background-disabled: $light-gray;
+// $input-border: 1px solid $medium-gray;
+// $input-border-focus: 1px solid $dark-gray;
+// $input-padding: $form-spacing / 2;
+// $input-shadow: inset 0 1px 2px rgba($black, 0.1);
+// $input-shadow-focus: 0 0 5px $medium-gray;
+// $input-cursor-disabled: not-allowed;
+// $input-transition: box-shadow 0.5s, border-color 0.25s ease-in-out;
+// $input-number-spinners: true;
+// $input-radius: $global-radius;
+// $form-button-radius: $global-radius;
 
 // 21. Label
 // ---------

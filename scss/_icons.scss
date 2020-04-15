@@ -12,81 +12,86 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
-  
+
+  .icon-breadcrumb:before {
+    content: "\e914";
+    // color: #8d92a3;
+  }
   .icon-burger:before {
     content: "\e900";
-    //color: #fff;
+    // color: #fff;
   }
   .icon-cart:before {
     content: "\e901";
-    //color: #fff;
+    // color: #fff;
   }
   .icon-check:before {
     content: "\e902";
-    //color: #fff;
+    // color: #fff;
   }
   .icon-close:before {
     content: "\e903";
-    //color: #fff;
+  }
+  .icon-close-menu:before {
+    content: "\e904";
   }
   .icon-compare:before {
-    content: "\e904";
-    //color: #911c2c;
+    content: "\e905";
+    // color: #911c2c;
   }
   .icon-dropdown-down:before {
-    content: "\e905";
-    //color: #8d92a3;
+    content: "\e906";
+    // color: #8d92a3;
   }
   .icon-dropdown-up:before {
-    content: "\e906";
-    //color: #8d92a3;
+    content: "\e907";
+    // color: #8d92a3;
   }
   .icon-favorite:before {
-    content: "\e907";
-    //color: #911c2c;
+    content: "\e908";
+    // color: #911c2c;
   }
   .icon-favorite-added:before {
-    content: "\e908";
-    //color: #fff;
+    content: "\e909";
+    // color: #fff;
   }
   .icon-go-right:before {
-    content: "\e909";
-    //color: #911c2c;
+    content: "\e90a";
+    // color: #911c2c;
   }
   .icon-instagram:before {
-    content: "\e90a";
-    //color: #dbdbdb;
+    content: "\e90b";
+    // color: #dbdbdb;
   }
   .icon-location:before {
-    content: "\e90b";
-    //color: #dbdbdb;
+    content: "\e90c";
+    // color: #dbdbdb;
   }
   .icon-map:before {
-    content: "\e90c";
-    //color: #911c2c;
+    content: "\e90d";
+    // color: #911c2c;
   }
   .icon-phone:before {
-    content: "\e90d";
-    //color: #dbdbdb;
+    content: "\e90e";
+    // color: #dbdbdb;
   }
   .icon-plus:before {
-    content: "\e90e";
-    //color: #911c2c;
+    content: "\e90f";
+    // color: #911c2c;
   }
   .icon-search:before {
-    content: "\e90f";
-    //color: #8d92a3;
+    content: "\e910";
+    // color: #8d92a3;
   }
   .icon-slider-left:before {
-    content: "\e910";
-    //color: #911c2c;
+    content: "\e911";
+    // color: #911c2c;
   }
   .icon-slider-right:before {
-    content: "\e911";
-    //color: #911c2c;
+    content: "\e912";
+    // color: #911c2c;
   }
   .icon-user:before {
-    content: "\e912";
-    //color: #8d92a3;
+    content: "\e913";
+    // color: #8d92a3;
   }
-  
