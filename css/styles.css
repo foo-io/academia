@@ -164,6 +164,10 @@ i {
           font-feature-settings: 'pnum' on, 'lnum' on;
 }
 
+[type='text'], [type='password'], [type='date'], [type='datetime'], [type='datetime-local'], [type='month'], [type='week'], [type='email'], [type='number'], [type='search'], [type='tel'], [type='time'], [type='url'], [type='color'], textarea {
+  height: auto;
+}
+
 a {
   -webkit-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
@@ -196,6 +200,15 @@ body,
 
 .modal-active {
   overflow: hidden;
+}
+
+.button.custom {
+  line-height: 19px;
+  width: 100%;
+}
+
+.button.custom:hover {
+  color: #911C2C;
 }
 
 .card-section {
@@ -1362,6 +1375,41 @@ body,
   margin-right: 6px;
 }
 
+.sitemap__content {
+  border-bottom: 1px solid #EAEAEA;
+  padding-bottom: 2rem;
+}
+
+.sitemap__content .catalog__content {
+  padding: 0;
+}
+
+.sitemap__list {
+  list-style-type: none;
+  margin: 0;
+  margin-bottom: 2rem;
+}
+
+.sitemap__list li {
+  margin-bottom: 1rem;
+}
+
+.sitemap__list li a {
+  color: #3F4351;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 500;
+}
+
+.sitemap__list li a:hover {
+  color: #911C2C;
+}
+
+.sitemap__list li.sitemap__list-header a {
+  font-weight: bold;
+  color: #911C2C;
+}
+
 .copyright {
   color: #8D92A3;
   margin-bottom: 40px;
@@ -1639,6 +1687,14 @@ section {
   border-top: 1px solid #D5E1E8;
 }
 
+.section__timetable, .section__sitemap {
+  padding: 0;
+}
+
+.section__timetable:last-child, .section__sitemap:last-child {
+  padding-bottom: 4rem;
+}
+
 .info__title {
   font-weight: 500;
   font-size: 18px;
@@ -1905,12 +1961,12 @@ section {
   min-width: auto;
 }
 
-.courses {
+.newses {
   padding-top: 0;
   margin-bottom: 4rem;
 }
 
-.course-card {
+.news-card {
   background: #FFF;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1922,7 +1978,11 @@ section {
   margin-bottom: 1rem;
 }
 
-.course-card__image {
+.news-card > *:last-child {
+  margin: 0;
+}
+
+.news-card__image {
   border-radius: 4px;
   overflow: hidden;
   position: relative;
@@ -1936,12 +1996,12 @@ section {
   margin-bottom: 1rem;
 }
 
-.course-card__image img {
+.news-card__image img {
   width: 100%;
   max-width: auto;
 }
 
-.course-card__info {
+.news-card__info {
   position: absolute;
   top: 12px;
   left: 12px;
@@ -1950,7 +2010,7 @@ section {
   line-height: 24px;
 }
 
-.course-card__info-date {
+.news-card__info-date {
   color: #FFFFFF;
   border-radius: 2px;
   background: rgba(141, 146, 163, 0.8);
@@ -1961,7 +2021,7 @@ section {
   width: fit-content;
 }
 
-.course-card__info-price {
+.news-card__info-price {
   background: rgba(255, 255, 255, 0.8);
   border-radius: 2px;
   color: #3F4351;
@@ -1971,7 +2031,7 @@ section {
   width: fit-content;
 }
 
-.course-card__title {
+.news-card__title {
   font-weight: 500;
   font-size: 16px;
   line-height: 26px;
@@ -1979,25 +2039,25 @@ section {
   color: #3F4351;
 }
 
-.course-card__title:hover {
+.news-card__title:hover {
   color: #911C2C;
 }
 
-.course-card__descr {
+.news-card__descr {
   font-weight: 500;
   font-size: 14px;
   line-height: 24px;
   color: #8D92A3;
 }
 
-.course__header {
+.news__header {
   background: #282A32;
   color: #BABECD;
   margin-top: -1px;
   position: relative;
 }
 
-.course__header-image {
+.news__header-image {
   border-radius: 4px;
   width: 100%;
   max-height: 380px;
@@ -2006,7 +2066,7 @@ section {
      object-fit: cover;
 }
 
-.course__header-info {
+.news__header-info {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2021,7 +2081,7 @@ section {
   margin-left: 1rem;
 }
 
-.course__header-date {
+.news__header-date {
   font-weight: 500;
   font-size: 14px;
   line-height: 14px;
@@ -2029,7 +2089,7 @@ section {
   margin-bottom: 1rem;
 }
 
-.course__header-title {
+.news__header-title {
   font-weight: 500;
   font-size: 20px;
   line-height: 28px;
@@ -2039,36 +2099,36 @@ section {
   padding: 0;
 }
 
-.course__header-descr {
+.news__header-descr {
   font-weight: 500;
   font-size: 16px;
   line-height: 26px;
   color: #BABECD;
 }
 
-.course__header-share {
+.news__header-share {
   margin-top: 3rem;
 }
 
-.course__content {
+.news__content {
   background: #FFF;
+  padding-bottom: 4rem;
 }
 
-.course__info {
+.news__info {
   background: #EBF0F5;
   border-left: 3px solid #911C2C;
   padding: 1rem 2rem;
   color: #3F4351;
   font-size: 14px;
   line-height: 22px;
-  margin-bottom: 3rem;
 }
 
-.course__info-item {
+.news__info-item {
   margin-bottom: 1rem;
 }
 
-.course__title {
+.news__title {
   font-weight: bold;
   font-size: 18px;
   line-height: 28px;
@@ -2076,8 +2136,180 @@ section {
   padding-bottom: 2rem;
 }
 
+.news__descr * {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 30px;
+  margin-bottom: 30px;
+  color: #3F4351;
+}
+
 label > input {
   margin-top: 1rem !important;
+}
+
+.helptext {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  color: #8D92A3;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+  max-width: 212px;
+  margin-left: auto;
+}
+
+.helptext [type="checkbox"] {
+  margin: 0 1rem;
+}
+
+.padding-bottom__3rem {
+  padding-bottom: 3rem;
+}
+
+.padding-bottom__4rem {
+  padding-bottom: 4rem;
+}
+
+.timetable {
+  background: #F9F9F9;
+  border: 1px solid #D5E1E8;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 1rem;
+}
+
+.timetable:last-child {
+  margin-bottom: 0;
+}
+
+.timetable__title {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 24px;
+  color: #3F4351;
+  max-width: 40%;
+  border-right: 1px solid #D5E1E8;
+  padding: 1rem;
+}
+
+.timetable__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+}
+
+.timetable__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  border-bottom: 1px solid #D5E1E8;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 24px;
+  color: #3F4351;
+}
+
+.timetable__item:last-child {
+  border: 0;
+}
+
+.timetable__item-date {
+  border-right: 1px solid #D5E1E8;
+  padding: 1rem;
+  white-space: nowrap;
+}
+
+.timetable__item-address {
+  padding: 1rem;
+}
+
+.pagination {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 3rem;
+}
+
+.pagination li {
+  width: 34px;
+  height: 34px;
+  border: 1px solid #F3F3F3;
+  margin: 0;
+  padding: 0;
+  margin-right: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.pagination li a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  line-height: 20px;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+}
+
+.pagination li a:hover {
+  color: #FFF;
+}
+
+.pagination li:first-child, .pagination li:last-child {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  border: none;
+  padding: 0;
+  width: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.pagination .current {
+  padding: 0;
+}
+
+.pagination .pagination-previous a,
+.pagination .pagination-next a {
+  color: #911C2C;
+}
+
+.pagination .pagination-previous a:hover,
+.pagination .pagination-next a:hover {
+  color: #911C2C;
+  text-decoration: underline;
+  background: transparent;
 }
 
 @media screen and (max-width: 1123px) {
@@ -2263,6 +2495,12 @@ label > input {
   .sitemap__block {
     display: none;
   }
+  .sitemap__content {
+    background: #FFF;
+    margin-left: -16px;
+    margin-right: -16px;
+    padding: 1rem;
+  }
   footer {
     background: #F5F5F5;
   }
@@ -2305,6 +2543,9 @@ label > input {
   .section__tabs .tabs__main .medium-up-3 .cell {
     display: block;
   }
+  .section__timetable {
+    padding-bottom: 2rem;
+  }
   .banner-slider .slick-dots {
     bottom: 1rem;
     left: calc(50% - 144px / 2);
@@ -2327,42 +2568,97 @@ label > input {
     line-height: 28px;
     margin-bottom: 0;
   }
-  .course-card {
+  .news-card {
     border: 1px solid #D5E1E8;
     border-radius: 3px;
     overflow: hidden;
   }
-  .course-card__image {
+  .news-card__image {
     border-radius: 0;
     margin-bottom: 0;
   }
-  .course-card__title {
+  .news-card__title {
     padding: 24px;
     margin-bottom: 0;
   }
-  .course-card__descr {
+  .news-card__descr {
     padding: 0 24px 24px;
   }
-  .course__header {
+  .news__header {
     padding: 1rem 0 1.5rem;
   }
-  .course__header-image {
+  .news__header-image {
     min-height: auto;
   }
-  .course__header-info {
+  .news__header-info {
     margin-left: 0;
     padding-top: 1.5rem;
   }
-  .course__header-title {
+  .news__header-title {
     font-size: 16px;
     line-height: 25px;
   }
-  .course__header-descr {
+  .news__header-descr {
     font-size: 14px;
     line-height: 23px;
   }
-  .course__content {
+  .news__content {
     padding: 1.5rem 0;
+  }
+  .news__info {
+    padding: 1rem;
+  }
+  .news__info .cell:last-child {
+    margin-bottom: 0;
+  }
+  .news__title {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .news__descr * {
+    font-size: 15px;
+    line-height: 28px;
+    margin-bottom: 28px;
+  }
+  .padding-bottom__3rem {
+    padding-bottom: 1rem;
+  }
+  label {
+    font-weight: 500;
+  }
+  .helptext {
+    margin: 0 auto;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+  }
+  .button.custom {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: auto;
+    margin: 0 auto;
+  }
+  .timetable {
+    border: 0;
+    background: #FFF;
+    margin-left: -16px;
+    margin-right: -16px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .timetable__title {
+    border-right: 0;
+    border-bottom: 1px solid #D5E1E8;
+    max-width: none;
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .timetable__item-date {
+    border-right: 0;
+    min-width: 144px;
+    white-space: normal;
   }
 }
 

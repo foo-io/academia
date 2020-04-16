@@ -293,21 +293,21 @@ $breadcrumbs-item-separator-color: #8D92A3;
 // ----------
 
 $button-font-family: inherit;
-$button-font-weight: null;
-$button-padding: 0.85em 1em;
-$button-margin: 0 0 $global-margin 0;
+$button-font-weight: 500;
+$button-padding: rem-calc(10.5 65);
+$button-margin: 0;
 $button-fill: solid;
-$button-background: $primary-color;
-$button-background-hover: scale-color($button-background, $lightness: -15%);
-$button-color: $white;
+$button-background: #911C2C;
+$button-background-hover: #FFF;
+$button-color: #FFF;
 $button-color-alt: $black;
-$button-radius: $global-radius;
-$button-border: 1px solid transparent;
+$button-radius: 30px;
+$button-border: 1px solid #911C2C;
 $button-hollow-border-width: 1px;
 $button-sizes: (
   tiny: 0.6rem,
   small: 0.75rem,
-  default: 0.9rem,
+  default: 1rem,
   large: 1.25rem,
 );
 $button-palette: $foundation-palette;
@@ -460,7 +460,7 @@ $input-background-focus: #F9F9F9;
 $input-background-disabled: #F9F9F9;
 $input-border: 1px solid #D5E1E8;
 $input-border-focus: 1px solid #911C2C;;
-$input-padding: rem-calc(13) rem-calc(16);
+$input-padding: rem-calc(9 16);
 $input-shadow: none;
 $input-shadow-focus: none;
 $input-cursor-disabled: not-allowed;
@@ -593,19 +593,19 @@ $orbit-control-zindex: 10;
 // --------------
 
 $pagination-font-size: rem-calc(14);
-$pagination-margin-bottom: $global-margin;
-$pagination-item-color: $black;
+$pagination-margin-bottom: 0;
+$pagination-item-color: #4F4F4F;
 $pagination-item-padding: rem-calc(3 10);
 $pagination-item-spacing: rem-calc(1);
-$pagination-radius: $global-radius;
-$pagination-item-background-hover: $light-gray;
-$pagination-item-background-current: $primary-color;
-$pagination-item-color-current: $white;
-$pagination-item-color-disabled: $medium-gray;
-$pagination-ellipsis-color: $black;
+$pagination-radius: rem-calc(30);
+$pagination-item-background-hover: #911C2C;
+$pagination-item-background-current: #911C2C;
+$pagination-item-color-current: #FFF;
+$pagination-item-color-disabled: #BDBDBD;
+$pagination-ellipsis-color: #4F4F4F;
 $pagination-mobile-items: false;
 $pagination-mobile-current-item: false;
-$pagination-arrows: true;
+$pagination-arrows: false;
 $pagination-arrow-previous: '\00AB';
 $pagination-arrow-next: '\00BB';
 

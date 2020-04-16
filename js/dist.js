@@ -36,8 +36,20 @@ $(document).ready(function() {
     //! �������
         // ������ ��������� ������� ���������
         $('.title').text(function() {
-            $(this).text($(this).parent().attr('id'));
+            var text = $(this).parent().attr('id');
+            if( /\_map/.test(text) ){
+                $(this).text($(this).parent().attr('id').slice(0,-4));
+            } else {
+                $(this).text($(this).parent().attr('id'));
+            }
+    
         });
+        // var text = $('.title').text();
+        // if( /\_map/.test(text) ){
+        //     $(this).text($(this).parent().attr('id'));
+        // } else {
+        //     $(this).text($(this).parent().attr('id'));
+        // }
 
     //! выпадашка мобменю
         $('.menu__mobile>button').click(function (e) {
