@@ -14,6 +14,15 @@ function closeOutsideClick(element, button, closeElement) {
 
 $(document).ready(function() {
     
+    DG.then(function() {
+        var map = DG.map('map', {
+            center: [62.02885582811773, 129.72673416137698],
+            zoom: 13,
+            fullscreenControl: false,
+            zoomControl: false
+        });
+    });
+
     //! �������� �������
         // ����� ������
         $('button.card-section__button.compare').click(function() {
