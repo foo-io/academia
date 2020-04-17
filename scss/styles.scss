@@ -1706,6 +1706,71 @@ section {
 
         color: #3F4351;
     }
+    &__text {
+        * {
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 30px;
+            color: #3F4351;
+        }
+
+        p {
+            margin-bottom: 30px;
+        }
+    }
+    &__slider {
+        position: relative;
+
+        &-for {
+
+            img.slick-slide {
+                padding: 0;
+            }
+        }
+        &-nav {
+            position: absolute;
+            max-width: 100%;
+            bottom: 0;
+            padding: 0 .5rem 1rem;
+
+            img.slick-slide {
+                height: 54px;
+                min-height: auto;
+                max-height: none;
+                margin: 0 4px;
+                padding: 0;
+                border: 1px solid transparent;
+                cursor: pointer;
+                &:first-child {
+                    //margin-left: 1rem;
+                }
+                &:last-child {
+                    //margin-right: 1rem;
+                }
+            }
+            .slick-list {
+                max-height: 54px;
+            }
+            .slick-track {
+                height: 100%;
+            }
+            img.slick-current {
+                border: 1px solid #FFFFFF;
+                position: relative;
+                &:before {
+                    background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
+                    content: ""; // ::before and ::after both require content
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-image: linear-gradient(120deg, #eaee44, #33d0ff);
+                    opacity: .7;
+                }
+            }
+        }
+    }
 }
 label > input {
     margin-top: 1rem !important;

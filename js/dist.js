@@ -120,6 +120,26 @@ $(document).ready(function() {
                 ]
             });
         }
+
+        $('.news__slider-for').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: false,
+            fade: true,
+            asNavFor: '.news__slider-nav'
+          });
+          $('.news__slider-nav').slick({
+            slidesToShow: 7,
+            slidesToScroll: 1,
+            asNavFor: '.news__slider-for',
+            infinite: false,
+            //dots: true,
+            //centerMode: true,
+            focusOnSelect: true,
+            arrows: false,
+            
+          });
+
     var time = 2;
     var $slick, isPause, tick, percentTime = 0;
   
