@@ -1695,6 +1695,12 @@ section {
   padding-bottom: 4rem;
 }
 
+.section__contacts {
+  margin-top: -6rem;
+  position: relative;
+  padding-top: 0;
+}
+
 .info__title {
   font-weight: 500;
   font-size: 18px;
@@ -2122,6 +2128,7 @@ section {
   color: #3F4351;
   font-size: 14px;
   line-height: 22px;
+  border-radius: 0 4px 4px 0;
 }
 
 .news__info-item {
@@ -2210,8 +2217,13 @@ section {
   opacity: .7;
 }
 
-label > input {
+label > input,
+label > textarea {
   margin-top: 1rem !important;
+}
+
+textarea {
+  border-radius: 1rem;
 }
 
 .helptext {
@@ -2232,6 +2244,14 @@ label > input {
 
 .helptext [type="checkbox"] {
   margin: 0 1rem;
+}
+
+.padding-bottom__1rem {
+  padding-bottom: 1rem;
+}
+
+.padding-bottom__2rem {
+  padding-bottom: 2rem;
 }
 
 .padding-bottom__3rem {
@@ -2376,6 +2396,35 @@ label > input {
   color: #911C2C;
   text-decoration: underline;
   background: transparent;
+}
+
+#map {
+  width: 100%;
+  height: 420px;
+}
+
+.address {
+  background: #FFFFFF;
+  border: 1px solid #D5E1E8;
+  border-radius: 4px;
+  padding: 24px;
+  margin-bottom: 1rem;
+}
+
+.address__item {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  color: #8D92A3;
+  margin-bottom: 1rem;
+}
+
+.address__item:last-child {
+  margin-bottom: 0;
+}
+
+.address__link {
+  color: #911C2C;
 }
 
 @media screen and (max-width: 1123px) {
