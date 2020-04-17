@@ -137,7 +137,19 @@ $(document).ready(function() {
             //centerMode: true,
             focusOnSelect: true,
             arrows: false,
-            
+            responsive: [{
+                breakpoint: 9999,
+                slidesToShow: 2,
+                slidesToScroll: 1,
+        },
+            {
+                breakpoint: 540,
+                settings: {
+                    slidesToShow: 4,
+                    slidesToScroll: 1,
+                }
+            },
+            ]
           });
 
     var time = 2;

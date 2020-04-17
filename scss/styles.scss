@@ -1712,6 +1712,11 @@ section {
             font-size: 16px;
             line-height: 30px;
             color: #3F4351;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
         }
 
         p {
@@ -2361,5 +2366,41 @@ label > input {
     .header__logo-link {
         font-size: 14px;
         line-height: 16px;
+    }
+    .news {
+        &__slider {
+            &-nav {
+                position: unset;
+                max-width: 100%;
+                bottom: 0;
+                padding: 1rem 0 1rem;
+
+                .slick-list {
+                    max-height: 54px;
+                }
+    
+            }
+        }
+        &__text {
+            * {
+                font-size: 15px;
+                line-height: 28px;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+
+            p {
+                margin-bottom: 28px;
+            }
+        }
+    }
+    .news-card {
+        &__title {
+            font-size: 15px;
+            line-height: 22px;
+        }
+
     }
 }

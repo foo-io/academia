@@ -2151,6 +2151,10 @@ section {
   color: #3F4351;
 }
 
+.news__text *:last-child {
+  margin-bottom: 0;
+}
+
 .news__text p {
   margin-bottom: 30px;
 }
@@ -2752,5 +2756,28 @@ label > input {
   .header__logo-link {
     font-size: 14px;
     line-height: 16px;
+  }
+  .news__slider-nav {
+    position: unset;
+    max-width: 100%;
+    bottom: 0;
+    padding: 1rem 0 1rem;
+  }
+  .news__slider-nav .slick-list {
+    max-height: 54px;
+  }
+  .news__text * {
+    font-size: 15px;
+    line-height: 28px;
+  }
+  .news__text *:last-child {
+    margin-bottom: 0;
+  }
+  .news__text p {
+    margin-bottom: 28px;
+  }
+  .news-card__title {
+    font-size: 15px;
+    line-height: 22px;
   }
 }
