@@ -415,9 +415,9 @@ label.middle {
 
 .help-text {
   margin-top: -0.5rem;
-  font-size: 0.8125rem;
-  font-style: italic;
-  color: #0a0a0a;
+  font-size: 0.875rem;
+  font-style: normal;
+  color: #8D92A3;
 }
 
 .input-group {
@@ -3300,7 +3300,7 @@ ul.no-bullet, ol.no-bullet {
   display: inline-block;
   vertical-align: middle;
   margin: 0;
-  padding: 0.65625rem 4.0625rem;
+  padding: 0.65625rem;
   border: 1px solid #911C2C;
   border-radius: 30px;
   -webkit-transition: background-color 0.25s ease-out, color 0.25s ease-out;
@@ -3532,7 +3532,7 @@ ul.no-bullet, ol.no-bullet {
   top: 0.4em;
   display: inline-block;
   float: right;
-  margin-left: 4.0625rem;
+  margin-left: 0.65625rem;
 }
 
 .button.dropdown.hollow::after, .button.dropdown.clear::after {
