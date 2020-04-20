@@ -2463,6 +2463,9 @@ textarea {
   .section__tabs .tabs__main .medium-up-3 .cell:nth-child(-n+3) {
     display: block;
   }
+  .contacts__image {
+    padding-bottom: 2rem;
+  }
 }
 
 @media screen and (max-width: 48rem) {
@@ -2661,6 +2664,17 @@ textarea {
   .section__timetable {
     padding-bottom: 2rem;
   }
+  .section__contacts {
+    margin-top: 0;
+    padding-bottom: 0;
+    margin-bottom: -1rem;
+  }
+  .section__contacts .news__title {
+    padding: 2rem 0;
+  }
+  .section__contacts .news__info {
+    margin-bottom: 1rem;
+  }
   .banner-slider .slick-dots {
     bottom: 1rem;
     left: calc(50% - 144px / 2);
@@ -2774,6 +2788,32 @@ textarea {
     border-right: 0;
     min-width: 144px;
     white-space: normal;
+  }
+  .contacts__items {
+    background: #FFF;
+    margin: 0 -1rem !important;
+    padding: 1.5rem .5rem 0;
+  }
+  .contacts__items.padding-bottom__3rem {
+    padding-bottom: 0;
+  }
+  .contacts__image {
+    background: #FFF;
+    min-width: calc(100% + 1rem);
+  }
+  .contacts__form {
+    background: #FFF;
+    margin: 0 -1rem !important;
+    min-width: calc(100% + 1rem);
+    padding: 0 1rem 2rem !important;
+  }
+  .address {
+    border: 0;
+    padding: 0;
+    margin-bottom: 2rem;
+  }
+  #map {
+    height: 268px;
   }
 }
 

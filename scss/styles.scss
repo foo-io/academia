@@ -2012,6 +2012,11 @@ textarea {
             }
         }
     }
+    .contacts {
+        &__image {
+            padding-bottom: 2rem;
+        }
+    }
 }
 
 @media screen and (max-width: 48rem) {
@@ -2232,6 +2237,18 @@ textarea {
         &__timetable {
             padding-bottom: 2rem;
         }
+        &__contacts {
+            margin-top: 0;
+            padding-bottom: 0;
+            margin-bottom: -1rem; // костыль но всё таки
+
+            .news__title {
+                padding: 2rem 0;
+            }
+            .news__info {
+                margin-bottom: 1rem;
+            }
+        }
     }
     .banner-slider {
         .slick-dots {
@@ -2379,8 +2396,36 @@ textarea {
             //width: 50%;
 
 		}
-}
-
+    }
+    .contacts {
+        &__items {
+            background: #FFF;
+            margin: 0 -1rem !important;
+            padding: 1.5rem .5rem 0;
+    
+            &.padding-bottom__3rem {
+                padding-bottom: 0;
+            }
+        }
+        &__image {
+            background: #FFF;
+            min-width: calc(100% + 1rem);
+        }
+        &__form {
+            background: #FFF;
+            margin: 0 -1rem !important;
+            min-width: calc(100% + 1rem);
+            padding: 0 1rem 2rem !important;
+        }
+    }
+    .address {
+        border: 0;
+        padding: 0;
+        margin-bottom: 2rem;
+    }
+    #map {
+        height: 268px;
+    }
 }
 @media screen and (max-width: 37rem) {
     // меняем флекс дирекшн у субскрайб
