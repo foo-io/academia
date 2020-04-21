@@ -1,0 +1,964 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каталог товаров (Гель-лаки)</title>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" href="css/app.min.css">
+    <link rel="stylesheet" href="css/styles.min.css">
+
+</head>
+<body>
+    <!-- Компонент хедера -->
+    <header>
+        <div class="header__top">
+            <div class="grid-container">
+                <div class="header__top-content">
+                    <div class="header__top-cities">
+                        <ul class="dropdown menu custom" data-dropdown-menu>
+                            <li>
+                                <a href="#" class="custom__selected">Якутск</a>
+                                <ul class="menu">
+                                    <li><a href="#">Москва</a></li>
+                                    <li><a href="#">Санкт-Петербург</a></li>
+                                    <li><a href="#">Новосибирск</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="header__top-address">
+                        <div class="phone">
+                            <a href="tel:+79142223344">
+                                <i class="icon-phone"></i>
+                                Интернет-магазин: 8‒914‒222‒33‒44
+                            </a>
+                        </div>
+                        <div class="location">
+                            <ul class="dropdown menu custom" data-dropdown-menu>
+                                <li>
+                                    <a href="#" class="custom__selected">
+                                        <i class="icon-location"></i>
+                                        ТЦ “Атлант”, 2 этаж ( 8‒914‒2‒725‒521 )            
+                                    </a>
+                                    <ul class="menu">
+                                        <li><a href="#">ТЦ “Атлант”, 2 этаж ( 8‒914‒2‒725‒521 )</a></li>
+                                        <li><a href="#">ТЦ “Атлант”, 2 этаж ( 8‒914‒2‒725‒521 )</a></li>
+                                        <li><a href="#">ТЦ “Атлант”, 2 этаж ( 8‒914‒2‒725‒521 )</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="header__top-search">
+                        <button class="button pc-search" data-toggle="pc-search"><i class="icon-search"></i></button>
+                        <div class="pc-search__block small reveal " id="pc-search" data-reveal>
+                            <form action="#" class="pc-search__form">
+                                <input type="text" name="search" id="search" class="pc-search__input" placeholder="Введите поисковый запрос, например, жидкость для снятия лака">
+                                <button type="submit" class="pc-search__button"><i class="icon-search"></i></button>
+                            </form>
+                        </div>
+                    </div>    
+                </div>
+            </div>
+        </div>
+        <div class="header__center">
+            <div class="grid-container">
+                <div class="header__center-content">
+                    <div class="header__logo">
+                        <a href="#" class="header__logo-link">
+                            <img src="/images/header/logo.png" alt="Логотип">
+                            Академия Красоты
+                        </a>
+                    </div>
+                    <div class="header__menu">
+                        <!-- desktop nav -->
+                        <ul class="dropdown menu show-for-large" data-dropdown-menu>
+                            <li>
+                                <a href="#">О компании</a>
+                                <ul class="menu">
+                                    <li><a href="#">Item 1A</a></li>
+                                    <li><a href="#">Item 1A</a></li>
+                                    <li><a href="#">Item 1A</a></li>
+                                    <!-- ... -->
+                                </ul>
+                            </li>
+                            <li><a href="#">Новости</a></li>
+                            <li><a href="#">Оптовикам</a></li>
+                            <li>
+                                <a href="#">Покупателям</a>
+                                <ul class="menu">
+                                    <li><a href="#">Item 1A</a></li>
+                                    <!-- ... -->
+                                </ul>
+                            </li>
+                            <li><a href="#">Салон</a></li>
+                            <li>
+                                <a href="#">Учебный центр</a>
+                                <ul class="menu">
+                                    <li><a href="#">Item 1A</a></li>
+                                    <!-- ... -->
+                                </ul>
+                            </li>
+                        </ul>
+                        <!-- mobile nav -->
+                        <ul class="dropdown menu hide-for-large" data-dropdown-menu>
+                            <li>
+                                <a href="#">О компании</a>
+                                <ul class="menu">
+                                    <li><a href="#">Item 1A</a></li>
+                                    <li><a href="#">Item 1A</a></li>
+                                    <li><a href="#">Item 1A</a></li>
+                                    <!-- ... -->
+                                </ul>
+                            </li>
+                            <li><a href="#">Новости</a></li>
+                            <li>
+                                <a href="#">Еще</a>
+                                <ul class="menu">
+                                    <li><a href="#">Item 1A</a></li>
+                                    <!-- ... -->
+                                </ul>
+                            </li>
+                        </ul>
+
+                    </div>
+                    <div class="header__sign">
+                        <button class="sign__button" type="button" data-toggle="sign-up">Регистрация</button>
+                        <div class="sign__delimeter"></div>
+                        <button class="sign__button" type="button" data-toggle="sign-in"><i class="icon-user"></i> Войти</button>
+                        <a href="#" class="sign__button mobile__auth"><i class="icon-user"></i> Войти</a>
+                        <div class="dropdown-pane sign__container" id="sign-up" data-dropdown data-auto-focus="true" data-position="bottom" data-alignment="right" data-parent-class="header__sign">
+                            <div class="sign__container-title">Регистрация</div>
+                            <form>
+                                <div class="cell medium-12">
+                                    <label>
+                                        <input type="text" placeholder="Фамилия">
+                                    </label>
+                                </div>
+                                <div class="cell medium-12">
+                                    <label>
+                                        <input type="text" placeholder="Имя">
+                                    </label>
+                                </div>
+                                <div class="cell medium-12">
+                                    <label>
+                                        <input type="email" placeholder="e-mail">
+                                    </label>
+                                </div>
+                                <div class="cell medium-12">
+                                    <label>
+                                        <input type="password" placeholder="Пароль">
+                                    </label>
+                                </div>
+                                <div class="cell medium-12">
+                                    <label>
+                                        <input type="password" placeholder="Повторите пароль">
+                                    </label>
+                                </div>
+                                <div class="cell medium-12">
+                                    <div class="sign__captcha">
+                                        // captcha
+                                    </div>
+                                </div>
+                                <div class="cell medium-12">
+                                    <input type="submit" class="sign__submit" value="Зарегистрироваться">
+                                </div>
+                            </form>
+                            <div class="sign__container-bottom">
+                                Уже есть аккаунт?
+                                <a href="#">Авторизуйтесь</a>
+                            </div>
+                        </div>
+                        <div class="dropdown-pane sign__container" id="sign-in" data-dropdown data-auto-focus="true" data-position="bottom" data-alignment="right">
+                            <div class="sign__container-title">Авторизация</div>
+                            <form>
+                                <div class="cell medium-12">
+                                    <label>
+                                        <input type="text" placeholder="Номер телефона">
+                                    </label>
+                                </div>
+                                <div class="cell medium-12">
+                                    <label>
+                                        <input type="password" placeholder="Пароль">
+                                        <a href="#" class="forgot">Забыли пароль?</a>
+                                    </label>
+                                </div>
+                                <div class="cell medium-12">
+                                    <input type="submit" class="sign__submit" value="Войти">
+                                </div>
+                            </form>
+                            <div class="sign__container-bottom">
+                                Еще нет аккаунта?
+                                <a href="#">Зарегистрируйтесь</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header__bottom">
+            <div class="grid-container">
+                <div class="header__bottom-content">
+                    <!--! Main catalog -->
+                    <div class="catalog">
+                        
+                        <ul class="menu">
+                            <li class="hide-for-large"><a href="#" class="catalog__item"><i class="icon-burger"></i>Весь каталог</a></li>
+                            <li><button class="button catalog__item" type="button" data-toggle="brands-tab">Бренды</button></li>
+                            <li><button class="button catalog__item" type="button" data-toggle="gel-tab">Гель-лаки</button></li>
+                            <li><a href="#" class="catalog__item">Маникюр</a></li>
+                            <li><a href="#" class="catalog__item">Педикюр</a></li>
+                            <li><a href="#" class="catalog__item">Брови и ресницы</a></li>
+                            <li><a href="#" class="catalog__item">Волосы</a></li>
+                            <li><a href="#" class="catalog__item">Уход за кожей</a></li>
+                            <li><a href="#" class="catalog__item">Оборудование</a></li>
+                            <li><a href="#" class="catalog__item">Прочее</a></li>
+                        </ul>
+                        <div class="dropdown-pane" id="brands-tab" data-dropdown data-hover="true" data-hover-pane="true">
+                            <div class="catalog__content">
+                                <ul class="tabs" data-tabs id="brands-tab">
+                                    <li class="tabs-title is-active"><a href="#A" aria-selected="true">A</a></li>
+                                    <li class="tabs-title"><a data-tabs-target="B" href="#B">B</a></li>
+                                    <li class="tabs-title"><a data-tabs-target="C" href="#C">C</a></li>
+                                    <li class="tabs-title"><a data-tabs-target="D" href="#D">D</a></li>
+                                    <li class="tabs-title"><a data-tabs-target="E" href="#E">E</a></li>
+                                    <li class="tabs-title"><a data-tabs-target="F" href="#F">F</a></li>
+                                    <li class="tabs-title"><a data-tabs-target="G" href="#G">G</a></li>
+                                    <li class="tabs-title"><a data-tabs-target="H" href="#H">H</a></li>
+                                    <li class="tabs-title"><a data-tabs-target="I" href="#I">I</a></li>
+                                    <li class="tabs-title"><a data-tabs-target="J" href="#J">J</a></li>
+                                    <li class="tabs-title"><a data-tabs-target="K" href="#K">K</a></li>
+                                    <li class="tabs-title"><a data-tabs-target="L" href="#L">L</a></li>
+                                    <li class="tabs-title"><a data-tabs-target="M" href="#M">M</a></li>
+                                    <li class="tabs-title"><a data-tabs-target="N" href="#N">N</a></li>
+                                    <li class="tabs-title"><a data-tabs-target="O" href="#O">O</a></li>
+                                    <li class="tabs-title"><a data-tabs-target="P" href="#P">P</a></li>
+                                    <li class="tabs-title"><a data-tabs-target="R" href="#R">R</a></li>
+                                    <li class="tabs-title"><a data-tabs-target="S" href="#S">S</a></li>
+                                    <li class="tabs-title"><a data-tabs-target="T" href="#T">T</a></li>
+                                    <li class="tabs-title"><a data-tabs-target="U" href="#U">U</a></li>
+                                    <li class="tabs-title"><a data-tabs-target="V" href="#V">V</a></li>
+                                    <li class="tabs-title"><a data-tabs-target="W" href="#W">W</a></li>
+                                    <li class="tabs-title"><a data-tabs-target="Y" href="#Y">Y</a></li>
+                                    <li class="tabs-title"><a data-tabs-target="Z" href="#Z">Z</a></li>
+                                    <li class="tabs-title"><a data-tabs-target="А-Я" href="#А-Я">А-Я</a></li>
+                                    <li class="tabs-title"><a data-tabs-target="0-9" href="#0-9">0-9</a></li>
+                                </ul>
+                                <div class="tabs-content" data-tabs-content="brands-tab">
+                                    <div class="tabs-panel is-active" id="A">
+                                        <div class="title"></div> <!-- ставится автоматом (jquery) -->
+                                        
+                                        <ul class="brands-tab__list">
+                                            <li><a href="#" class="brands-tab__list-item">Aasha Herbals</a></li>
+                                            <li><a href="#" class="brands-tab__list-item">Adri Coco</a></li>
+                                            <li><a href="#" class="brands-tab__list-item">AIRnails</a></li>
+                                            <li><a href="#" class="brands-tab__list-item">Alan Hadash</a></li>
+                                            <li><a href="#" class="brands-tab__list-item">Alba Botanica</a></li>
+                                            <li><a href="#" class="brands-tab__list-item">Alfaparf Milano</a></li>
+                                            <li><a href="#" class="brands-tab__list-item">Almea</a></li>
+                                            <li><a href="#" class="brands-tab__list-item">Aasha Herbals</a></li>
+                                            <li><a href="#" class="brands-tab__list-item">Adri Coco</a></li>
+                                            <li><a href="#" class="brands-tab__list-item">AIRnails</a></li>
+                                            <li><a href="#" class="brands-tab__list-item">Alan Hadash</a></li>
+                                            <li><a href="#" class="brands-tab__list-item">Alba Botanica</a></li>
+                                            <li><a href="#" class="brands-tab__list-item">Alfaparf Milano</a></li>
+                                            <li><a href="#" class="brands-tab__list-item">Almea</a></li>
+                                            <li><a href="#" class="brands-tab__list-item">Aasha Herbals</a></li>
+                                            <li><a href="#" class="brands-tab__list-item">Adri Coco</a></li>
+                                            <li><a href="#" class="brands-tab__list-item">AIRnails</a></li>
+                                            <li><a href="#" class="brands-tab__list-item">Alan Hadash</a></li>
+                                            <li><a href="#" class="brands-tab__list-item">Alba Botanica</a></li>
+                                            <li><a href="#" class="brands-tab__list-item">Alfaparf Milano</a></li>
+                                            <li><a href="#" class="brands-tab__list-item">Almea</a></li>
+                                            <li><a href="#" class="brands-tab__list-item">Aasha Herbals</a></li>
+                                            <li><a href="#" class="brands-tab__list-item">Adri Coco</a></li>
+                                            <li><a href="#" class="brands-tab__list-item">AIRnails</a></li>
+
+                                        </ul>
+                                    </div>
+                                    <div class="tabs-panel" id="B">
+                                        <div class="title"></div> <!-- ставится автоматом (jquery) -->
+
+                                        <p>Suspendisse dictum feugiat nisl ut dapibus.  Vivamus hendrerit arcu sed erat molestie vehicula. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor.  Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="dropdown-pane" id="gel-tab" data-dropdown data-hover="true" data-hover-pane="true">
+                            <div class="catalog__content">
+                                <ul class="catalog__list">
+                                    <li class="catalog__list-header"><a href="#">Аппаратный маникюр и педикюр</a></li>
+                                    <li class="catalog__list-item"><a href="#">Материалы для наращивания</a></li>
+                                    <li class="catalog__list-item"><a href="#">Машинки для маникюра и педикюра</a></li>
+                                    <li class="catalog__list-item"><a href="#">Фрезы (насадки)</a></li>
+                                    <li class="catalog__list-item"><a href="#">Пылесосы для маникюра</a></li>
+                                    <li class="catalog__list-header"><a href="#">Аэрография</a></li>
+                                    <li class="catalog__list-item"><a href="#">Краски для аэрографа</a></li>
+                                    <li class="catalog__list-item"><a href="#">Оборудование</a></li>
+                                    <li class="catalog__list-item"><a href="#">Трафареты</a></li>
+                                    <li class="catalog__list-header"><a href="#">Дезинфекторы</a></li>
+                                    <li class="catalog__list-item"><a href="#">Для инструментов</a></li>
+                                    <li class="catalog__list-item"><a href="#">Для ногтей</a></li>
+                                    <li class="catalog__list-item"><a href="#">Для рук</a></li>
+                                    <li class="catalog__list-header"><a href="#">Дегидраторы</a></li>
+                                    <li class="catalog__list-header"><a href="#">Дизайн ногтей</a></li>
+                                    <li class="catalog__list-item"><a href="#">Аэропуффинг</a></li>
+                                    <li class="catalog__list-item"><a href="#">Бархатный песок</a></li>
+                                    <li class="catalog__list-item"><a href="#">Гель-паста</a></li>
+                                    <li class="catalog__list-item"><a href="#">Наклейки для дизайна</a></li>
+                                    <li class="catalog__list-header"><a href="#">Аппаратный маникюр и педикюр</a></li>
+                                    <li class="catalog__list-item"><a href="#">Материалы для наращивания</a></li>
+                                    <li class="catalog__list-item"><a href="#">Машинки для маникюра и педикюра</a></li>
+                                    <li class="catalog__list-item"><a href="#">Фрезы (насадки)</a></li>
+                                    <li class="catalog__list-item"><a href="#">Пылесосы для маникюра</a></li>
+                                    <li class="catalog__list-header"><a href="#">Аэрография</a></li>
+                                    <li class="catalog__list-item"><a href="#">Краски для аэрографа</a></li>
+                                    <li class="catalog__list-item"><a href="#">Оборудование</a></li>
+                                    <li class="catalog__list-item"><a href="#">Трафареты</a></li>
+                                    <li class="catalog__list-header"><a href="#">Дезинфекторы</a></li>
+                                    <li class="catalog__list-item"><a href="#">Для инструментов</a></li>
+                                    <li class="catalog__list-item"><a href="#">Для ногтей</a></li>
+                                    <li class="catalog__list-item"><a href="#">Для рук</a></li>
+                                    <li class="catalog__list-header"><a href="#">Дегидраторы</a></li>
+                                    <li class="catalog__list-header"><a href="#">Дизайн ногтей</a></li>
+                                    <li class="catalog__list-item"><a href="#">Аэропуффинг</a></li>
+                                    <li class="catalog__list-item"><a href="#">Бархатный песок</a></li>
+                                    <li class="catalog__list-item"><a href="#">Гель-паста</a></li>
+                                    <li class="catalog__list-item"><a href="#">Наклейки для дизайна</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <!--! /Main catalog -->
+
+                    <!-- Mobile Menu -->
+
+                    <div class="menu__mobile">
+                        <button class="button" type="button" data-toggle="mobile-menu"><i class="icon-burger"></i> Меню</button>
+
+                        <div class="dropdown-pane" id="mobile-menu" data-dropdown>
+                            <div class="accordion-menu__wrapper">
+                                <ul class="vertical menu accordion-menu accordion-menu__mobile-menu" data-accordion-menu data-multi-open="false">
+                                    <li><a href="#">Каталог товаров</a></li>
+                                    <li><a href="#">Бренды</a></li>
+                                    <li>
+                                        <a href="#">Покупателям</a>
+                                        <ul class="menu vertical nested">
+                                            <li><a href="#">Личный кабинет</a></li>
+                                            <li><a href="#">Способы оплаты</a></li>
+                                            <li><a href="#">Доставка</a></li>
+                                            <li><a href="#">Обмен, возврат</a></li>
+                                            <li><a href="#">Пользовательское соглашение</a></li>
+                                            <li><a href="#">Политика конфиденциальности</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">Новости</a></li>
+                                    <li><a href="#">Салон</a></li>
+                                    <li><a href="#">Оптовикам</a></li>
+                                    <li>
+                                        <a href="#">О компании</a>
+                                        <ul class="menu vertical nested">
+                                            <li><a href="#">Item 1A</a></li>
+                                            <li><a href="#">Item 1B</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- /Mobile Menu -->
+                    <div class="widgets">
+                        <div class="widget">
+                            <a href="#">
+                                <i class="icon-compare"></i>
+                                <span class="count">3</span>
+                            </a>
+                        </div>
+                        <div class="widget">
+                            <a href="#">
+                                <i class="icon-favorite"></i>
+                                <span class="count">23</span>
+                            </a>
+                        </div>
+                        <div class="widget">
+                            <a href="#">
+                                <i class="icon-cart"></i>
+                                <span class="count">5</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- / Компонент хедера -->
+
+    <main>
+
+        <!-- Breadcrumb -->
+
+        <div class="grid-container">
+            <div class="grid-x grid-padding-x">
+                <nav role="navigation" class="cell large-12">
+                    <ul class="breadcrumbs">
+                        <li><a href="#">Главная</a></li>
+                        <li><a href="#">Каталог товаров</a></li>
+                        <li><a href="#">Маникюр</a></li>
+                        <li>Гель-лаки</li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+        <!-- ./Breadcrumb -->
+
+        <!-- GoBack -->
+        <section class="section__back">
+            <div class="grid-container">    
+                <a href="#" class="back__link"><i class="icon-back"></i> Вернуться</a>
+            </div>
+        </section>
+        <!-- ./GoBack -->
+
+        <section class="section__products">
+            <div class="grid-container">
+                <div class="grid-x grid-padding-x">
+                    
+                    <div class="cell large-12 medium-12 small-12">
+                        <h1>Гель-лаки</h1>
+                    </div>
+    
+                </div>
+                <div class="grid-x grid-padding-x">
+                    <div class="cell large-12 medium-12 small-12 show-for-small-only">
+                        <div class="grid-x grid-padding-x">
+                            <div class="cell large-3 medium-3">
+                                mobilefilter
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cell large-12 medium-12 small-12 hide-for-small-only">
+                        <div class="grid-x grid-padding-x">
+                            <div class="cell large-3 medium-3">
+                                <button class="filter filter__catalog" type="button" data-toggle="filter-catalog">Каталог <i class="icon-dropdown-down filter-catalog"></i></button>
+                                
+                                <div class="dropdown-pane filter__dropdown" id="filter-catalog" data-dropdown data-hover="false" data-hover-pane="false">
+                                    Just some junk that needs to be said. Or not. Your choice.
+                                </div>
+                            </div>
+                            <div class="cell large-3 medium-3">
+                                strokeDashoffset
+                            </div>
+                            <div class="cell large-3 medium-3">
+                                strokeDashoffset
+                            </div>
+                            <div class="cell large-3 medium-3">
+                                strokeDashoffset
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cell large-3 medium-4 hide-for-small-only">
+                        <div class="grid-x grid-padding-x">
+                            <div class="cell large-12">
+                                filter
+                            </div>
+                            <div class="cell large-12">
+                                filter
+                            </div>
+                            <div class="cell large-12">
+                                filter
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cell large-9 medium-8">
+                        <div class="grid-x grid-padding-x large-up-3 medium-up-3 small-up-1">
+                            asd
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Компонент футера -->
+    <footer>
+        <div class="subscribe">
+            <div class="grid-container">
+                <div class="grid-x">
+                    <div class="subscribe__wrapper">
+                        <div class="subscribe__text">
+                            <img src="/images/footer/subscribe.png" alt="">
+                            <span>Будьте в курсе всех наших акций и событий с подпиской на рассылку!</span>
+                        </div>
+                        <div class="subscribe__block">
+                            <form action="#" class="subscribe__form">
+                                <input type="email" name="" id="" class="input-custom" placeholder="Ваш e-mail...">
+                                <button type="submit" class="input-custom__button"><i class="icon-go-right"></i></button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>        
+        </div>
+        <div class="grid-container">
+            <div class="grid-x grid-padding-x footer__wrapper hide-for-small-only">
+                <div class="cell large-6 medium-4">
+                    <div class="footer__logo">
+                        <a href="#" class="header__logo-link">
+                            <img src="/images/header/logo.png" alt="Логотип">
+                            Академия Красоты
+                        </a>
+                    </div>
+                    <div class="footer__contacts">
+                        <div class="grid-x grid-padding-x">
+                            <div class="cell large-6">
+                                <ul class="footer__list">
+                                    <li class="footer__list-item"><a href="#" class="footer__list-link">О компании</a></li>
+                                    <li class="footer__list-item"><a href="#" class="footer__list-link">Контакты</a></li>
+                                    <li class="footer__list-item"><a href="#" class="footer__list-link">Салон</a></li>
+                                    <li class="footer__list-item"><a href="#" class="footer__list-link">Оптовикам</a></li>
+                                </ul>
+                            </div>
+                            <div class="cell large-6">
+                                <ul class="footer__list">
+                                    <li class="footer__list-item"><a href="#" class="footer__list-link"><i class="icon-phone"></i> 8 914 222 33 44</a></li>
+                                    <li class="footer__list-item"><a href="#" class="footer__list-link"><i class="icon-instagram"></i>akademia_krasoty_ykt_shop</a></li>
+                                    <li class="footer__list-item"><a href="#" class="footer__list-link"><i class="icon-instagram"></i>akademia_ykt</a></li>
+                                </ul>                           
+                            </div>
+                        </div>    
+                    </div>
+                </div>
+                <div class="cell large-2 medium-auto">
+                    <h4 class="footer__list-title">Каталог</h4>
+                    <ul class="footer__list">
+                        <li class="footer__list-item"><a href="#" class="footer__list-link">Бренды</a></li>
+                        <li class="footer__list-item"><a href="#" class="footer__list-link">Маникюр</a></li>
+                        <li class="footer__list-item"><a href="#" class="footer__list-link">Педикюр</a></li>
+                        <li class="footer__list-item"><a href="#" class="footer__list-link">Брови и ресницы</a></li>
+                        <li class="footer__list-item"><a href="#" class="footer__list-link">Волосы</a></li>
+                        <li class="footer__list-item"><a href="#" class="footer__list-link">Уход за кожей</a></li>
+                        <li class="footer__list-item"><a href="#" class="footer__list-link">Оборудование</a></li>
+                        <li class="footer__list-item"><a href="#" class="footer__list-link">Прочее</a></li>
+                        <li class="footer__list-item"><a href="#" class="footer__list-link red">Полный каталог</a></li>
+                    </ul>
+                </div>
+                <div class="cell large-2 medium-auto">
+                    <h4 class="footer__list-title">Покупателям</h4>
+                    <ul class="footer__list">
+                        <li class="footer__list-item"><a href="#" class="footer__list-link">Личный кабинет</a></li>
+                        <li class="footer__list-item"><a href="#" class="footer__list-link">Способы оплаты</a></li>
+                        <li class="footer__list-item"><a href="#" class="footer__list-link">Доставка</a></li>
+                        <li class="footer__list-item"><a href="#" class="footer__list-link">Обмен, возврат</a></li>
+                        <li class="footer__list-item"><a href="#" class="footer__list-link">Пользовательское соглашение</a></li>
+                        <li class="footer__list-item"><a href="#" class="footer__list-link">Политика конфиденциальности</a></li>
+                    </ul>
+                </div>
+                <div class="cell large-2 medium-auto">
+                    <h4 class="footer__list-title">Учебный центр</h4>
+                    <ul class="footer__list">
+                        <li class="footer__list-item"><a href="#" class="footer__list-link">Курсы</a></li>
+                        <li class="footer__list-item"><a href="#" class="footer__list-link">Расписание</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="grid-x grid-padding-x footer__wrapper-mobile show-for-small-only">
+                <ul class="vertical menu accordion-menu" data-accordion-menu data-multi-open="false">
+                    <li><a href="#"><i class="icon-burger"></i> Каталог товаров</a></li>
+                    <li><a href="#">Бренды</a></li>
+                    <li>
+                        <a href="#">О компании</a>
+                        <ul class="menu vertical">
+                            <li><a href="#">Item 1A</a></li>
+                            <li><a href="#">Item 1B</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Покупателям</a>
+                        <ul class="menu vertical">
+                            <li><a href="#">Item 1A</a></li>
+                            <li><a href="#">Item 1B</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Учебный центр</a>
+                        <ul class="menu vertical">
+                            <li><a href="#">Item 1A</a></li>
+                            <li><a href="#">Item 1B</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Контакты</a></li>
+                    <li><a href="#" class="sitemap"><i class="icon-map"></i> Карта сайта</a></li>
+                </ul>
+            </div>
+            <div class="grid-x grid-padding-x">
+                <div class="cell large-12">
+                    <div class="footer__bottom">
+                        <div class="footer__phone">
+                            <i class="icon-phone"></i>
+                            <div class="footer__phone-text">
+                                Интернет-магазин:
+                                <a href="#">8 914 222 33 44</a>
+                            </div>
+                        </div>
+                        <div class="sitemap__block">
+                            <a href="#" class="sitemap__link"><i class="icon-map"></i> Карта сайта</a>
+                        </div>
+                        <div class="copyright">
+                            <div class="copyright__item">© 2020 “Академия Красоты”</div>
+                            <div class="copyright__item">Дизайн и разработка <a href="#">Платформа</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- / Компонент футера -->
+
+
+    <div class="grid-container">
+        <div class="grid-x grid-padding-x">
+            <div class="cell large-6">cell 1</div>
+            <div class="cell large-6">cell 2 </div>
+        </div>
+    </div>
+
+
+    <div class="grid-container">
+        <div class="grid-x grid-padding-x">
+            <div class="cell small-1">cell 1</div>
+            <div class="cell small-1">cell 2 </div>
+            <div class="cell small-1">cell 3</div>
+            <div class="cell small-1">cell 4</div>
+            <div class="cell small-1">cell 5</div>
+            <div class="cell small-1">cell 6</div>
+            <div class="cell small-1">cell 7</div>
+            <div class="cell small-1">cell 8</div>
+            <div class="cell small-1">cell 9</div>
+            <div class="cell small-1">cell 10</div>
+            <div class="cell small-1">cell 11</div>
+            <div class="cell small-1">cell 12</div>
+        </div>
+    </div>
+
+    <div class="grid-container">
+        <div class="grid-x grid-padding-x">
+            <div class="cell large-12">
+                <h1>Кнопочки</h1>
+            </div>
+        </div>
+        <div class="grid-x grid-padding-x">
+            <div class="cell">
+                <!-- Кнопка "Все товары" -->
+
+                    <div class="all">
+                        <a href="#" class="all__link">Все товары</a>
+                    </div>
+
+                <!-- /Кнопка "Все товары" -->
+
+            </div>
+        </div>
+    </div>
+
+    <div class="grid-container">
+        <div class="grid-x grid-padding-x">
+            <div class="cell large-12">
+                <h1>Табы</h1>
+            </div>
+        </div>
+        <div class="grid-x grid-padding-x">
+            <div class="cell">
+                <!-- Таб на главной -->
+
+                <div class="tabs__main">
+                    <ul class="tabs" data-tabs id="example-tabs">
+                        <li class="tabs-title is-active"><a href="#panel1" aria-selected="true">Tab 1</a></li>
+                        <li class="tabs-title"><a data-tabs-target="panel2" href="#panel2">Tab 2</a></li>
+                    </ul>
+    
+                    <div class="tabs-content" data-tabs-content="example-tabs">
+                        <div class="tabs-panel is-active" id="panel1">
+                            <p>Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat nisl ut dapibus.</p>
+                        </div>
+                        <div class="tabs-panel" id="panel2">
+                            <p>Suspendisse dictum feugiat nisl ut dapibus.  Vivamus hendrerit arcu sed erat molestie vehicula. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor.  Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- /Таб на главной -->
+
+            </div>
+        </div>
+    </div>
+
+    <div class="grid-container">
+        <div class="grid-x grid-padding-x">
+            <div class="cell large-12">
+                <h1>Карточка товара (карты)</h1>
+            </div>
+        </div>
+        <div class="grid-x grid-padding-x large-up-4">
+            <div class="cell">
+                <div class="card">
+                    <div class="card-section">
+                        <a href="#" class="card-section__image">
+                            <img src="/images/content/cards/card1.png" alt="">
+                            <div class="card-section__hit">
+                                Хит продаж!
+                            </div>
+                            <div class="card-section__warning">
+                                <div class="card-section__warning-text compare-add">
+                                    Добавлено в Сравнение!
+                                </div>
+                                <div class="card-section__warning-text cart-add">
+                                    Добавлено в Корзину!
+                                </div>
+                                <div class="card-section__warning-text favorite-add">
+                                    Добавлено в Избранное!
+                                </div>
+                            </div>
+                        </a>
+                        <div class="card-section__content">
+                            <a href="#" class="card-section__category">Гели для моделирования</a>
+                            <a href="#" class="card-section__title">
+                                Express, однофазный гель
+                            </a>
+    
+                            <div class="card-section__bottom">
+                                <div class="card-section__price">
+                                    <div class="card-section__price-old">
+                                        1 200 ₽
+                                    </div>
+                                    <div class="card-section__price-new">
+                                        890 ₽
+                                    </div>
+                                </div>
+    
+                                <div class="card-section__buttons">
+                                    <button class="card-section__button compare"><i class="icon-compare"></i></button>
+                                    <button class="card-section__button favorite"><i class="icon-favorite"></i></button>
+                                    <button class="card-section__button plus"><i class="icon-plus"></i></button>
+                                </div>
+                            </div>
+    
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cell">
+                <div class="card">
+                    <div class="card-section">
+                        <a href="#" class="card-section__image">
+                            <img src="/images/content/cards/card1.png" alt="">
+                            <div class="card-section__hit">
+                                Хит продаж!
+                            </div>
+                            <div class="card-section__warning">
+                                <div class="card-section__warning-text compare-add">
+                                    Добавлено в Сравнение!
+                                </div>
+                                <div class="card-section__warning-text cart-add">
+                                    Добавлено в Корзину!
+                                </div>
+                                <div class="card-section__warning-text favorite-add">
+                                    Добавлено в Избранное!
+                                </div>
+                            </div>
+                        </a>
+                        <div class="card-section__content">
+                            <a href="#" class="card-section__category">Гели для моделирования</a>
+                            <a href="#" class="card-section__title">
+                                Express, однофазный гель
+                            </a>
+    
+                            <div class="card-section__bottom">
+                                <div class="card-section__price">
+                                    <div class="card-section__price-old">
+                                        1 200 ₽
+                                    </div>
+                                    <div class="card-section__price-new">
+                                        890 ₽
+                                    </div>
+                                </div>
+    
+                                <div class="card-section__buttons">
+                                    <button class="card-section__button compare"><i class="icon-compare"></i></button>
+                                    <button class="card-section__button favorite"><i class="icon-favorite"></i></button>
+                                    <button class="card-section__button plus"><i class="icon-plus"></i></button>
+                                </div>
+                            </div>
+    
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cell">
+                <div class="card">
+                    <div class="card-section">
+                        <a href="#" class="card-section__image">
+                            <img src="/images/content/cards/card1.png" alt="">
+                            <div class="card-section__hit">
+                                Хит продаж!
+                            </div>
+                            <div class="card-section__warning">
+                                <div class="card-section__warning-text compare-add">
+                                    Добавлено в Сравнение!
+                                </div>
+                                <div class="card-section__warning-text cart-add">
+                                    Добавлено в Корзину!
+                                </div>
+                                <div class="card-section__warning-text favorite-add">
+                                    Добавлено в Избранное!
+                                </div>
+                            </div>
+                        </a>
+                        <div class="card-section__content">
+                            <a href="#" class="card-section__category">Гели для моделирования</a>
+                            <a href="#" class="card-section__title">
+                                Express, однофазный гель
+                            </a>
+    
+                            <div class="card-section__bottom">
+                                <div class="card-section__price">
+                                    <div class="card-section__price-old">
+                                        1 200 ₽
+                                    </div>
+                                    <div class="card-section__price-new">
+                                        890 ₽
+                                    </div>
+                                </div>
+    
+                                <div class="card-section__buttons">
+                                    <button class="card-section__button compare"><i class="icon-compare"></i></button>
+                                    <button class="card-section__button favorite"><i class="icon-favorite"></i></button>
+                                    <button class="card-section__button plus"><i class="icon-plus"></i></button>
+                                </div>
+                            </div>
+    
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="grid-container">
+        <div class="grid-x grid-padding-x">
+            <div class="cell large-12">
+                <h1>Карточка товара (таблица)</h1>
+            </div>
+        </div>
+        <div class="grid-x grid-padding-x large-up-1 grid-table">
+            <div class="cell">
+                <div class="card">
+                    <div class="card-section">
+                        <a href="#" class="card-section__image">
+                            <img src="/images/content/cards/card1.png" alt="">
+                            <div class="card-section__hit">
+                                Хит продаж!
+                            </div>
+                            <div class="card-section__warning">
+                                <div class="card-section__warning-text compare-add">
+                                    Добавлено в Сравнение!
+                                </div>
+                                <div class="card-section__warning-text cart-add">
+                                    Добавлено в Корзину!
+                                </div>
+                                <div class="card-section__warning-text favorite-add">
+                                    Добавлено в Избранное!
+                                </div>
+                            </div>
+                        </a>
+                        <div class="card-section__content">
+                            <a href="#" class="card-section__category">Гели для моделирования</a>
+                            <a href="#" class="card-section__title">
+                                Express, однофазный гель
+                            </a>
+    
+                            <div class="card-section__bottom">
+                                <div class="card-section__price">
+                                    <div class="card-section__price-old">
+                                        1 200 ₽
+                                    </div>
+                                    <div class="card-section__price-new">
+                                        890 ₽
+                                    </div>
+                                </div>
+    
+                                <div class="card-section__buttons">
+                                    <button class="card-section__button compare"><i class="icon-compare"></i></button>
+                                    <button class="card-section__button favorite"><i class="icon-favorite"></i></button>
+                                    <button class="card-section__button plus"><i class="icon-plus"></i></button>
+                                </div>
+                            </div>
+    
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cell">
+                <div class="card">
+                    <div class="card-section">
+                        <a href="#" class="card-section__image">
+                            <img src="/images/content/cards/card1.png" alt="">
+                            <div class="card-section__hit">
+                                Хит продаж!
+                            </div>
+                            <div class="card-section__warning">
+                                <div class="card-section__warning-text compare-add">
+                                    Добавлено в Сравнение!
+                                </div>
+                                <div class="card-section__warning-text cart-add">
+                                    Добавлено в Корзину!
+                                </div>
+                                <div class="card-section__warning-text favorite-add">
+                                    Добавлено в Избранное!
+                                </div>
+                            </div>
+                        </a>
+                        <div class="card-section__content">
+                            <a href="#" class="card-section__category">Гели для моделирования</a>
+                            <a href="#" class="card-section__title">
+                                Express, однофазный гель
+                            </a>
+    
+                            <div class="card-section__bottom">
+                                <div class="card-section__price">
+                                    <div class="card-section__price-old">
+                                        1 200 ₽
+                                    </div>
+                                    <div class="card-section__price-new">
+                                        890 ₽
+                                    </div>
+                                </div>
+    
+                                <div class="card-section__buttons">
+                                    <button class="card-section__button compare"><i class="icon-compare"></i></button>
+                                    <button class="card-section__button favorite"><i class="icon-favorite"></i></button>
+                                    <button class="card-section__button plus"><i class="icon-plus"></i></button>
+                                </div>
+                            </div>
+    
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <!-- Compressed JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.2/dist/js/foundation.min.js"></script>
+    <!-- Slick JS -->
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="/js/dist.js"></script>
+</body>
+</html>

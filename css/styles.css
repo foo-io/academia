@@ -54,8 +54,8 @@
 
 @font-face {
   font-family: 'icomoon';
-  src: url("../css/icons/icomoon.eot?8kqxg9");
-  src: url("../css/icons/icomoon.eot?8kqxg9#iefix") format("embedded-opentype"), url("../css/icons/icomoon.ttf?8kqxg9") format("truetype"), url("../css/icons/icomoon.woff?8kqxg9") format("woff"), url("../css/icons/icomoon.svg?8kqxg9#icomoon") format("svg");
+  src: url("../css/icons/icomoon.eot");
+  src: url("../css/icons/icomoon.eot#iefix") format("embedded-opentype"), url("../css/icons/icomoon.ttf") format("truetype"), url("../css/icons/icomoon.woff") format("woff"), url("../css/icons/icomoon.svg#icomoon") format("svg");
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -73,6 +73,10 @@ i {
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-back:before {
+  content: "\e915";
 }
 
 .icon-breadcrumb:before {
@@ -1722,6 +1726,19 @@ section {
   padding-top: 0;
 }
 
+.section__brands {
+  padding-top: 0;
+  padding-bottom: 4rem;
+}
+
+.section__cats {
+  padding-top: 0;
+}
+
+.section__back {
+  padding-bottom: 0;
+}
+
 .info__title {
   font-weight: 500;
   font-size: 18px;
@@ -2625,6 +2642,122 @@ textarea {
   margin-right: 0;
 }
 
+.cats {
+  border: 1px solid #D5E1E8;
+  border-radius: 4px;
+  min-height: 400px;
+  overflow: hidden;
+  margin-bottom: 1rem;
+  background: #FFF;
+}
+
+.cats__image {
+  height: 200px;
+}
+
+.cats__image img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.cats__body {
+  padding: 16px 24px;
+}
+
+.cats__title {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #911C2C;
+}
+
+.cats__descr {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 22px;
+  color: #949494;
+  margin-top: 1rem;
+}
+
+.back__link {
+  color: #911C2C;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.back__link i.icon-back {
+  font-size: 10px;
+  margin-right: 11px;
+}
+
+.filter {
+  background: #FFFFFF;
+  border: 1px solid #D5E1E8;
+  border-radius: 4px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 65px;
+  padding: 1rem;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  color: #8F8F8F;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  outline: none;
+}
+
+.filter.hover {
+  color: #911C2C;
+  border-radius: 4px 4px 0 0;
+}
+
+.filter.hover .filter-catalog {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.filter.filter__catalog.hover {
+  border-bottom: 0;
+}
+
+.filter .filter-catalog {
+  font-size: 8px;
+  margin-left: auto;
+  width: 22px;
+  height: 22px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.filter__dropdown {
+  width: 272px;
+  background: #FFF;
+  border: 1px solid #D5E1E8;
+  border-top: 0;
+  padding-top: 0;
+}
+
 @media screen and (max-width: 1123px) {
   .header__menu .dropdown.menu.show-for-large > li:last-child {
     display: none;
@@ -2901,6 +3034,12 @@ textarea {
   .section__account .account__favorites {
     padding: 0 1rem;
   }
+  .section__cats {
+    padding-bottom: 0;
+  }
+  .section__cats .cell:last-child .cats {
+    margin-bottom: 0;
+  }
   .banner-slider .slick-dots {
     bottom: 1rem;
     left: calc(50% - 144px / 2);
@@ -3110,6 +3249,28 @@ textarea {
   .order__body-actions {
     margin-left: unset;
     margin: 0 auto;
+  }
+  .cats {
+    border: 0;
+    border-radius: 0;
+    margin: 0 -1rem 1rem;
+    min-height: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 1rem;
+  }
+  .cats__image {
+    width: 60px;
+    min-width: 60px;
+    height: 60px;
+    min-height: 60px;
+    border-radius: 30px;
+    overflow: hidden;
+  }
+  .cats__body {
+    padding: 0;
+    margin-left: 1rem;
   }
 }
 

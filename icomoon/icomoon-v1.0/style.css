@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?ryvk3d');
-  src:  url('fonts/icomoon.eot?ryvk3d#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?ryvk3d') format('truetype'),
-    url('fonts/icomoon.woff?ryvk3d') format('woff'),
-    url('fonts/icomoon.svg?ryvk3d#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?m0m74v');
+  src:  url('fonts/icomoon.eot?m0m74v#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?m0m74v') format('truetype'),
+    url('fonts/icomoon.woff?m0m74v') format('woff'),
+    url('fonts/icomoon.svg?m0m74v#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -25,57 +25,89 @@ i {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-back:before {
+  content: "\e915";
+  color: #911c2c;
+}
+.icon-breadcrumb:before {
+  content: "\e914";
+  color: #8d92a3;
+}
 .icon-burger:before {
   content: "\e900";
+  color: #fff;
 }
 .icon-cart:before {
   content: "\e901";
+  color: #fff;
 }
 .icon-check:before {
   content: "\e902";
+  color: #fff;
 }
 .icon-close:before {
   content: "\e903";
 }
-.icon-compare:before {
+.icon-close-menu:before {
   content: "\e904";
 }
-.icon-dropdown-down:before {
+.icon-compare:before {
   content: "\e905";
+  color: #911c2c;
+}
+.icon-dropdown-down:before {
+  content: "\e906";
+  color: #8d92a3;
 }
 .icon-dropdown-up:before {
-  content: "\e906";
+  content: "\e907";
+  color: #8d92a3;
 }
 .icon-favorite:before {
-  content: "\e907";
+  content: "\e908";
+  color: #911c2c;
 }
 .icon-favorite-added:before {
-  content: "\e908";
-}
-.icon-filter-dropdown-up:before {
   content: "\e909";
+  color: #fff;
 }
 .icon-go-right:before {
   content: "\e90a";
+  color: #911c2c;
 }
 .icon-instagram:before {
   content: "\e90b";
+  color: #dbdbdb;
 }
 .icon-location:before {
   content: "\e90c";
+  color: #dbdbdb;
 }
 .icon-map:before {
   content: "\e90d";
+  color: #911c2c;
 }
 .icon-phone:before {
   content: "\e90e";
+  color: #dbdbdb;
 }
 .icon-plus:before {
   content: "\e90f";
+  color: #911c2c;
 }
 .icon-search:before {
   content: "\e910";
+  color: #8d92a3;
+}
+.icon-slider-left:before {
+  content: "\e911";
+  color: #911c2c;
+}
+.icon-slider-right:before {
+  content: "\e912";
+  color: #911c2c;
 }
 .icon-user:before {
-  content: "\e911";
+  content: "\e913";
+  color: #8d92a3;
 }
