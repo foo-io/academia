@@ -75,32 +75,16 @@ i {
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-back:before {
-  content: "\e915";
+.icon-cancel:before {
+  content: "\e918";
 }
 
-.icon-breadcrumb:before {
-  content: "\e914";
+.icon-tables:before {
+  content: "\e916";
 }
 
-.icon-burger:before {
-  content: "\e900";
-}
-
-.icon-cart:before {
-  content: "\e901";
-}
-
-.icon-check:before {
-  content: "\e902";
-}
-
-.icon-close:before {
-  content: "\e903";
-}
-
-.icon-close-menu:before {
-  content: "\e904";
+.icon-cards:before {
+  content: "\e917";
 }
 
 .icon-compare:before {
@@ -149,6 +133,7 @@ i {
 
 .icon-search:before {
   content: "\e910";
+  font-size: 12px;
 }
 
 .icon-slider-left:before {
@@ -161,6 +146,34 @@ i {
 
 .icon-user:before {
   content: "\e913";
+}
+
+.icon-back:before {
+  content: "\e915";
+}
+
+.icon-breadcrumb:before {
+  content: "\e914";
+}
+
+.icon-burger:before {
+  content: "\e900";
+}
+
+.icon-cart:before {
+  content: "\e901";
+}
+
+.icon-check:before {
+  content: "\e902";
+}
+
+.icon-close:before {
+  content: "\e903";
+}
+
+.icon-close-menu:before {
+  content: "\e904";
 }
 
 * {
@@ -234,17 +247,30 @@ body,
   width: 100%;
 }
 
-.card-section__hit {
+.card-section__label {
   position: absolute;
-  background: #F02727;
   border-radius: 4px;
   color: #FFF;
   font-weight: 500;
   font-size: 14px;
   line-height: 16px;
-  padding: 4px 19px;
+  padding: 4px;
+  width: 120px;
+  text-align: center;
   top: 0;
   right: 0;
+}
+
+.card-section__label.red {
+  background: #F02727;
+}
+
+.card-section__label.purple {
+  background: #8027F0;
+}
+
+.card-section__label.blue {
+  background: #0029FE;
 }
 
 .card-section__warning {
@@ -413,7 +439,7 @@ body,
   margin-bottom: 0;
 }
 
-.grid-table .card-section__hit {
+.grid-table .card-section__label {
   left: 0;
   right: auto;
 }
@@ -1466,7 +1492,7 @@ body,
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  font-size: 8px;
+  font-size: 6px;
 }
 
 .accordion-menu__wrapper {
@@ -1535,7 +1561,7 @@ body,
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  font-size: 8px;
+  font-size: 6px;
 }
 
 .dropdown.menu > li.is-dropdown-submenu-parent.is-active > a::after {
@@ -2365,12 +2391,14 @@ textarea {
   display: -ms-flexbox;
   display: flex;
   margin-top: 3rem;
+  margin-bottom: 2rem;
 }
 
 .pagination li {
   width: 34px;
   height: 34px;
   border: 1px solid #F3F3F3;
+  background: #F7F7F7;
   margin: 0;
   padding: 0;
   margin-right: 1rem;
@@ -2386,6 +2414,7 @@ textarea {
 }
 
 .pagination li a {
+  font-weight: 500;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2422,6 +2451,11 @@ textarea {
 
 .pagination .current {
   padding: 0;
+}
+
+.pagination .pagination-previous,
+.pagination .pagination-next {
+  background: transparent;
 }
 
 .pagination .pagination-previous a,
@@ -2712,7 +2746,7 @@ textarea {
   font-weight: 500;
   font-size: 14px;
   line-height: 16px;
-  color: #8F8F8F;
+  color: #3F4351;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -2725,17 +2759,189 @@ textarea {
   border-radius: 4px 4px 0 0;
 }
 
-.filter.hover .filter-catalog {
+.filter.hover .filter-drop {
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
+}
+
+.filter:hover {
+  color: #911C2C;
+}
+
+.filter.filter__catalog {
+  color: #8F8F8F;
+}
+
+.filter.filter__catalog:hover {
+  color: #911C2C;
 }
 
 .filter.filter__catalog.hover {
   border-bottom: 0;
 }
 
-.filter .filter-catalog {
-  font-size: 8px;
+.filter__dropdown {
+  width: 272px;
+  background: #FFF;
+  border: 1px solid #D5E1E8;
+  border-top: 0;
+  border-radius: 0 0 4px 4px;
+}
+
+.filter__dropdown-catalog {
+  padding-top: 0;
+}
+
+.filter__accordion {
+  margin-bottom: 0;
+}
+
+.filter__accordion-item {
+  margin: 11px 0;
+}
+
+.filter__accordion-item:first-child {
+  margin-top: 0;
+}
+
+.filter__accordion-item.is-active {
+  margin: 0;
+}
+
+.filter__accordion-item.is-active .filter__accordion-title {
+  background: #911C2C;
+  color: #FFFFFF;
+}
+
+.filter__accordion-title {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  border-radius: 0;
+  border: 0 !important;
+  padding: 9px 12px;
+  color: #3F4351;
+}
+
+.filter__accordion-title::before {
+  content: '' !important;
+}
+
+.filter__accordion-title:hover {
+  background: transparent;
+  color: #911C2C;
+}
+
+.filter__accordion-content {
+  border: 0;
+  padding: 1rem 12px;
+  border-bottom: 1px solid #D5E1E8;
+}
+
+.filter__accordion-items {
+  list-style-type: none;
+  margin: 0;
+}
+
+.filter__accordion-items li {
+  line-height: 15px;
+  margin-bottom: 1rem;
+}
+
+.filter__accordion-items li:last-child {
+  margin-bottom: 0;
+}
+
+.filter__accordion-items li a {
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 15px;
+  color: #8D92A3;
+}
+
+.filter__accordion-items li a:hover {
+  color: #911C2C;
+}
+
+.filter__sorting {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.filter__sorting i.filter-drop {
+  margin-left: 6px;
+}
+
+.filter__brands {
+  max-height: 308px;
+  overflow: auto;
+  /* width */
+  /* Track */
+  /* Handle */
+  /* Handle on hover */
+}
+
+.filter__brands::-webkit-scrollbar {
+  width: 8px;
+}
+
+.filter__brands::-webkit-scrollbar-track {
+  background: #F1F1F1;
+}
+
+.filter__brands::-webkit-scrollbar-thumb {
+  background: #C4C4C4;
+}
+
+.filter__brands::-webkit-scrollbar-thumb:hover {
+  background: #aaaaaa;
+}
+
+.filter__show {
+  cursor: auto;
+  padding: 0;
+}
+
+.filter__button {
+  width: 50%;
+  height: 100%;
+  cursor: pointer;
+  color: #C8CCD8;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  outline: none;
+}
+
+.filter__button:hover, .filter__button.filter-active {
+  color: #911C2C;
+}
+
+.filter-delimeter {
+  height: 100%;
+  width: 1px;
+  border-left: 1px solid #D5E1E8;
+}
+
+.filter__cancel {
+  height: auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  color: #911C2C;
+}
+
+.filter__cancel i {
+  margin-right: 10px;
+  color: #C6C6C6;
+  font-size: 10px;
+}
+
+.filter-drop {
+  font-size: 6px;
   margin-left: auto;
   width: 22px;
   height: 22px;
@@ -2750,12 +2956,131 @@ textarea {
           justify-content: center;
 }
 
-.filter__dropdown {
-  width: 272px;
-  background: #FFF;
+.filter-accordion__item {
+  margin-bottom: 1rem;
+  outline: none;
   border: 1px solid #D5E1E8;
-  border-top: 0;
+  border-radius: 4px;
+}
+
+.filter-accordion__item.is-active .filter-drop {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.filter-accordion__item:last-child > .accordion-content:last-child {
+  border: 0;
+}
+
+.filter-accordion__item:last-child:not(.is-active) > .accordion-title {
+  border: 0;
+}
+
+.filter-accordion__title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  color: #8F8F8F;
+  background: #FFFFFF;
+  border-radius: 4px !important;
+  outline: none;
+  border: 0;
+}
+
+.filter-accordion__title:hover {
+  background: inherit;
+  color: #911C2C;
+}
+
+.filter-accordion__title:focus {
+  background: inherit;
+  color: #8F8F8F;
+}
+
+.filter-accordion__title::before {
+  content: '' !important;
+}
+
+.filter-accordion__content {
   padding-top: 0;
+  border: 0;
+  background: transparent;
+}
+
+/* Customize the label (the container) */
+.checkbox-custom {
+  display: block;
+  position: relative;
+  padding-left: 2rem;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  color: #545A60;
+  /* Create a custom checkbox */
+  /* On mouse-over, add a grey background color */
+  /* When the checkbox is checked, add a blue background */
+  /* Create the checkmark/indicator (hidden when not checked) */
+  /* Show the checkmark when checked */
+  /* Style the checkmark/indicator */
+}
+
+.checkbox-custom input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkbox-custom .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 16px;
+  width: 16px;
+  background: #F8F8F8;
+  border: 1px solid #DFE9EF;
+}
+
+.checkbox-custom:hover input ~ .checkmark {
+  background-color: #DFE9EF;
+}
+
+.checkbox-custom input:checked ~ .checkmark {
+  background-color: #F8F8F8;
+}
+
+.checkbox-custom .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.checkbox-custom input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.checkbox-custom .checkmark:after {
+  left: 4px;
+  top: 0px;
+  width: 6px;
+  height: 11px;
+  border: solid #911C2C;
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
 }
 
 @media screen and (max-width: 1123px) {
@@ -3271,6 +3596,47 @@ textarea {
   .cats__body {
     padding: 0;
     margin-left: 1rem;
+  }
+  .pagination li {
+    border-color: #D5E1E8;
+  }
+  .pagination li.current {
+    border-color: #F3F3F3;
+  }
+  .pagination li:first-child, .pagination li:last-child {
+    background: #F7F7F7;
+    border: 1px solid #D5E1E8;
+    width: 34px;
+    height: 34px;
+  }
+  .pagination li:last-child {
+    margin-right: 0;
+  }
+  .pagination-previous span {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+  .pagination-previous span, .pagination-next span {
+    color: #911C2C;
+    font-size: 9px;
+    width: 5.53px;
+    height: 8.94px;
+    line-height: 9px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .pagination-previous.disabled span, .pagination-next.disabled span {
+    color: #8D92A3;
+  }
+  .pagination-previous a:hover, .pagination-next a:hover {
+    text-decoration: none !important;
   }
 }
 

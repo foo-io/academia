@@ -14,6 +14,18 @@ function closeOutsideClick(element, button, closeElement) {
 
 $(document).ready(function() {
     
+    //! card/table button in catalog
+        $('#showTable').click(function () { 
+            $('#catalogue').addClass('large-up-1 medium-up-1 grid-table').removeClass('large-up-3 medium-up-2');
+            $(this).addClass('filter-active');
+            $('#showCard').removeClass('filter-active');
+        });
+        $('#showCard').click(function () { 
+            $('#catalogue').addClass('large-up-3 medium-up-2').removeClass('large-up-1 medium-up-1 grid-table');
+            $(this).addClass('filter-active');
+            $('#showTable').removeClass('filter-active');
+        });
+
     //! �������� �������
         // ����� ������
         $('button.card-section__button.compare').click(function() {

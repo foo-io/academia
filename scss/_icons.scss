@@ -13,31 +13,17 @@
     -moz-osx-font-smoothing: grayscale;
   }
 
-  .icon-back:before {
-    content: "\e915";
-    // color: #8d92a3;
+  .icon-cancel:before {
+    content: "\e918";
+    // color: #c6c6c6;
+  }  
+  .icon-tables:before {
+    content: "\e916";
+    // color: #c8ccd8;
   }
-  .icon-breadcrumb:before {
-    content: "\e914";
-    // color: #8d92a3;
-  }
-  .icon-burger:before {
-    content: "\e900";
-    // color: #fff;
-  }
-  .icon-cart:before {
-    content: "\e901";
-    // color: #fff;
-  }
-  .icon-check:before {
-    content: "\e902";
-    // color: #fff;
-  }
-  .icon-close:before {
-    content: "\e903";
-  }
-  .icon-close-menu:before {
-    content: "\e904";
+  .icon-cards:before {
+    content: "\e917";
+    // color: #911c2c;
   }
   .icon-compare:before {
     content: "\e905";
@@ -85,6 +71,7 @@
   }
   .icon-search:before {
     content: "\e910";
+    font-size: 12px;
     // color: #8d92a3;
   }
   .icon-slider-left:before {
@@ -99,3 +86,32 @@
     content: "\e913";
     // color: #8d92a3;
   }
+  .icon-back:before {
+    content: "\e915";
+    // color: #911c2c;
+  }
+  .icon-breadcrumb:before {
+    content: "\e914";
+    // color: #8d92a3;
+  }
+  .icon-burger:before {
+    content: "\e900";
+    // color: #fff;
+  }
+  .icon-cart:before {
+    content: "\e901";
+    // color: #fff;
+  }
+  .icon-check:before {
+    content: "\e902";
+    // color: #fff;
+  }
+  .icon-close:before {
+    content: "\e903";
+    // color: #fff;
+  }
+  .icon-close-menu:before {
+    content: "\e904";
+    // color: #fff;
+  }
+  

@@ -436,6 +436,8 @@
     
                 </div>
                 <div class="grid-x grid-padding-x">
+
+                    <!-- Мобильные фильтры -->
                     <div class="cell large-12 medium-12 small-12 show-for-small-only">
                         <div class="grid-x grid-padding-x">
                             <div class="cell large-3 medium-3">
@@ -443,46 +445,634 @@
                             </div>
                         </div>
                     </div>
-                    <div class="cell large-12 medium-12 small-12 hide-for-small-only">
+                    <!-- ./Мобильные фильтры -->
+
+                    <!-- Верхние фильтры -->
+                    <div class="cell large-12 medium-12 small-12 hide-for-small-only padding-bottom__1rem">
                         <div class="grid-x grid-padding-x">
                             <div class="cell large-3 medium-3">
-                                <button class="filter filter__catalog" type="button" data-toggle="filter-catalog">Каталог <i class="icon-dropdown-down filter-catalog"></i></button>
+                                <button class="filter filter__catalog" type="button" data-toggle="filter-catalog">Каталог <i class="icon-dropdown-down filter-drop"></i></button>
                                 
-                                <div class="dropdown-pane filter__dropdown" id="filter-catalog" data-dropdown data-hover="false" data-hover-pane="false">
-                                    Just some junk that needs to be said. Or not. Your choice.
+                                <div class="dropdown-pane filter__dropdown filter__dropdown-catalog" id="filter-catalog" data-dropdown data-hover="true" data-hover-pane="true">
+                                    <ul class="accordion filter__accordion" data-accordion>
+                                        <li class="accordion-item filter__accordion-item is-active" data-accordion-item>
+                                            <!-- Accordion tab title -->
+                                            <a href="#" class="accordion-title filter__accordion-title">Маникюр</a>
+                                        
+                                            <!-- Accordion tab content: it would start in the open state due to using the `is-active` state class. -->
+                                            <div class="accordion-content filter__accordion-content" data-tab-content>
+                                                <ul class="filter__accordion-items">
+                                                    <li><a href="#">Аппаратный маникюр и педикюр</a></li>
+                                                    <li><a href="#">Дегидраторы</a></li>
+                                                    <li><a href="#">Аэрография</a></li>
+                                                    <li><a href="#">Дизайн ногтей</a></li>
+                                                    <li><a href="#">Гель-лаки</a></li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li class="accordion-item filter__accordion-item" data-accordion-item>
+                                            <!-- Accordion tab title -->
+                                            <a href="#" class="accordion-title filter__accordion-title">Педикюр</a>
+                                        
+                                            <!-- Accordion tab content: it would start in the open state due to using the `is-active` state class. -->
+                                            <div class="accordion-content filter__accordion-content" data-tab-content>
+                                                <ul class="filter__accordion-items">
+                                                    <li><a href="#">Аппаратный маникюр и педикюр</a></li>
+                                                    <li><a href="#">Дегидраторы</a></li>
+                                                    <li><a href="#">Аэрография</a></li>
+                                                    <li><a href="#">Дизайн ногтей</a></li>
+                                                    <li><a href="#">Гель-лаки</a></li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li class="accordion-item filter__accordion-item" data-accordion-item>
+                                            <!-- Accordion tab title -->
+                                            <a href="#" class="accordion-title filter__accordion-title">Волосы</a>
+                                        
+                                            <!-- Accordion tab content: it would start in the open state due to using the `is-active` state class. -->
+                                            <div class="accordion-content filter__accordion-content" data-tab-content>
+                                                <ul class="filter__accordion-items">
+                                                    <li><a href="#">Аппаратный маникюр и педикюр</a></li>
+                                                    <li><a href="#">Дегидраторы</a></li>
+                                                    <li><a href="#">Аэрография</a></li>
+                                                    <li><a href="#">Дизайн ногтей</a></li>
+                                                    <li><a href="#">Гель-лаки</a></li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li class="accordion-item filter__accordion-item" data-accordion-item>
+                                            <!-- Accordion tab title -->
+                                            <a href="#" class="accordion-title filter__accordion-title">Уход за кожей</a>
+                                        
+                                            <!-- Accordion tab content: it would start in the open state due to using the `is-active` state class. -->
+                                            <div class="accordion-content filter__accordion-content" data-tab-content>
+                                                <ul class="filter__accordion-items">
+                                                    <li><a href="#">Аппаратный маникюр и педикюр</a></li>
+                                                    <li><a href="#">Дегидраторы</a></li>
+                                                    <li><a href="#">Аэрография</a></li>
+                                                    <li><a href="#">Дизайн ногтей</a></li>
+                                                    <li><a href="#">Гель-лаки</a></li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <!-- 111 -->
+                                    </ul>
                                 </div>
                             </div>
                             <div class="cell large-3 medium-3">
-                                strokeDashoffset
+                                <button class="filter filter__sorting" type="button" data-toggle="filter-sorting" id="sorting"><span>Без сортировки</span> <i class="icon-dropdown-down filter-drop"></i></button>
+                                
+                                <div class="dropdown-pane filter__dropdown" id="filter-sorting" data-dropdown data-hover="true" data-hover-pane="true">
+
+                                    <label class="checkbox-custom">Без сортировки
+                                        <input type="radio" checked="checked" name="radio">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                      
+                                    <label class="checkbox-custom">Дороже
+                                        <input type="radio" name="radio">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    
+                                    <label class="checkbox-custom">Дешевле
+                                        <input type="radio" name="radio">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    
+                                    <label class="checkbox-custom">По популярности
+                                        <input type="radio" name="radio">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="checkbox-custom">По новизне
+                                        <input type="radio" name="radio">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="checkbox-custom">По акции
+                                        <input type="radio" name="radio">
+                                        <span class="checkmark"></span>
+                                    </label>
+
+                                </div>
+
                             </div>
                             <div class="cell large-3 medium-3">
-                                strokeDashoffset
+                                <button class="filter filter__sorting" type="button" data-toggle="filter-brands" id="sortingBrands"><span>Все бренды</span> <i class="icon-dropdown-down filter-drop"></i></button>
+                                
+                                <div class="dropdown-pane filter__dropdown filter__brands" id="filter-brands" data-dropdown data-hover="true" data-hover-pane="true">
+
+                                    <label class="checkbox-custom">Aasha Herbals
+                                        <input type="checkbox">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="checkbox-custom">Adri Coco
+                                        <input type="checkbox">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="checkbox-custom">AIRnails
+                                        <input type="checkbox">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="checkbox-custom">Adri Coco
+                                        <input type="checkbox">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="checkbox-custom">Alan Hadash
+                                        <input type="checkbox">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="checkbox-custom">Alba Botanica
+                                        <input type="checkbox">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="checkbox-custom">Aasha Herbals
+                                        <input type="checkbox">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="checkbox-custom">Aasha Herbals
+                                        <input type="checkbox">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="checkbox-custom">Adri Coco
+                                        <input type="checkbox">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="checkbox-custom">AIRnails
+                                        <input type="checkbox">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="checkbox-custom">Adri Coco
+                                        <input type="checkbox">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="checkbox-custom">Alan Hadash
+                                        <input type="checkbox">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="checkbox-custom">Alba Botanica
+                                        <input type="checkbox">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="checkbox-custom">Aasha Herbals
+                                        <input type="checkbox">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                      
+                                </div>
                             </div>
                             <div class="cell large-3 medium-3">
-                                strokeDashoffset
+                                <div class="filter filter__show">
+                                    <button class="filter__button filter-active" id="showCard"><i class="icon-cards"></i></button>
+                                    <div class="filter-delimeter"></div>
+                                    <button class="filter__button" id="showTable"><i class="icon-tables"></i></button>
+                                </div>
                             </div>
                         </div>
                     </div>
+                    <!-- ./Верхние фильтры -->
+
+                    <!-- Левый сайдбар -->
                     <div class="cell large-3 medium-4 hide-for-small-only">
                         <div class="grid-x grid-padding-x">
                             <div class="cell large-12">
-                                filter
+                                <ul class="accordion filter-accordion" data-accordion data-multi-expand="true" data-allow-all-closed="true">
+                                    <li class="accordion-item filter-accordion__item is-active" data-accordion-item>
+                                        <a href="#" class="accordion-title filter-accordion__title">Цена <i class="icon-dropdown-down filter-drop"></i></a>
+                                  
+                                        <div class="accordion-content filter-accordion__content" data-tab-content>
+                                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quaerat alias autem magnam!
+                                        </div>
+                                    </li>
+                                    <li class="accordion-item filter-accordion__item is-active" data-accordion-item>
+                                        <a href="#" class="accordion-title filter-accordion__title">Цвет <i class="icon-dropdown-down filter-drop"></i></a>
+                                  
+                                        <div class="accordion-content filter-accordion__content" data-tab-content>
+                                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quaerat alias autem magnam!
+                                        </div>
+                                    </li>
+                                    <li class="accordion-item filter-accordion__item is-active" data-accordion-item>
+                                        <a href="#" class="accordion-title filter-accordion__title">Эффект <i class="icon-dropdown-down filter-drop"></i></a>
+                                  
+                                        <div class="accordion-content filter-accordion__content" data-tab-content>
+                                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quaerat alias autem magnam!
+                                        </div>
+                                    </li>
+                                    <!-- ... -->
+                                  </ul>
                             </div>
                             <div class="cell large-12">
-                                filter
-                            </div>
-                            <div class="cell large-12">
-                                filter
+                                <button class="filter filter__cancel"><i class="icon-cancel"></i> Очистить фильтр</button>
                             </div>
                         </div>
                     </div>
+                    <!-- ./Левый сайдбар -->
+
+                    <!-- Карточки -->
                     <div class="cell large-9 medium-8">
-                        <div class="grid-x grid-padding-x large-up-3 medium-up-3 small-up-1">
-                            asd
+                        <div class="grid-x grid-padding-x large-up-3 medium-up-2 small-up-1" id="catalogue">
+                            <div class="cell">
+                                <div class="card">
+                                    <div class="card-section">
+                                        <a href="#" class="card-section__image">
+                                            <img src="/images/content/cards/card1.png" alt="">
+                                            <div class="card-section__label red">
+                                                Хит продаж!
+                                            </div>
+                                            <div class="card-section__warning">
+                                                <div class="card-section__warning-text compare-add">
+                                                    Добавлено в Сравнение!
+                                                </div>
+                                                <div class="card-section__warning-text cart-add">
+                                                    Добавлено в Корзину!
+                                                </div>
+                                                <div class="card-section__warning-text favorite-add">
+                                                    Добавлено в Избранное!
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <div class="card-section__content">
+                                            <a href="#" class="card-section__category">Гели для моделирования</a>
+                                            <a href="#" class="card-section__title">
+                                                Express, однофазный гель
+                                            </a>
+                    
+                                            <div class="card-section__bottom">
+                                                <div class="card-section__price">
+                                                    <div class="card-section__price-old">
+                                                        1 200 ₽
+                                                    </div>
+                                                    <div class="card-section__price-new">
+                                                        890 ₽
+                                                    </div>
+                                                </div>
+                    
+                                                <div class="card-section__buttons">
+                                                    <button class="card-section__button compare"><i class="icon-compare"></i></button>
+                                                    <button class="card-section__button favorite"><i class="icon-favorite"></i></button>
+                                                    <button class="card-section__button plus"><i class="icon-plus"></i></button>
+                                                </div>
+                                            </div>
+                    
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cell">
+                                <div class="card">
+                                    <div class="card-section">
+                                        <a href="#" class="card-section__image">
+                                            <img src="/images/content/cards/card1.png" alt="">
+                                            <div class="card-section__label purple">
+                                                Акции
+                                            </div>
+                                            <div class="card-section__warning">
+                                                <div class="card-section__warning-text compare-add">
+                                                    Добавлено в Сравнение!
+                                                </div>
+                                                <div class="card-section__warning-text cart-add">
+                                                    Добавлено в Корзину!
+                                                </div>
+                                                <div class="card-section__warning-text favorite-add">
+                                                    Добавлено в Избранное!
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <div class="card-section__content">
+                                            <a href="#" class="card-section__category">Гели для моделирования</a>
+                                            <a href="#" class="card-section__title">
+                                                Express, однофазный гель
+                                            </a>
+                    
+                                            <div class="card-section__bottom">
+                                                <div class="card-section__price">
+                                                    <div class="card-section__price-old">
+                                                        1 200 ₽
+                                                    </div>
+                                                    <div class="card-section__price-new">
+                                                        890 ₽
+                                                    </div>
+                                                </div>
+                    
+                                                <div class="card-section__buttons">
+                                                    <button class="card-section__button compare"><i class="icon-compare"></i></button>
+                                                    <button class="card-section__button favorite"><i class="icon-favorite"></i></button>
+                                                    <button class="card-section__button plus"><i class="icon-plus"></i></button>
+                                                </div>
+                                            </div>
+                    
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cell">
+                                <div class="card">
+                                    <div class="card-section">
+                                        <a href="#" class="card-section__image">
+                                            <img src="/images/content/cards/card1.png" alt="">
+                                            <div class="card-section__label blue">
+                                                Новинки
+                                            </div>
+                                            <div class="card-section__warning">
+                                                <div class="card-section__warning-text compare-add">
+                                                    Добавлено в Сравнение!
+                                                </div>
+                                                <div class="card-section__warning-text cart-add">
+                                                    Добавлено в Корзину!
+                                                </div>
+                                                <div class="card-section__warning-text favorite-add">
+                                                    Добавлено в Избранное!
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <div class="card-section__content">
+                                            <a href="#" class="card-section__category">Гели для моделирования</a>
+                                            <a href="#" class="card-section__title">
+                                                Express, однофазный гель
+                                            </a>
+                    
+                                            <div class="card-section__bottom">
+                                                <div class="card-section__price">
+                                                    <div class="card-section__price-old">
+                                                        1 200 ₽
+                                                    </div>
+                                                    <div class="card-section__price-new">
+                                                        890 ₽
+                                                    </div>
+                                                </div>
+                    
+                                                <div class="card-section__buttons">
+                                                    <button class="card-section__button compare"><i class="icon-compare"></i></button>
+                                                    <button class="card-section__button favorite"><i class="icon-favorite"></i></button>
+                                                    <button class="card-section__button plus"><i class="icon-plus"></i></button>
+                                                </div>
+                                            </div>
+                    
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cell">
+                                <div class="card">
+                                    <div class="card-section">
+                                        <a href="#" class="card-section__image">
+                                            <img src="/images/content/cards/card1.png" alt="">
+                                            <div class="card-section__label red">
+                                                Хит продаж!
+                                            </div>
+                                            <div class="card-section__warning">
+                                                <div class="card-section__warning-text compare-add">
+                                                    Добавлено в Сравнение!
+                                                </div>
+                                                <div class="card-section__warning-text cart-add">
+                                                    Добавлено в Корзину!
+                                                </div>
+                                                <div class="card-section__warning-text favorite-add">
+                                                    Добавлено в Избранное!
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <div class="card-section__content">
+                                            <a href="#" class="card-section__category">Гели для моделирования</a>
+                                            <a href="#" class="card-section__title">
+                                                Express, однофазный гель
+                                            </a>
+                    
+                                            <div class="card-section__bottom">
+                                                <div class="card-section__price">
+                                                    <div class="card-section__price-old">
+                                                        1 200 ₽
+                                                    </div>
+                                                    <div class="card-section__price-new">
+                                                        890 ₽
+                                                    </div>
+                                                </div>
+                    
+                                                <div class="card-section__buttons">
+                                                    <button class="card-section__button compare"><i class="icon-compare"></i></button>
+                                                    <button class="card-section__button favorite"><i class="icon-favorite"></i></button>
+                                                    <button class="card-section__button plus"><i class="icon-plus"></i></button>
+                                                </div>
+                                            </div>
+                    
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cell">
+                                <div class="card">
+                                    <div class="card-section">
+                                        <a href="#" class="card-section__image">
+                                            <img src="/images/content/cards/card1.png" alt="">
+                                            <div class="card-section__label red">
+                                                Хит продаж!
+                                            </div>
+                                            <div class="card-section__warning">
+                                                <div class="card-section__warning-text compare-add">
+                                                    Добавлено в Сравнение!
+                                                </div>
+                                                <div class="card-section__warning-text cart-add">
+                                                    Добавлено в Корзину!
+                                                </div>
+                                                <div class="card-section__warning-text favorite-add">
+                                                    Добавлено в Избранное!
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <div class="card-section__content">
+                                            <a href="#" class="card-section__category">Гели для моделирования</a>
+                                            <a href="#" class="card-section__title">
+                                                Express, однофазный гель
+                                            </a>
+                    
+                                            <div class="card-section__bottom">
+                                                <div class="card-section__price">
+                                                    <div class="card-section__price-old">
+                                                        1 200 ₽
+                                                    </div>
+                                                    <div class="card-section__price-new">
+                                                        890 ₽
+                                                    </div>
+                                                </div>
+                    
+                                                <div class="card-section__buttons">
+                                                    <button class="card-section__button compare"><i class="icon-compare"></i></button>
+                                                    <button class="card-section__button favorite"><i class="icon-favorite"></i></button>
+                                                    <button class="card-section__button plus"><i class="icon-plus"></i></button>
+                                                </div>
+                                            </div>
+                    
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cell">
+                                <div class="card">
+                                    <div class="card-section">
+                                        <a href="#" class="card-section__image">
+                                            <img src="/images/content/cards/card1.png" alt="">
+                                            <div class="card-section__label red">
+                                                Хит продаж!
+                                            </div>
+                                            <div class="card-section__warning">
+                                                <div class="card-section__warning-text compare-add">
+                                                    Добавлено в Сравнение!
+                                                </div>
+                                                <div class="card-section__warning-text cart-add">
+                                                    Добавлено в Корзину!
+                                                </div>
+                                                <div class="card-section__warning-text favorite-add">
+                                                    Добавлено в Избранное!
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <div class="card-section__content">
+                                            <a href="#" class="card-section__category">Гели для моделирования</a>
+                                            <a href="#" class="card-section__title">
+                                                Express, однофазный гель
+                                            </a>
+                    
+                                            <div class="card-section__bottom">
+                                                <div class="card-section__price">
+                                                    <div class="card-section__price-old">
+                                                        1 200 ₽
+                                                    </div>
+                                                    <div class="card-section__price-new">
+                                                        890 ₽
+                                                    </div>
+                                                </div>
+                    
+                                                <div class="card-section__buttons">
+                                                    <button class="card-section__button compare"><i class="icon-compare"></i></button>
+                                                    <button class="card-section__button favorite"><i class="icon-favorite"></i></button>
+                                                    <button class="card-section__button plus"><i class="icon-plus"></i></button>
+                                                </div>
+                                            </div>
+                    
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cell">
+                                <div class="card">
+                                    <div class="card-section">
+                                        <a href="#" class="card-section__image">
+                                            <img src="/images/content/cards/card1.png" alt="">
+                                            <div class="card-section__label red">
+                                                Хит продаж!
+                                            </div>
+                                            <div class="card-section__warning">
+                                                <div class="card-section__warning-text compare-add">
+                                                    Добавлено в Сравнение!
+                                                </div>
+                                                <div class="card-section__warning-text cart-add">
+                                                    Добавлено в Корзину!
+                                                </div>
+                                                <div class="card-section__warning-text favorite-add">
+                                                    Добавлено в Избранное!
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <div class="card-section__content">
+                                            <a href="#" class="card-section__category">Гели для моделирования</a>
+                                            <a href="#" class="card-section__title">
+                                                Express, однофазный гель
+                                            </a>
+                    
+                                            <div class="card-section__bottom">
+                                                <div class="card-section__price">
+                                                    <div class="card-section__price-old">
+                                                        1 200 ₽
+                                                    </div>
+                                                    <div class="card-section__price-new">
+                                                        890 ₽
+                                                    </div>
+                                                </div>
+                    
+                                                <div class="card-section__buttons">
+                                                    <button class="card-section__button compare"><i class="icon-compare"></i></button>
+                                                    <button class="card-section__button favorite"><i class="icon-favorite"></i></button>
+                                                    <button class="card-section__button plus"><i class="icon-plus"></i></button>
+                                                </div>
+                                            </div>
+                    
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cell">
+                                <div class="card">
+                                    <div class="card-section">
+                                        <a href="#" class="card-section__image">
+                                            <img src="/images/content/cards/card1.png" alt="">
+                                            <div class="card-section__label red">
+                                                Хит продаж!
+                                            </div>
+                                            <div class="card-section__warning">
+                                                <div class="card-section__warning-text compare-add">
+                                                    Добавлено в Сравнение!
+                                                </div>
+                                                <div class="card-section__warning-text cart-add">
+                                                    Добавлено в Корзину!
+                                                </div>
+                                                <div class="card-section__warning-text favorite-add">
+                                                    Добавлено в Избранное!
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <div class="card-section__content">
+                                            <a href="#" class="card-section__category">Гели для моделирования</a>
+                                            <a href="#" class="card-section__title">
+                                                Express, однофазный гель
+                                            </a>
+                    
+                                            <div class="card-section__bottom">
+                                                <div class="card-section__price">
+                                                    <div class="card-section__price-old">
+                                                        1 200 ₽
+                                                    </div>
+                                                    <div class="card-section__price-new">
+                                                        890 ₽
+                                                    </div>
+                                                </div>
+                    
+                                                <div class="card-section__buttons">
+                                                    <button class="card-section__button compare"><i class="icon-compare"></i></button>
+                                                    <button class="card-section__button favorite"><i class="icon-favorite"></i></button>
+                                                    <button class="card-section__button plus"><i class="icon-plus"></i></button>
+                                                </div>
+                                            </div>
+                    
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
+                    <!-- ./Карточки -->
+
                 </div>
+                <!-- Пагинация -->
+                <div class="grid-x grid-padding-x align-center">
+                    <ul class="pagination" role="navigation" aria-label="Pagination">
+                        <li class="pagination-previous disabled">
+                            <span class="hide-for-small-only">Назад</span>
+                            <span class="show-for-small-only"><i class="icon-breadcrumb"></i></span>
+                        </li>
+                        <li class="current">1</li>
+                        <li><a href="#" aria-label="Page 2">2</a></li>
+                        <li class="ellipsis show-for-small-only" aria-hidden="true"></li>
+                        <li class="hide-for-small-only"><a href="#" aria-label="Page 3">3</a></li>
+                        <li class="hide-for-small-only"><a href="#" aria-label="Page 4">4</a></li>
+                        <li><a href="#" aria-label="Page 5">5</a></li>
+                        <li class="pagination-next">
+                            <span class="hide-for-small-only"><a href="#" aria-label="Next page">Вперед</a></span>
+                            <span class="show-for-small-only"><a href="#" aria-label="Next page"><i class="icon-breadcrumb"></i></a></span>
+
+                        </li>
+                    </ul>
+                </div>
+                <!-- ./Пагинация -->
             </div>
+
         </section>
     </main>
 
@@ -620,338 +1210,6 @@
         </div>
     </footer>
     <!-- / Компонент футера -->
-
-
-    <div class="grid-container">
-        <div class="grid-x grid-padding-x">
-            <div class="cell large-6">cell 1</div>
-            <div class="cell large-6">cell 2 </div>
-        </div>
-    </div>
-
-
-    <div class="grid-container">
-        <div class="grid-x grid-padding-x">
-            <div class="cell small-1">cell 1</div>
-            <div class="cell small-1">cell 2 </div>
-            <div class="cell small-1">cell 3</div>
-            <div class="cell small-1">cell 4</div>
-            <div class="cell small-1">cell 5</div>
-            <div class="cell small-1">cell 6</div>
-            <div class="cell small-1">cell 7</div>
-            <div class="cell small-1">cell 8</div>
-            <div class="cell small-1">cell 9</div>
-            <div class="cell small-1">cell 10</div>
-            <div class="cell small-1">cell 11</div>
-            <div class="cell small-1">cell 12</div>
-        </div>
-    </div>
-
-    <div class="grid-container">
-        <div class="grid-x grid-padding-x">
-            <div class="cell large-12">
-                <h1>Кнопочки</h1>
-            </div>
-        </div>
-        <div class="grid-x grid-padding-x">
-            <div class="cell">
-                <!-- Кнопка "Все товары" -->
-
-                    <div class="all">
-                        <a href="#" class="all__link">Все товары</a>
-                    </div>
-
-                <!-- /Кнопка "Все товары" -->
-
-            </div>
-        </div>
-    </div>
-
-    <div class="grid-container">
-        <div class="grid-x grid-padding-x">
-            <div class="cell large-12">
-                <h1>Табы</h1>
-            </div>
-        </div>
-        <div class="grid-x grid-padding-x">
-            <div class="cell">
-                <!-- Таб на главной -->
-
-                <div class="tabs__main">
-                    <ul class="tabs" data-tabs id="example-tabs">
-                        <li class="tabs-title is-active"><a href="#panel1" aria-selected="true">Tab 1</a></li>
-                        <li class="tabs-title"><a data-tabs-target="panel2" href="#panel2">Tab 2</a></li>
-                    </ul>
-    
-                    <div class="tabs-content" data-tabs-content="example-tabs">
-                        <div class="tabs-panel is-active" id="panel1">
-                            <p>Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat nisl ut dapibus.</p>
-                        </div>
-                        <div class="tabs-panel" id="panel2">
-                            <p>Suspendisse dictum feugiat nisl ut dapibus.  Vivamus hendrerit arcu sed erat molestie vehicula. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor.  Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- /Таб на главной -->
-
-            </div>
-        </div>
-    </div>
-
-    <div class="grid-container">
-        <div class="grid-x grid-padding-x">
-            <div class="cell large-12">
-                <h1>Карточка товара (карты)</h1>
-            </div>
-        </div>
-        <div class="grid-x grid-padding-x large-up-4">
-            <div class="cell">
-                <div class="card">
-                    <div class="card-section">
-                        <a href="#" class="card-section__image">
-                            <img src="/images/content/cards/card1.png" alt="">
-                            <div class="card-section__hit">
-                                Хит продаж!
-                            </div>
-                            <div class="card-section__warning">
-                                <div class="card-section__warning-text compare-add">
-                                    Добавлено в Сравнение!
-                                </div>
-                                <div class="card-section__warning-text cart-add">
-                                    Добавлено в Корзину!
-                                </div>
-                                <div class="card-section__warning-text favorite-add">
-                                    Добавлено в Избранное!
-                                </div>
-                            </div>
-                        </a>
-                        <div class="card-section__content">
-                            <a href="#" class="card-section__category">Гели для моделирования</a>
-                            <a href="#" class="card-section__title">
-                                Express, однофазный гель
-                            </a>
-    
-                            <div class="card-section__bottom">
-                                <div class="card-section__price">
-                                    <div class="card-section__price-old">
-                                        1 200 ₽
-                                    </div>
-                                    <div class="card-section__price-new">
-                                        890 ₽
-                                    </div>
-                                </div>
-    
-                                <div class="card-section__buttons">
-                                    <button class="card-section__button compare"><i class="icon-compare"></i></button>
-                                    <button class="card-section__button favorite"><i class="icon-favorite"></i></button>
-                                    <button class="card-section__button plus"><i class="icon-plus"></i></button>
-                                </div>
-                            </div>
-    
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="cell">
-                <div class="card">
-                    <div class="card-section">
-                        <a href="#" class="card-section__image">
-                            <img src="/images/content/cards/card1.png" alt="">
-                            <div class="card-section__hit">
-                                Хит продаж!
-                            </div>
-                            <div class="card-section__warning">
-                                <div class="card-section__warning-text compare-add">
-                                    Добавлено в Сравнение!
-                                </div>
-                                <div class="card-section__warning-text cart-add">
-                                    Добавлено в Корзину!
-                                </div>
-                                <div class="card-section__warning-text favorite-add">
-                                    Добавлено в Избранное!
-                                </div>
-                            </div>
-                        </a>
-                        <div class="card-section__content">
-                            <a href="#" class="card-section__category">Гели для моделирования</a>
-                            <a href="#" class="card-section__title">
-                                Express, однофазный гель
-                            </a>
-    
-                            <div class="card-section__bottom">
-                                <div class="card-section__price">
-                                    <div class="card-section__price-old">
-                                        1 200 ₽
-                                    </div>
-                                    <div class="card-section__price-new">
-                                        890 ₽
-                                    </div>
-                                </div>
-    
-                                <div class="card-section__buttons">
-                                    <button class="card-section__button compare"><i class="icon-compare"></i></button>
-                                    <button class="card-section__button favorite"><i class="icon-favorite"></i></button>
-                                    <button class="card-section__button plus"><i class="icon-plus"></i></button>
-                                </div>
-                            </div>
-    
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="cell">
-                <div class="card">
-                    <div class="card-section">
-                        <a href="#" class="card-section__image">
-                            <img src="/images/content/cards/card1.png" alt="">
-                            <div class="card-section__hit">
-                                Хит продаж!
-                            </div>
-                            <div class="card-section__warning">
-                                <div class="card-section__warning-text compare-add">
-                                    Добавлено в Сравнение!
-                                </div>
-                                <div class="card-section__warning-text cart-add">
-                                    Добавлено в Корзину!
-                                </div>
-                                <div class="card-section__warning-text favorite-add">
-                                    Добавлено в Избранное!
-                                </div>
-                            </div>
-                        </a>
-                        <div class="card-section__content">
-                            <a href="#" class="card-section__category">Гели для моделирования</a>
-                            <a href="#" class="card-section__title">
-                                Express, однофазный гель
-                            </a>
-    
-                            <div class="card-section__bottom">
-                                <div class="card-section__price">
-                                    <div class="card-section__price-old">
-                                        1 200 ₽
-                                    </div>
-                                    <div class="card-section__price-new">
-                                        890 ₽
-                                    </div>
-                                </div>
-    
-                                <div class="card-section__buttons">
-                                    <button class="card-section__button compare"><i class="icon-compare"></i></button>
-                                    <button class="card-section__button favorite"><i class="icon-favorite"></i></button>
-                                    <button class="card-section__button plus"><i class="icon-plus"></i></button>
-                                </div>
-                            </div>
-    
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="grid-container">
-        <div class="grid-x grid-padding-x">
-            <div class="cell large-12">
-                <h1>Карточка товара (таблица)</h1>
-            </div>
-        </div>
-        <div class="grid-x grid-padding-x large-up-1 grid-table">
-            <div class="cell">
-                <div class="card">
-                    <div class="card-section">
-                        <a href="#" class="card-section__image">
-                            <img src="/images/content/cards/card1.png" alt="">
-                            <div class="card-section__hit">
-                                Хит продаж!
-                            </div>
-                            <div class="card-section__warning">
-                                <div class="card-section__warning-text compare-add">
-                                    Добавлено в Сравнение!
-                                </div>
-                                <div class="card-section__warning-text cart-add">
-                                    Добавлено в Корзину!
-                                </div>
-                                <div class="card-section__warning-text favorite-add">
-                                    Добавлено в Избранное!
-                                </div>
-                            </div>
-                        </a>
-                        <div class="card-section__content">
-                            <a href="#" class="card-section__category">Гели для моделирования</a>
-                            <a href="#" class="card-section__title">
-                                Express, однофазный гель
-                            </a>
-    
-                            <div class="card-section__bottom">
-                                <div class="card-section__price">
-                                    <div class="card-section__price-old">
-                                        1 200 ₽
-                                    </div>
-                                    <div class="card-section__price-new">
-                                        890 ₽
-                                    </div>
-                                </div>
-    
-                                <div class="card-section__buttons">
-                                    <button class="card-section__button compare"><i class="icon-compare"></i></button>
-                                    <button class="card-section__button favorite"><i class="icon-favorite"></i></button>
-                                    <button class="card-section__button plus"><i class="icon-plus"></i></button>
-                                </div>
-                            </div>
-    
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="cell">
-                <div class="card">
-                    <div class="card-section">
-                        <a href="#" class="card-section__image">
-                            <img src="/images/content/cards/card1.png" alt="">
-                            <div class="card-section__hit">
-                                Хит продаж!
-                            </div>
-                            <div class="card-section__warning">
-                                <div class="card-section__warning-text compare-add">
-                                    Добавлено в Сравнение!
-                                </div>
-                                <div class="card-section__warning-text cart-add">
-                                    Добавлено в Корзину!
-                                </div>
-                                <div class="card-section__warning-text favorite-add">
-                                    Добавлено в Избранное!
-                                </div>
-                            </div>
-                        </a>
-                        <div class="card-section__content">
-                            <a href="#" class="card-section__category">Гели для моделирования</a>
-                            <a href="#" class="card-section__title">
-                                Express, однофазный гель
-                            </a>
-    
-                            <div class="card-section__bottom">
-                                <div class="card-section__price">
-                                    <div class="card-section__price-old">
-                                        1 200 ₽
-                                    </div>
-                                    <div class="card-section__price-new">
-                                        890 ₽
-                                    </div>
-                                </div>
-    
-                                <div class="card-section__buttons">
-                                    <button class="card-section__button compare"><i class="icon-compare"></i></button>
-                                    <button class="card-section__button favorite"><i class="icon-favorite"></i></button>
-                                    <button class="card-section__button plus"><i class="icon-plus"></i></button>
-                                </div>
-                            </div>
-    
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>

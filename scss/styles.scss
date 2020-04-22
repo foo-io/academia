@@ -54,17 +54,28 @@ body,
             width: 100%;
         }
     }
-    &__hit {
+    &__label {
         position: absolute;
-        background: #F02727;
         border-radius: 4px;
         color: #FFF;
         font-weight: 500;
         font-size: 14px;
         line-height: 16px;
-        padding: 4px 19px;
+        padding: 4px;
+        width: 120px;
+        text-align: center;
         top: 0;
         right: 0;
+
+        &.red {
+            background: #F02727;
+        }
+        &.purple {
+            background: #8027F0;;
+        }
+        &.blue {
+            background: #0029FE;
+        }
     }
     &__warning {
         position: absolute;
@@ -192,7 +203,7 @@ body,
             &__image {
                 margin-bottom: 0;
             }
-            &__hit {
+            &__label {
                 left: 0;
                 right: auto;
             }
@@ -1104,7 +1115,7 @@ body,
         display: flex;
         align-items: center;
         justify-content: center;
-        font-size: 8px;
+        font-size: 6px;
     }
     &__wrapper {
         margin-right: -.5rem;
@@ -1167,7 +1178,7 @@ body,
         display: flex;
         align-items: center;
         justify-content: center;
-        font-size: 8px;
+        font-size: 6px;
     }
     &>li.is-dropdown-submenu-parent.is-active>a::after {
         transform: rotate(180deg);
@@ -1896,10 +1907,12 @@ textarea {
 .pagination {
     display: flex;
     margin-top: 3rem;
+    margin-bottom: 2rem;
     li {
         width: 34px;
         height: 34px;
         border: 1px solid #F3F3F3;
+        background: #F7F7F7;
         margin: 0;
         padding: 0;
         margin-right: 1rem;
@@ -1908,6 +1921,8 @@ textarea {
         align-items: center;
 
         a {
+            font-weight: 500;
+
             display: flex;
             justify-content: center;
             align-items: center;
@@ -1938,6 +1953,7 @@ textarea {
     }
     .pagination-previous,
     .pagination-next {
+        background: transparent;
         a {
             color: #911C2C;
             
@@ -2228,7 +2244,8 @@ textarea {
     font-weight: 500;
     font-size: 14px;
     line-height: 16px;
-    color: #8F8F8F;
+    color: #3F4351;
+    
     align-items: center;
     cursor: pointer;
     outline: none;
@@ -2236,31 +2253,303 @@ textarea {
     &.hover {
         color: #911C2C;
         border-radius: 4px 4px 0 0;
-        .filter-catalog {
+        .filter-drop {
             transform: rotate(180deg);
         }
     }
-    &.filter__catalog.hover {
-        border-bottom: 0;
-
+    &:hover {
+        color: #911C2C;
     }
-    .filter-catalog {
-        font-size: 8px;
-        margin-left: auto;
-        width: 22px;
-        height: 22px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+    &.filter__catalog {
+        color: #8F8F8F;
+        &:hover {
+            color: #911C2C;
+
+        }
+        &.hover {
+            border-bottom: 0;
+        }
     }
     &__dropdown {
         width: 272px;
         background: #FFF;
         border: 1px solid #D5E1E8;
         border-top: 0;
-        padding-top: 0;
+        border-radius: 0 0 4px 4px;
+
+        &-catalog {
+            padding-top: 0;
+        }
     }
+    &__accordion {
+        margin-bottom: 0;
+        &-item {
+            margin: 11px 0;
+
+            &:first-child {
+                margin-top: 0;
+            }
+        }
+        &-item.is-active {
+            margin: 0;
+
+            .filter__accordion-title {
+                background: #911C2C;
+                color: #FFFFFF;
+            }
+        }
+        &-title {
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 16px;
+            border-radius: 0;
+            border: 0 !important;
+            padding: 9px 12px;
+            color: #3F4351;
+            &::before {
+                content: '' !important;
+            }
+            &:hover {
+                background: transparent;
+                color: #911C2C;
+            }
+        }
+        &-content {
+            border: 0;
+            padding: 1rem 12px;
+            border-bottom: 1px solid #D5E1E8;
+        }
+        &-items {
+            list-style-type: none;
+            margin: 0;
+            
+            li {
+                line-height: 15px;
+                margin-bottom: 1rem;
+                &:last-child {
+                    margin-bottom: 0;
+                }
+                a {
+                    font-weight: 500;
+                    font-size: 13px;
+                    line-height: 15px;
+
+                    color: #8D92A3;
+        
+                    &:hover {
+                        color: #911C2C;
+                    }
+                }
+            }
+        }
+    }
+    &__sorting {
+        justify-content: center;
+
+        i.filter-drop {
+            margin-left: 6px;
+        }
+    }
+    &__brands {
+        max-height: 308px;
+        overflow: auto;
+
+        /* width */
+        &::-webkit-scrollbar {
+            width: 8px;
+        }
+        
+        /* Track */
+        &::-webkit-scrollbar-track {
+            background: #F1F1F1;
+        }
+        
+        /* Handle */
+        &::-webkit-scrollbar-thumb {
+            background: #C4C4C4;
+        }
+        
+        /* Handle on hover */
+        &::-webkit-scrollbar-thumb:hover {
+            background: rgb(170, 170, 170);
+        }
+    }
+    &__show {
+        cursor: auto;
+        padding: 0;
+    }
+    &__button {
+        width: 50%;
+        height: 100%;
+        cursor: pointer;
+        color: #C8CCD8;
+        transition: $tansition-setting;
+        outline: none;
+        &:hover,
+        &.filter-active {
+            color: #911C2C;
+        }
+    }
+    &-delimeter {
+        height: 100%;
+        width: 1px;
+        border-left: 1px solid #D5E1E8;
+    }
+    &__cancel {
+        height: auto;
+        justify-content: center;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 16px;
+        color: #911C2C;
+
+        i {
+            margin-right: 10px;
+            color: #C6C6C6;
+            font-size: 10px;
+        }
+    }
+
 }
+.filter-drop {
+    font-size: 6px;
+    margin-left: auto;
+    width: 22px;
+    height: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+// Left sidebar
+.filter-accordion {
+
+    &__item {
+        margin-bottom: 1rem;
+        outline: none;
+        border: 1px solid #D5E1E8;
+        border-radius: 4px;
+        &.is-active {
+            .filter-accordion__title {
+                //color: #911C2C;
+
+            }
+            .filter-drop {
+                transform: rotate(180deg);
+            }
+    
+        }
+        &:last-child>.accordion-content:last-child {
+            border: 0;
+        }
+        &:last-child:not(.is-active)>.accordion-title {
+            border: 0;
+        }
+    }
+    &__title {
+        display: flex;
+        align-items: center;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 16px;
+        color: #8F8F8F;
+        background: #FFFFFF;
+        border-radius: 4px !important;
+        outline: none;
+        border: 0;
+        &:hover {
+            background: inherit;
+            color: #911C2C;
+        }
+        &:focus {
+            background: inherit;
+
+            color: #8F8F8F;
+            //color: #911C2C;
+        }
+        
+        &::before {
+            content: '' !important;
+        }
+    }
+    &__content {
+        padding-top: 0;
+        border: 0;
+        background: transparent;
+        
+    }
+
+}
+/* Customize the label (the container) */
+.checkbox-custom {
+    display: block;
+    position: relative;
+    padding-left: 2rem;
+    margin-bottom: 1rem;
+    cursor: pointer;
+    user-select: none;
+
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    color: #545A60;
+
+    & input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+    }
+    
+    /* Create a custom checkbox */
+    .checkmark {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 16px;
+        width: 16px;
+        background: #F8F8F8;
+        border: 1px solid #DFE9EF;
+    }
+    
+    /* On mouse-over, add a grey background color */
+    &:hover input ~ .checkmark {
+        background-color: #DFE9EF;
+    }
+    
+    /* When the checkbox is checked, add a blue background */
+    & input:checked ~ .checkmark {
+        background-color: #F8F8F8;
+    }
+    
+    /* Create the checkmark/indicator (hidden when not checked) */
+    .checkmark:after {
+        content: "";
+        position: absolute;
+        display: none;
+    }
+    
+    /* Show the checkmark when checked */
+    & input:checked ~ .checkmark:after {
+        display: block;
+    }
+    
+    /* Style the checkmark/indicator */
+    & .checkmark:after {
+        left: 4px;
+        top: 0px;
+        width: 6px;
+        height: 11px;
+        border: solid #911C2C;
+        border-width: 0 2px 2px 0;
+        transform: rotate(45deg);
+    }    
+}
+
+
+
+//! START MEDIA QUERIES
 @media screen and (max-width: 1123px) {
     .header__menu {
         .dropdown.menu.show-for-large {
@@ -2886,7 +3175,54 @@ textarea {
 		&__descr {
 		}
     }
+    .pagination {
+        li {
+            border-color: #D5E1E8;
 
+            &.current {
+                border-color: #F3F3F3;
+            }
+            &:first-child,
+            &:last-child {
+                background: #F7F7F7;
+                border: 1px solid #D5E1E8;
+                width: 34px;
+                height: 34px;
+            }
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+        &-previous {
+            span {
+                transform: rotate(180deg);
+            }
+        }
+        &-previous,
+        &-next {
+            
+            span {
+                color: #911C2C;
+                font-size: 9px;
+                width: 5.53px;
+                height: 8.94px;
+                line-height: 9px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            &.disabled {
+                span {
+                    color: #8D92A3;
+                }
+            }
+            a {
+                &:hover {
+                    text-decoration: none !important;
+                }
+            }
+        }
+    }
 }
 @media screen and (max-width: 37rem) {
     // меняем флекс дирекшн у субскрайб
