@@ -12,7 +12,10 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
-
+  .icon-filter:before {
+    content: "\e919";
+    // color: #911c2c;
+  }
   .icon-cancel:before {
     content: "\e918";
     // color: #c6c6c6;

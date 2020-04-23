@@ -139,8 +139,8 @@ $(document).ready(function() {
             arrows: false,
             fade: true,
             asNavFor: '.news__slider-nav'
-          });
-          $('.news__slider-nav').slick({
+        });
+        $('.news__slider-nav').slick({
             slidesToShow: 7,
             slidesToScroll: 1,
             asNavFor: '.news__slider-for',
@@ -162,7 +162,7 @@ $(document).ready(function() {
                 }
             },
             ]
-          });
+        });
 
     var time = 2;
     var $slick, isPause, tick, percentTime = 0;
