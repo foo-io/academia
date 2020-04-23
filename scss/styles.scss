@@ -1261,6 +1261,10 @@ section {
     padding: 2rem 0;
 }
 .section {
+    &__static {
+        padding: 0;
+    }
+
     &__banner {
         padding: 2rem 0 1rem;
         .banner {
@@ -2500,6 +2504,25 @@ textarea {
     line-height: 16px;
     color: #545A60;
 
+    &.left .checkmark {
+        right: 0;
+        top: calc(50% - 8px);
+        left: auto;
+    }
+    &.left.helptext {
+        display: flex;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 16px;
+        color: #8D92A3;
+        align-items: center;
+        height: 100%;
+        max-width: 212px;
+        margin-left: auto;
+        margin-right: 1rem;
+        margin-bottom: 0;
+        padding: 0;
+    }
     & input {
         position: absolute;
         opacity: 0;
@@ -3134,6 +3157,7 @@ dl {
                 margin: 0;
                 background: transparent;
                 border: none;
+                border-radius: unset;
                 padding: 18px 0.5rem;
                 font-weight: 500;
                 font-size: 14px;
@@ -3148,11 +3172,12 @@ dl {
             }
 
             .dropdown-pane {
-                height: 100vh;
+                height: calc(100vh - 115px);
                 border: none;
                 width: calc(100% + 16px);
                 left: -8px !important;
                 position: fixed;
+                overflow: auto;
             }
         }
     }
@@ -3181,6 +3206,7 @@ dl {
     }
     .footer {
         &__wrapper-mobile {
+            margin: 0 -1rem;
             .accordion-menu {
                 width: 100%;
 
@@ -3396,6 +3422,12 @@ dl {
     }
     .static {
         &__content {
+            background: #FFF;
+            font-size: 16px;
+            line-height: 28px;
+            color: #8D92A3;
+            margin: 0 -1rem;
+            padding: 0 1rem 4rem;
             img {
                 min-width: calc(100% + 2rem);
                 margin-left: -1rem;
@@ -3759,7 +3791,15 @@ dl {
             }
         }
     }
-
+    .checkbox-custom {
+    
+        &.left .checkmark {
+        }
+        &.left.helptext {
+            margin: 1rem auto 2rem;
+            height: auto;
+        }
+    }
 }
 @media screen and (max-width: 37rem) {
     // меняем флекс дирекшн у субскрайб

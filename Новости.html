@@ -469,18 +469,27 @@
                         </div>
                     </div>
                 </div>
+                <!-- Пагинация -->
                 <div class="grid-x grid-padding-x align-center">
                     <ul class="pagination" role="navigation" aria-label="Pagination">
-                        <li class="pagination-previous disabled">Назад</li>
+                        <li class="pagination-previous disabled">
+                            <span class="hide-for-small-only">Назад</span>
+                            <span class="show-for-small-only"><i class="icon-breadcrumb"></i></span>
+                        </li>
                         <li class="current">1</li>
                         <li><a href="#" aria-label="Page 2">2</a></li>
-                        <!-- <li class="ellipsis" aria-hidden="true"></li> -->
-                        <li><a href="#" aria-label="Page 3">3</a></li>
-                        <li><a href="#" aria-label="Page 4">4</a></li>
+                        <li class="ellipsis show-for-small-only" aria-hidden="true"></li>
+                        <li class="hide-for-small-only"><a href="#" aria-label="Page 3">3</a></li>
+                        <li class="hide-for-small-only"><a href="#" aria-label="Page 4">4</a></li>
                         <li><a href="#" aria-label="Page 5">5</a></li>
-                        <li class="pagination-next"><a href="#" aria-label="Next page">Вперед</a></li>
+                        <li class="pagination-next">
+                            <span class="hide-for-small-only"><a href="#" aria-label="Next page">Вперед</a></span>
+                            <span class="show-for-small-only"><a href="#" aria-label="Next page"><i class="icon-breadcrumb"></i></a></span>
+
+                        </li>
                     </ul>
                 </div>
+                <!-- ./Пагинация -->
             </div>
         </section>
     </main>
@@ -567,7 +576,7 @@
                     </ul>
                 </div>
             </div>
-            <div class="grid-x grid-padding-x footer__wrapper-mobile show-for-small-only">
+            <div class="grid-x footer__wrapper-mobile show-for-small-only">
                 <ul class="vertical menu accordion-menu" data-accordion-menu data-multi-open="false">
                     <li><a href="#"><i class="icon-burger"></i> Каталог товаров</a></li>
                     <li><a href="#">Бренды</a></li>

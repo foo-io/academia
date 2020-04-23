@@ -1667,6 +1667,10 @@ section {
   padding: 2rem 0;
 }
 
+.section__static {
+  padding: 0;
+}
+
 .section__banner {
   padding: 2rem 0 1rem;
 }
@@ -3049,6 +3053,31 @@ textarea {
   /* Style the checkmark/indicator */
 }
 
+.checkbox-custom.left .checkmark {
+  right: 0;
+  top: calc(50% - 8px);
+  left: auto;
+}
+
+.checkbox-custom.left.helptext {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  color: #8D92A3;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+  max-width: 212px;
+  margin-left: auto;
+  margin-right: 1rem;
+  margin-bottom: 0;
+  padding: 0;
+}
+
 .checkbox-custom input {
   position: absolute;
   opacity: 0;
@@ -3701,6 +3730,7 @@ dl dd {
     margin: 0;
     background: transparent;
     border: none;
+    border-radius: unset;
     padding: 18px 0.5rem;
     font-weight: 500;
     font-size: 14px;
@@ -3717,11 +3747,12 @@ dl dd {
     margin-right: 16px;
   }
   .menu__mobile .dropdown-pane {
-    height: 100vh;
+    height: calc(100vh - 115px);
     border: none;
     width: calc(100% + 16px);
     left: -8px !important;
     position: fixed;
+    overflow: auto;
   }
 }
 
@@ -3745,6 +3776,9 @@ dl dd {
   .input-custom {
     background: #EEEEEE;
     color: #8D92A3;
+  }
+  .footer__wrapper-mobile {
+    margin: 0 -1rem;
   }
   .footer__wrapper-mobile .accordion-menu {
     width: 100%;
@@ -3934,6 +3968,14 @@ dl dd {
     padding: 1rem;
     margin-left: -1rem;
     margin-right: -1rem;
+  }
+  .static__content {
+    background: #FFF;
+    font-size: 16px;
+    line-height: 28px;
+    color: #8D92A3;
+    margin: 0 -1rem;
+    padding: 0 1rem 4rem;
   }
   .static__content img {
     min-width: calc(100% + 2rem);
@@ -4243,6 +4285,10 @@ dl dd {
   .product__tabs .tabs-title a {
     font-size: 14px;
     line-height: 16px;
+  }
+  .checkbox-custom.left.helptext {
+    margin: 1rem auto 2rem;
+    height: auto;
   }
 }
 
