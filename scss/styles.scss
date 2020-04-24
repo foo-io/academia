@@ -516,6 +516,12 @@ body,
         }
     }
 }
+.auth {
+    margin-top: 4rem;
+}
+.forgot {
+    color: #911C2C;
+}
 .sign {
     &__button {
         cursor: pointer;
@@ -1273,7 +1279,9 @@ section {
     &__static {
         padding: 0;
     }
-
+    &__auth {
+        background: #FFF;
+    }
     &__banner {
         padding: 2rem 0 1rem;
         .banner {
@@ -3560,7 +3568,8 @@ dl {
     }
     .button.custom {
         display: flex;
-        width: auto;
+        width: 212px;
+        justify-content: center;
         margin: 0 auto;
     }
     .timetable {

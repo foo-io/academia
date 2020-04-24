@@ -817,6 +817,14 @@ body,
   opacity: 1;
 }
 
+.auth {
+  margin-top: 4rem;
+}
+
+.forgot {
+  color: #911C2C;
+}
+
 .sign__button {
   cursor: pointer;
   font-weight: 500;
@@ -1681,6 +1689,10 @@ section {
 
 .section__static {
   padding: 0;
+}
+
+.section__auth {
+  background: #FFF;
 }
 
 .section__banner {
@@ -4102,7 +4114,10 @@ dl dd {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    width: auto;
+    width: 212px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     margin: 0 auto;
   }
   .timetable {
