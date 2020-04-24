@@ -36,7 +36,7 @@
             <div class="grid-container">
                 <div class="header__top-content">
                     <div class="header__top-cities">
-                        <ul class="dropdown menu custom" data-dropdown-menu>
+                        <ul class="dropdown menu custom" data-dropdown-menu data-click-open="true" data-disable-hover="true">
                             <li>
                                 <a href="#" class="custom__selected">Якутск</a>
                                 <ul class="menu">
@@ -55,7 +55,7 @@
                             </a>
                         </div>
                         <div class="location">
-                            <ul class="dropdown menu custom" data-dropdown-menu>
+                            <ul class="dropdown menu custom" data-dropdown-menu data-click-open="true" data-disable-hover="true">
                                 <li>
                                     <a href="#" class="custom__selected">
                                         <i class="icon-location"></i>
@@ -93,7 +93,7 @@
                     </div>
                     <div class="header__menu">
                         <!-- desktop nav -->
-                        <ul class="dropdown menu show-for-large" data-dropdown-menu>
+                        <ul class="dropdown menu show-for-large" data-dropdown-menu data-click-open="true" data-disable-hover="true">
                             <li>
                                 <a href="#">О компании</a>
                                 <ul class="menu">
@@ -122,7 +122,7 @@
                             </li>
                         </ul>
                         <!-- mobile nav -->
-                        <ul class="dropdown menu hide-for-large" data-dropdown-menu>
+                        <ul class="dropdown menu hide-for-large" data-dropdown-menu data-click-open="true" data-disable-hover="true">
                             <li>
                                 <a href="#">О компании</a>
                                 <ul class="menu">
@@ -568,13 +568,13 @@
                                 </div>
                                 <div class="cell product__tabs large-7 medium-7 small-12">
                                     <!-- Табы -->
-                                    <ul class="tabs" data-tabs id="example-tabs">
+                                    <ul class="tabs" data-tabs id="product-tabs">
                                         <li class="tabs-title is-active"><a href="#panel1" aria-selected="true">Описание</a></li>
                                         <li class="tabs-title"><a data-tabs-target="panel2" href="#panel2">Наличие в магазинах</a></li>
                                         <li class="tabs-title"><a data-tabs-target="panel3" href="#panel3">Отзывы</a></li>
                                     </ul>
                     
-                                    <div class="tabs-content" data-tabs-content="example-tabs">
+                                    <div class="tabs-content" data-tabs-content="product-tabs">
                                         <div class="tabs-panel product__descr is-active" id="panel1">
                                             <p>Декоративный гель-лак с прозрачной основой, мерцающим песком и крупными блестками-шестигранниками. Голубые, розовые, желтые блестки обладают голографическим эффектом. Для плотного покрытия распределяйте материал кистью из флакона, чтобы частицы образовали равномерный слой. Второй способ нанесения – на цветную основу. Гель-лак преобразит любой цвет и удвоит вашу палитру.</p>
                                             <p>Декоративный гель-лак с прозрачной основой, мерцающим песком и крупными блестками-шестигранниками. Голубые, розовые, желтые блестки обладают голографическим эффектом. Для плотного покрытия распределяйте материал кистью из флакона, чтобы частицы образовали равномерный слой. Второй способ нанесения – на цветную основу. Гель-лак преобразит любой цвет и удвоит вашу палитру.</p>
@@ -608,8 +608,9 @@
                                               </table>
                                         </div>
                                         <div class="tabs-panel" id="panel3">
-                                            <form action="#">
+                                            <form action="#" class="reviews__form">
                                                 <textarea name="review" id="" cols="30" rows="2" placeholder="Оставьте ваш отзыв о товаре..."></textarea>
+                                                <button class="button reviews__button">Отправить</button>
                                             </form>
 
                                             <div class="reviews">
