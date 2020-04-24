@@ -1043,9 +1043,13 @@ body,
 .catalog__content .tabs-title {
   margin-right: 10px;
   margin-bottom: 1rem;
-  min-width: 32px;
+  width: 32px;
   height: 32px;
   border-radius: 100px;
+}
+
+.catalog__content .tabs-title.three {
+  width: auto;
 }
 
 .catalog__content .tabs-title.is-active a {
@@ -4352,6 +4356,13 @@ dl dd {
   .checkbox-custom.left.helptext {
     margin: 1rem auto 2rem;
     height: auto;
+  }
+  .brands-tab__list {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    max-height: unset;
   }
 }
 

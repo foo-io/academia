@@ -724,9 +724,13 @@ body,
                 margin-right: 10px;
                 margin-bottom: 1rem;
 
-                min-width: 32px;
+                width: 32px;
                 height: 32px;
                 border-radius: 100px;
+
+                &.three {
+                    width: auto;
+                }
                 &.is-active {
                     a {
                         color: #FFF;
@@ -3844,6 +3848,12 @@ dl {
             height: auto;
         }
     }
+    .brands-tab {
+        &__list {
+            flex-direction: row;
+            max-height: unset;
+        }
+    }    
 }
 @media screen and (max-width: 37rem) {
     // меняем флекс дирекшн у субскрайб
