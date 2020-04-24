@@ -1722,6 +1722,8 @@ section {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  -webkit-transition: all 3s linear;
+  transition: all 3s linear;
 }
 
 .section__banner .banner__image:after {
