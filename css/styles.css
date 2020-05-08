@@ -2299,6 +2299,7 @@ section {
 
 .news__slider-nav img.slick-slide {
   height: 54px;
+  min-width: 84px;
   min-height: auto;
   max-height: none;
   margin: 0 4px;
@@ -2313,6 +2314,7 @@ section {
 
 .news__slider-nav .slick-track {
   height: 100%;
+  width: 100% !important;
 }
 
 .news__slider-nav img.slick-current {

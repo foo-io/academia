@@ -1821,6 +1821,7 @@ section {
 
             img.slick-slide {
                 height: 54px;
+                min-width: 84px;
                 min-height: auto;
                 max-height: none;
                 margin: 0 4px;
@@ -1839,6 +1840,8 @@ section {
             }
             .slick-track {
                 height: 100%;
+                // min-width: 100%;
+                width: 100% !important;
             }
             img.slick-current {
                 border: 1px solid #FFFFFF;
