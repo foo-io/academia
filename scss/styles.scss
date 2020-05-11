@@ -2630,6 +2630,12 @@ textarea {
     border: 1px solid #D5E1E8;
     border-radius: 4px;
 
+    &__image {
+        border-right: 1px solid #D5E1E8;
+        border-bottom: 1px solid #D5E1E8;
+        position: relative;
+        padding: 2rem;
+    }
     &__slider {
         border-right: 1px solid #D5E1E8;
         border-bottom: 1px solid #D5E1E8;
@@ -2651,6 +2657,7 @@ textarea {
         border-bottom: 1px solid #D5E1E8;
         padding: 2rem;
         flex-direction: column;
+        position: relative;
 
         &-top {
             margin-bottom: 1rem;
@@ -2927,8 +2934,8 @@ textarea {
         border: 1px solid #D5E1E8;
         border-radius: 13px;
         position: absolute;
-        bottom: -6.5px;
-        right: -6.5px;
+        bottom: -7.5px;
+        left: -7.5px;
         background: #FFF;
         z-index: 1;
     }
