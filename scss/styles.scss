@@ -3518,6 +3518,11 @@ dl {
     }
     .news {
 
+        &__image {
+            height: 320px;
+            overflow: hidden;
+            border-radius: 4px;
+        }
         &__header {
             padding: 1rem 0 1.5rem;
         }

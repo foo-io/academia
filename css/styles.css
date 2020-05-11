@@ -4080,6 +4080,11 @@ dl dd {
   .news-card__descr {
     padding: 0 24px 24px;
   }
+  .news__image {
+    height: 320px;
+    overflow: hidden;
+    border-radius: 4px;
+  }
   .news__header {
     padding: 1rem 0 1.5rem;
   }

@@ -1,0 +1,735 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Курсы (детальное)</title>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" href="css/app.min.css">
+    <link rel="stylesheet" href="css/styles.min.css">
+
+</head>
+<body>
+    <div class="grid-container">
+        <a href="/index.html">Главная</a> / 
+        <a href="/Авторизация.html">Авторизация</a> / 
+        <a href="/Аккаунт.html">Аккаунт</a> / 
+        <a href="/Бренды.html">Бренды</a> / 
+        <a href="/Вакансии.html">Вакансии</a> / 
+        <a href="/Доставка.html">Доставка</a> / 
+        <a href="/Карта сайта.html">Карта сайта</a> / 
+        <a href="/Контакты.html">Контакты</a> / 
+        <a href="/Курсы_1.html">Курсы (карточки)</a> / 
+        <a href="/Курсы_2.html">Курсы (детальное)</a> / 
+        <a href="/Курсы_3.html">Курсы (расписание)</a> / 
+        <a href="/Новости.html">Новости</a> / 
+        <a href="/Новости_2.html">Новости (детальное)</a> / 
+        <a href="/Статичная страница.html">Статичная страница</a> /
+        <a href="/Каталог_1.html">Каталог_1</a> /
+        <a href="/Каталог_2.html">Каталог_2</a> /
+        <a href="/Страница товара.html">Страница товара</a>
+    </div>
+
+    <!-- Компонент хедера -->
+    <header>
+        <div class="header__top">
+            <div class="grid-container">
+                <div class="header__top-content">
+                    <div class="header__top-cities">
+                        <ul class="dropdown menu custom" data-dropdown-menu data-click-open="true" data-disable-hover="true">
+                            <li>
+                                <a href="#" class="custom__selected">Якутск</a>
+                                <ul class="menu">
+                                    <li><a href="#">Москва</a></li>
+                                    <li><a href="#">Санкт-Петербург</a></li>
+                                    <li><a href="#">Новосибирск</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="header__top-address">
+                        <div class="phone">
+                            <a href="tel:+79142223344">
+                                <i class="icon-phone"></i>
+                                Интернет-магазин: 8‒914‒222‒33‒44
+                            </a>
+                        </div>
+                        <div class="location">
+                            <ul class="dropdown menu custom" data-dropdown-menu data-click-open="true" data-disable-hover="true">
+                                <li>
+                                    <a href="#" class="custom__selected">
+                                        <i class="icon-location"></i>
+                                        ТЦ “Атлант”, 2 этаж ( 8‒914‒2‒725‒521 )            
+                                    </a>
+                                    <ul class="menu">
+                                        <li><a href="#">ТЦ “Атлант”, 2 этаж ( 8‒914‒2‒725‒521 )</a></li>
+                                        <li><a href="#">ТЦ “Атлант”, 2 этаж ( 8‒914‒2‒725‒521 )</a></li>
+                                        <li><a href="#">ТЦ “Атлант”, 2 этаж ( 8‒914‒2‒725‒521 )</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="header__top-search">
+                        <button class="button pc-search" data-toggle="pc-search"><i class="icon-search"></i></button>
+                        <div class="pc-search__block small reveal " id="pc-search" data-reveal>
+                            <form action="#" class="pc-search__form">
+                                <input type="text" name="search" id="search" class="pc-search__input" placeholder="Введите поисковый запрос, например, жидкость для снятия лака">
+                                <button type="submit" class="pc-search__button"><i class="icon-search"></i></button>
+                            </form>
+                        </div>
+                    </div>    
+                </div>
+            </div>
+        </div>
+        <div class="header__center">
+            <div class="grid-container">
+                <div class="header__center-content">
+                    <div class="header__logo">
+                        <a href="#" class="header__logo-link">
+                            <img src="/images/header/logo.png" alt="Логотип">
+                            Академия Красоты
+                        </a>
+                    </div>
+                    <div class="header__menu">
+                        <!-- desktop nav -->
+                        <ul class="dropdown menu show-for-large" data-dropdown-menu data-click-open="true" data-disable-hover="true">
+                            <li>
+                                <a href="#">О компании</a>
+                                <ul class="menu">
+                                    <li><a href="#">Item 1A</a></li>
+                                    <li><a href="#">Item 1A</a></li>
+                                    <li><a href="#">Item 1A</a></li>
+                                    <!-- ... -->
+                                </ul>
+                            </li>
+                            <li><a href="#">Новости</a></li>
+                            <li><a href="#">Оптовикам</a></li>
+                            <li>
+                                <a href="#">Покупателям</a>
+                                <ul class="menu">
+                                    <li><a href="#">Item 1A</a></li>
+                                    <!-- ... -->
+                                </ul>
+                            </li>
+                            <li><a href="#">Салон</a></li>
+                            <li>
+                                <a href="#">Учебный центр</a>
+                                <ul class="menu">
+                                    <li><a href="#">Item 1A</a></li>
+                                    <!-- ... -->
+                                </ul>
+                            </li>
+                        </ul>
+                        <!-- mobile nav -->
+                        <ul class="dropdown menu hide-for-large" data-dropdown-menu data-click-open="true" data-disable-hover="true">
+                            <li>
+                                <a href="#">О компании</a>
+                                <ul class="menu">
+                                    <li><a href="#">Item 1A</a></li>
+                                    <li><a href="#">Item 1A</a></li>
+                                    <li><a href="#">Item 1A</a></li>
+                                    <!-- ... -->
+                                </ul>
+                            </li>
+                            <li><a href="#">Новости</a></li>
+                            <li>
+                                <a href="#">Еще</a>
+                                <ul class="menu">
+                                    <li><a href="#">Item 1A</a></li>
+                                    <!-- ... -->
+                                </ul>
+                            </li>
+                        </ul>
+
+                    </div>
+                    <div class="header__sign">
+                        <button class="sign__button" type="button" data-toggle="sign-up">Регистрация</button>
+                        <div class="sign__delimeter"></div>
+                        <button class="sign__button" type="button" data-toggle="sign-in"><i class="icon-user"></i> Войти</button>
+                        <a href="#" class="sign__button mobile__auth"><i class="icon-user"></i> Войти</a>
+                        <div class="dropdown-pane sign__container" id="sign-up" data-dropdown data-auto-focus="true" data-position="bottom" data-alignment="right" data-parent-class="header__sign">
+                            <div class="sign__container-title">Регистрация</div>
+                            <form>
+                                <div class="cell medium-12">
+                                    <label>
+                                        <input type="text" placeholder="Фамилия">
+                                    </label>
+                                </div>
+                                <div class="cell medium-12">
+                                    <label>
+                                        <input type="text" placeholder="Имя">
+                                    </label>
+                                </div>
+                                <div class="cell medium-12">
+                                    <label>
+                                        <input type="email" placeholder="e-mail">
+                                    </label>
+                                </div>
+                                <div class="cell medium-12">
+                                    <label>
+                                        <input type="password" placeholder="Пароль">
+                                    </label>
+                                </div>
+                                <div class="cell medium-12">
+                                    <label>
+                                        <input type="password" placeholder="Повторите пароль">
+                                    </label>
+                                </div>
+                                <div class="cell medium-12">
+                                    <div class="sign__captcha">
+                                        // captcha
+                                    </div>
+                                </div>
+                                <div class="cell medium-12">
+                                    <input type="submit" class="sign__submit" value="Зарегистрироваться">
+                                </div>
+                            </form>
+                            <div class="sign__container-bottom">
+                                Уже есть аккаунт?
+                                <a href="#">Авторизуйтесь</a>
+                            </div>
+                        </div>
+                        <div class="dropdown-pane sign__container" id="sign-in" data-dropdown data-auto-focus="true" data-position="bottom" data-alignment="right">
+                            <div class="sign__container-title">Авторизация</div>
+                            <form>
+                                <div class="cell medium-12">
+                                    <label>
+                                        <input type="text" placeholder="Номер телефона">
+                                    </label>
+                                </div>
+                                <div class="cell medium-12">
+                                    <label>
+                                        <input type="password" placeholder="Пароль">
+                                        <a href="#" class="forgot">Забыли пароль?</a>
+                                    </label>
+                                </div>
+                                <div class="cell medium-12">
+                                    <input type="submit" class="sign__submit" value="Войти">
+                                </div>
+                            </form>
+                            <div class="sign__container-bottom">
+                                Еще нет аккаунта?
+                                <a href="#">Зарегистрируйтесь</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header__bottom">
+            <div class="grid-container">
+                <div class="header__bottom-content">
+                    <!--! Main catalog -->
+                    <div class="catalog">
+                        
+                        <ul class="menu">
+                            <li class="hide-for-large"><a href="#" class="catalog__item"><i class="icon-burger"></i>Весь каталог</a></li>
+                            <li><button class="button catalog__item" type="button" data-toggle="brands-tab">Бренды</button></li>
+                            <li><button class="button catalog__item" type="button" data-toggle="gel-tab">Гель-лаки</button></li>
+                            <li><a href="#" class="catalog__item">Маникюр</a></li>
+                            <li><a href="#" class="catalog__item">Педикюр</a></li>
+                            <li><a href="#" class="catalog__item">Брови и ресницы</a></li>
+                            <li><a href="#" class="catalog__item">Волосы</a></li>
+                            <li><a href="#" class="catalog__item">Уход за кожей</a></li>
+                            <li><a href="#" class="catalog__item">Оборудование</a></li>
+                            <li><a href="#" class="catalog__item">Прочее</a></li>
+                        </ul>
+                        <div class="dropdown-pane" id="brands-tab" data-dropdown data-hover="true" data-hover-pane="true">
+                            <div class="catalog__content">
+                                <ul class="tabs" data-tabs id="brands-tab">
+                                    <li class="tabs-title is-active"><a href="#A" aria-selected="true">A</a></li>
+                                    <li class="tabs-title"><a data-tabs-target="B" href="#B">B</a></li>
+                                    <li class="tabs-title"><a data-tabs-target="C" href="#C">C</a></li>
+                                    <li class="tabs-title"><a data-tabs-target="D" href="#D">D</a></li>
+                                    <li class="tabs-title"><a data-tabs-target="E" href="#E">E</a></li>
+                                    <li class="tabs-title"><a data-tabs-target="F" href="#F">F</a></li>
+                                    <li class="tabs-title"><a data-tabs-target="G" href="#G">G</a></li>
+                                    <li class="tabs-title"><a data-tabs-target="H" href="#H">H</a></li>
+                                    <li class="tabs-title"><a data-tabs-target="I" href="#I">I</a></li>
+                                    <li class="tabs-title"><a data-tabs-target="J" href="#J">J</a></li>
+                                    <li class="tabs-title"><a data-tabs-target="K" href="#K">K</a></li>
+                                    <li class="tabs-title"><a data-tabs-target="L" href="#L">L</a></li>
+                                    <li class="tabs-title"><a data-tabs-target="M" href="#M">M</a></li>
+                                    <li class="tabs-title"><a data-tabs-target="N" href="#N">N</a></li>
+                                    <li class="tabs-title"><a data-tabs-target="O" href="#O">O</a></li>
+                                    <li class="tabs-title"><a data-tabs-target="P" href="#P">P</a></li>
+                                    <li class="tabs-title"><a data-tabs-target="R" href="#R">R</a></li>
+                                    <li class="tabs-title"><a data-tabs-target="S" href="#S">S</a></li>
+                                    <li class="tabs-title"><a data-tabs-target="T" href="#T">T</a></li>
+                                    <li class="tabs-title"><a data-tabs-target="U" href="#U">U</a></li>
+                                    <li class="tabs-title"><a data-tabs-target="V" href="#V">V</a></li>
+                                    <li class="tabs-title"><a data-tabs-target="W" href="#W">W</a></li>
+                                    <li class="tabs-title"><a data-tabs-target="Y" href="#Y">Y</a></li>
+                                    <li class="tabs-title"><a data-tabs-target="Z" href="#Z">Z</a></li>
+                                    <li class="tabs-title three"><a data-tabs-target="А-Я" href="#А-Я">А-Я</a></li>
+                                    <li class="tabs-title three"><a data-tabs-target="0-9" href="#0-9">0-9</a></li>
+                                </ul>
+                                <div class="tabs-content" data-tabs-content="brands-tab">
+                                    <div class="tabs-panel is-active" id="A">
+                                        <div class="title"></div> <!-- ставится автоматом (jquery) -->
+                                        
+                                        <ul class="grid-x grid-padding-x small-up-2 medium-up-3 large-up-6 brands-tab__list">
+                                            <li class="cell"><a href="#" class="brands-tab__list-item">Aasha Herbals</a></li>
+                                            <li class="cell"><a href="#" class="brands-tab__list-item">Adri Coco</a></li>
+                                            <li class="cell"><a href="#" class="brands-tab__list-item">AIRnails</a></li>
+                                            <li class="cell"><a href="#" class="brands-tab__list-item">Alan Hadash</a></li>
+                                            <li class="cell"><a href="#" class="brands-tab__list-item">Alba Botanica</a></li>
+                                            <li class="cell"><a href="#" class="brands-tab__list-item">Alfaparf Milano</a></li>
+                                            <li class="cell"><a href="#" class="brands-tab__list-item">Almea</a></li>
+                                            <li class="cell"><a href="#" class="brands-tab__list-item">Aasha Herbals</a></li>
+                                            <li class="cell"><a href="#" class="brands-tab__list-item">Adri Coco</a></li>
+                                            <li class="cell"><a href="#" class="brands-tab__list-item">AIRnails</a></li>
+                                            <li class="cell"><a href="#" class="brands-tab__list-item">Alan Hadash</a></li>
+                                            <li class="cell"><a href="#" class="brands-tab__list-item">Alba Botanica</a></li>
+                                            <li class="cell"><a href="#" class="brands-tab__list-item">Alfaparf Milano</a></li>
+                                            <li class="cell"><a href="#" class="brands-tab__list-item">Almea</a></li>
+                                            <li class="cell"><a href="#" class="brands-tab__list-item">Aasha Herbals</a></li>
+                                            <li class="cell"><a href="#" class="brands-tab__list-item">Adri Coco</a></li>
+                                            <li class="cell"><a href="#" class="brands-tab__list-item">AIRnails</a></li>
+                                            <li class="cell"><a href="#" class="brands-tab__list-item">Alan Hadash</a></li>
+                                            <li class="cell"><a href="#" class="brands-tab__list-item">Alba Botanica</a></li>
+                                            <li class="cell"><a href="#" class="brands-tab__list-item">Alfaparf Milano</a></li>
+                                            <li class="cell"><a href="#" class="brands-tab__list-item">Almea</a></li>
+                                            <li class="cell"><a href="#" class="brands-tab__list-item">Aasha Herbals</a></li>
+                                            <li class="cell"><a href="#" class="brands-tab__list-item">Adri Coco</a></li>
+                                            <li class="cell"><a href="#" class="brands-tab__list-item">AIRnails</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="tabs-panel" id="B">
+                                        <div class="title"></div> <!-- ставится автоматом (jquery) -->
+
+                                        <p>Suspendisse dictum feugiat nisl ut dapibus.  Vivamus hendrerit arcu sed erat molestie vehicula. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor.  Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="dropdown-pane" id="gel-tab" data-dropdown data-hover="true" data-hover-pane="true">
+                            <div class="catalog__content">
+                                <ul class="catalog__list">
+                                    <li class="catalog__list-header"><a href="#">Аппаратный маникюр и педикюр</a></li>
+                                    <li class="catalog__list-item"><a href="#">Материалы для наращивания</a></li>
+                                    <li class="catalog__list-item"><a href="#">Машинки для маникюра и педикюра</a></li>
+                                    <li class="catalog__list-item"><a href="#">Фрезы (насадки)</a></li>
+                                    <li class="catalog__list-item"><a href="#">Пылесосы для маникюра</a></li>
+                                    <li class="catalog__list-header"><a href="#">Аэрография</a></li>
+                                    <li class="catalog__list-item"><a href="#">Краски для аэрографа</a></li>
+                                    <li class="catalog__list-item"><a href="#">Оборудование</a></li>
+                                    <li class="catalog__list-item"><a href="#">Трафареты</a></li>
+                                    <li class="catalog__list-header"><a href="#">Дезинфекторы</a></li>
+                                    <li class="catalog__list-item"><a href="#">Для инструментов</a></li>
+                                    <li class="catalog__list-item"><a href="#">Для ногтей</a></li>
+                                    <li class="catalog__list-item"><a href="#">Для рук</a></li>
+                                    <li class="catalog__list-header"><a href="#">Дегидраторы</a></li>
+                                    <li class="catalog__list-header"><a href="#">Дизайн ногтей</a></li>
+                                    <li class="catalog__list-item"><a href="#">Аэропуффинг</a></li>
+                                    <li class="catalog__list-item"><a href="#">Бархатный песок</a></li>
+                                    <li class="catalog__list-item"><a href="#">Гель-паста</a></li>
+                                    <li class="catalog__list-item"><a href="#">Наклейки для дизайна</a></li>
+                                    <li class="catalog__list-header"><a href="#">Аппаратный маникюр и педикюр</a></li>
+                                    <li class="catalog__list-item"><a href="#">Материалы для наращивания</a></li>
+                                    <li class="catalog__list-item"><a href="#">Машинки для маникюра и педикюра</a></li>
+                                    <li class="catalog__list-item"><a href="#">Фрезы (насадки)</a></li>
+                                    <li class="catalog__list-item"><a href="#">Пылесосы для маникюра</a></li>
+                                    <li class="catalog__list-header"><a href="#">Аэрография</a></li>
+                                    <li class="catalog__list-item"><a href="#">Краски для аэрографа</a></li>
+                                    <li class="catalog__list-item"><a href="#">Оборудование</a></li>
+                                    <li class="catalog__list-item"><a href="#">Трафареты</a></li>
+                                    <li class="catalog__list-header"><a href="#">Дезинфекторы</a></li>
+                                    <li class="catalog__list-item"><a href="#">Для инструментов</a></li>
+                                    <li class="catalog__list-item"><a href="#">Для ногтей</a></li>
+                                    <li class="catalog__list-item"><a href="#">Для рук</a></li>
+                                    <li class="catalog__list-header"><a href="#">Дегидраторы</a></li>
+                                    <li class="catalog__list-header"><a href="#">Дизайн ногтей</a></li>
+                                    <li class="catalog__list-item"><a href="#">Аэропуффинг</a></li>
+                                    <li class="catalog__list-item"><a href="#">Бархатный песок</a></li>
+                                    <li class="catalog__list-item"><a href="#">Гель-паста</a></li>
+                                    <li class="catalog__list-item"><a href="#">Наклейки для дизайна</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <!--! /Main catalog -->
+
+                    <!-- Mobile Menu -->
+
+                    <div class="menu__mobile">
+                        <button class="button" type="button" data-toggle="mobile-menu"><i class="icon-burger"></i> Меню</button>
+
+                        <div class="dropdown-pane" id="mobile-menu" data-dropdown>
+                            <div class="accordion-menu__wrapper">
+                                <ul class="vertical menu accordion-menu accordion-menu__mobile-menu" data-accordion-menu data-multi-open="false">
+                                    <li><a href="#">Каталог товаров</a></li>
+                                    <li><a href="#">Бренды</a></li>
+                                    <li>
+                                        <a href="#">Покупателям</a>
+                                        <ul class="menu vertical nested">
+                                            <li><a href="#">Личный кабинет</a></li>
+                                            <li><a href="#">Способы оплаты</a></li>
+                                            <li><a href="#">Доставка</a></li>
+                                            <li><a href="#">Обмен, возврат</a></li>
+                                            <li><a href="#">Пользовательское соглашение</a></li>
+                                            <li><a href="#">Политика конфиденциальности</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">Новости</a></li>
+                                    <li><a href="#">Салон</a></li>
+                                    <li><a href="#">Оптовикам</a></li>
+                                    <li>
+                                        <a href="#">О компании</a>
+                                        <ul class="menu vertical nested">
+                                            <li><a href="#">Item 1A</a></li>
+                                            <li><a href="#">Item 1B</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- /Mobile Menu -->
+                    <div class="widgets">
+                        <div class="widget">
+                            <a href="#">
+                                <i class="icon-compare"></i>
+                                <span class="count">3</span>
+                            </a>
+                        </div>
+                        <div class="widget">
+                            <a href="#">
+                                <i class="icon-favorite"></i>
+                                <span class="count">23</span>
+                            </a>
+                        </div>
+                        <div class="widget">
+                            <a href="#">
+                                <i class="icon-cart"></i>
+                                <span class="count">5</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- / Компонент хедера -->
+
+    <main>
+
+        <!-- Breadcrumb -->
+
+        <div class="grid-container">
+            <div class="grid-x grid-padding-x">
+                <nav role="navigation" class="cell large-12">
+                    <ul class="breadcrumbs">
+                        <li><a href="#">Главная</a></li>
+                        <li><a href="#">Новости</a></li>
+                        <li>СПИКЕРЫ CNI НА BEAUTYDAY В МОСКВЕ 19 – 20 ФЕВРАЛЯ 2020</li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+        <!-- ./Breadcrumb -->
+
+        <section class="news__header">
+            <div class="grid-container">
+                <div class="grid-x grid-padding-x">
+                    <div class="cell large-7 medium-6 small-12">
+                        <div class="news__image">
+                            <img src="/images/content/news/1.jpg" alt="" class="news__header-image">
+                        </div>
+                        <!-- <div class="news__slider">
+                            <div class="news__slider-for">
+                                <img src="/images/content/news/1.jpg" alt="" class="news__header-image">
+                                <img src="/images/content/news/2.jpg" alt="" class="news__header-image">
+                                <img src="/images/content/news/3.jpg" alt="" class="news__header-image">
+                                <img src="/images/content/news/1.jpg" alt="" class="news__header-image">
+                                <img src="/images/content/news/2.jpg" alt="" class="news__header-image">
+                                <img src="/images/content/news/3.jpg" alt="" class="news__header-image">
+                                <img src="/images/content/news/1.jpg" alt="" class="news__header-image">
+                                <img src="/images/content/news/2.jpg" alt="" class="news__header-image">
+                                <img src="/images/content/news/3.jpg" alt="" class="news__header-image">
+                                <img src="/images/content/news/1.jpg" alt="" class="news__header-image">
+                                <img src="/images/content/news/2.jpg" alt="" class="news__header-image">
+                                <img src="/images/content/news/3.jpg" alt="" class="news__header-image">
+                            </div>
+                            <div class="news__slider-nav">
+                                <img src="/images/content/news/1.jpg" alt="" class="news__header-image">
+                                <img src="/images/content/news/2.jpg" alt="" class="news__header-image">
+                                <img src="/images/content/news/3.jpg" alt="" class="news__header-image">
+                                <img src="/images/content/news/1.jpg" alt="" class="news__header-image">
+                                <img src="/images/content/news/2.jpg" alt="" class="news__header-image">
+                                <img src="/images/content/news/3.jpg" alt="" class="news__header-image">
+                                <img src="/images/content/news/1.jpg" alt="" class="news__header-image">
+                                <img src="/images/content/news/2.jpg" alt="" class="news__header-image">
+                                <img src="/images/content/news/3.jpg" alt="" class="news__header-image">
+                                <img src="/images/content/news/1.jpg" alt="" class="news__header-image">
+                                <img src="/images/content/news/2.jpg" alt="" class="news__header-image">
+                                <img src="/images/content/news/3.jpg" alt="" class="news__header-image">
+                            </div>
+                        </div> -->
+                    </div>
+                    <div class="cell large-5 medium-6 small-12">
+                        <div class="news__header-info">
+                            <div class="news__header-date">
+                                12 марта 2020
+                            </div>
+                            <h1 class="news__header-title">
+                                Спикеры CNI на Beautyday в Москве 19-20 февраля 2020
+                            </h1>
+                            <div class="news__header-descr">
+                                Эксперты CNI провели мастер-классы на самом масштабном конгрессе мастеров ногтевого сервиса и подологов России.
+                            </div>
+                            <div class="news__header-share">
+                                //share buttons
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>        
+        </section>
+
+        <section class="news__content">
+
+            <div class="grid-container">
+                <div class="grid-x grid-padding-x align-center">
+                    <div class="cell large-8 medium-12 small-12 padding-bottom__3rem">
+                        <div class="news__text">
+                            <p>
+                                19 – 20 февраля 2020 года в Music Media Dome прошел крупнейший конгресс в российской ногтевой индустрии. Лучшие преподаватели, блогеры, звезды отрасли выступали с главной сцены с мастер-классами. От бренда CNI на конгрессе читали семинары Анастасия Минц, врач дерматолог, сооснователь бренда CNI, и Елена Морозова, креативный директор и эксперт в области дизайна ногтей. Анастасия Минц презентовала на белой сцене злободневную тему дистрофии ногтей: «Новый взгляд на анатомию ногтей. Распространенные дистрофии ногтей и методики их восстановления».
+                            </p>
+                            <p>
+                                Опираясь на последние медицинские разработки, она рассказала об анатомии ногтей, процессах, которые в них протекают, причинах травмирования ногтей, и какую роль во всем этом играет мастер маникюра. Работа с травмированными ногтями находится на стыке медицины и маникюра. В одном случае мастер должен рекомендовать лечение, а в другом помочь и исправить ситуацию самостоятельно. Мастера, затаив дыхание, слушали лекцию, которая развенчала множество мифов в профессиональной среде.
+                            </p>
+                            <p>
+                                19 – 20 февраля 2020 года в Music Media Dome прошел крупнейший конгресс в российской ногтевой индустрии. Лучшие преподаватели, блогеры, звезды отрасли выступали с главной сцены с мастер-классами. От бренда CNI на конгрессе читали семинары Анастасия Минц, врач дерматолог, сооснователь бренда CNI, и Елена Морозова, креативный директор и эксперт в области дизайна ногтей. Анастасия Минц презентовала на белой сцене злободневную тему дистрофии ногтей: «Новый взгляд на анатомию ногтей. Распространенные дистрофии ногтей и методики их восстановления».
+                            </p>
+                            <p>
+                                Опираясь на последние медицинские разработки, она рассказала об анатомии ногтей, процессах, которые в них протекают, причинах травмирования ногтей, и какую роль во всем этом играет мастер маникюра. Работа с травмированными ногтями находится на стыке медицины и маникюра. В одном случае мастер должен рекомендовать лечение, а в другом помочь и исправить ситуацию самостоятельно. Мастера, затаив дыхание, слушали лекцию, которая развенчала множество мифов в профессиональной среде.
+                            </p>
+                            <p>
+                                19 – 20 февраля 2020 года в Music Media Dome прошел крупнейший конгресс в российской ногтевой индустрии. Лучшие преподаватели, блогеры, звезды отрасли выступали с главной сцены с мастер-классами. От бренда CNI на конгрессе читали семинары Анастасия Минц, врач дерматолог, сооснователь бренда CNI, и Елена Морозова, креативный директор и эксперт в области дизайна ногтей. Анастасия Минц презентовала на белой сцене злободневную тему дистрофии ногтей: «Новый взгляд на анатомию ногтей. Распространенные дистрофии ногтей и методики их восстановления».
+                            </p>
+                            <p>
+                                Опираясь на последние медицинские разработки, она рассказала об анатомии ногтей, процессах, которые в них протекают, причинах травмирования ногтей, и какую роль во всем этом играет мастер маникюра. Работа с травмированными ногтями находится на стыке медицины и маникюра. В одном случае мастер должен рекомендовать лечение, а в другом помочь и исправить ситуацию самостоятельно. Мастера, затаив дыхание, слушали лекцию, которая развенчала множество мифов в профессиональной среде.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="cell large-12 medium-12 small-12">
+                        <div class="grid-x grid-padding-x align-center padding-bottom__3rem">
+                            <div class="cell large-12 text-center">
+                                <h2 class="news__title">Читайте также</h2>
+                            </div>
+                            <div class="cell large-9 medium-12 small-12">
+                                <div class="grid-x grid-padding-x large-up-3 medium-up-3 small-up-1">
+                                    <div class="cell">
+                                        <div class="news-card">
+                                            <div class="news-card__image">
+                                                <img src="/images/content/course/1.jpg" alt="">
+                
+                                                <div class="news-card__info">
+                                                    <div class="news-card__info-date">11 апреля - 11 мая</div>
+                                                </div>
+                                            </div>
+                                            <a href="#" class="news-card__title">
+                                                Курс по маникюру, педикюру наращиванию ногтей гелем, биогелем, акрилом
+                                            </a>
+                                            <div class="news-card__descr">
+                                                Обучающий курс ориентирован на начинающих
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="cell">
+                                        <div class="news-card">
+                                            <div class="news-card__image">
+                                                <img src="/images/content/course/2.jpg" alt="">
+                
+                                                <div class="news-card__info">
+                                                    <div class="news-card__info-date">11 апреля - 11 мая</div>
+                                                </div>
+                                            </div>
+                                            <a href="#" class="news-card__title">
+                                                Курс по маникюру, педикюру наращиванию ногтей гелем, биогелем, акрилом
+                                            </a>
+                                            <div class="news-card__descr">
+                                                Обучающий курс ориентирован на начинающих
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="cell">
+                                        <div class="news-card">
+                                            <div class="news-card__image">
+                                                <img src="/images/content/course/1.jpg" alt="">
+                
+                                                <div class="news-card__info">
+                                                    <div class="news-card__info-date">11 апреля - 11 мая</div>
+                                                </div>
+                                            </div>
+                                            <a href="#" class="news-card__title">
+                                                Курс по маникюру, педикюру наращиванию ногтей гелем, биогелем, акрилом
+                                            </a>
+                                            <div class="news-card__descr">
+                                                Обучающий курс ориентирован на начинающих
+                                            </div>
+                                        </div>
+                                    </div>                
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+
+        </section>
+
+    </main>
+
+    <!-- Компонент футера -->
+    <footer>
+        <div class="subscribe">
+            <div class="grid-container">
+                <div class="grid-x">
+                    <div class="subscribe__wrapper">
+                        <div class="subscribe__text">
+                            <img src="/images/footer/subscribe.png" alt="">
+                            <span>Будьте в курсе всех наших акций и событий с подпиской на рассылку!</span>
+                        </div>
+                        <div class="subscribe__block">
+                            <form action="#" class="subscribe__form">
+                                <input type="email" name="" id="" class="input-custom" placeholder="Ваш e-mail...">
+                                <button type="submit" class="input-custom__button"><i class="icon-go-right"></i></button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>        
+        </div>
+        <div class="grid-container">
+            <div class="grid-x grid-padding-x footer__wrapper hide-for-small-only">
+                <div class="cell large-6 medium-4">
+                    <div class="footer__logo">
+                        <a href="#" class="header__logo-link">
+                            <img src="/images/header/logo.png" alt="Логотип">
+                            Академия Красоты
+                        </a>
+                    </div>
+                    <div class="footer__contacts">
+                        <div class="grid-x grid-padding-x">
+                            <div class="cell large-6">
+                                <ul class="footer__list">
+                                    <li class="footer__list-item"><a href="#" class="footer__list-link">О компании</a></li>
+                                    <li class="footer__list-item"><a href="#" class="footer__list-link">Контакты</a></li>
+                                    <li class="footer__list-item"><a href="#" class="footer__list-link">Салон</a></li>
+                                    <li class="footer__list-item"><a href="#" class="footer__list-link">Оптовикам</a></li>
+                                </ul>
+                            </div>
+                            <div class="cell large-6">
+                                <ul class="footer__list">
+                                    <li class="footer__list-item"><a href="#" class="footer__list-link"><i class="icon-phone"></i> 8 914 222 33 44</a></li>
+                                    <li class="footer__list-item"><a href="#" class="footer__list-link"><i class="icon-instagram"></i>akademia_krasoty_ykt_shop</a></li>
+                                    <li class="footer__list-item"><a href="#" class="footer__list-link"><i class="icon-instagram"></i>akademia_ykt</a></li>
+                                </ul>                           
+                            </div>
+                        </div>    
+                    </div>
+                </div>
+                <div class="cell large-2 medium-auto">
+                    <h4 class="footer__list-title">Каталог</h4>
+                    <ul class="footer__list">
+                        <li class="footer__list-item"><a href="#" class="footer__list-link">Бренды</a></li>
+                        <li class="footer__list-item"><a href="#" class="footer__list-link">Маникюр</a></li>
+                        <li class="footer__list-item"><a href="#" class="footer__list-link">Педикюр</a></li>
+                        <li class="footer__list-item"><a href="#" class="footer__list-link">Брови и ресницы</a></li>
+                        <li class="footer__list-item"><a href="#" class="footer__list-link">Волосы</a></li>
+                        <li class="footer__list-item"><a href="#" class="footer__list-link">Уход за кожей</a></li>
+                        <li class="footer__list-item"><a href="#" class="footer__list-link">Оборудование</a></li>
+                        <li class="footer__list-item"><a href="#" class="footer__list-link">Прочее</a></li>
+                        <li class="footer__list-item"><a href="#" class="footer__list-link red">Полный каталог</a></li>
+                    </ul>
+                </div>
+                <div class="cell large-2 medium-auto">
+                    <h4 class="footer__list-title">Покупателям</h4>
+                    <ul class="footer__list">
+                        <li class="footer__list-item"><a href="#" class="footer__list-link">Личный кабинет</a></li>
+                        <li class="footer__list-item"><a href="#" class="footer__list-link">Способы оплаты</a></li>
+                        <li class="footer__list-item"><a href="#" class="footer__list-link">Доставка</a></li>
+                        <li class="footer__list-item"><a href="#" class="footer__list-link">Обмен, возврат</a></li>
+                        <li class="footer__list-item"><a href="#" class="footer__list-link">Пользовательское соглашение</a></li>
+                        <li class="footer__list-item"><a href="#" class="footer__list-link">Политика конфиденциальности</a></li>
+                    </ul>
+                </div>
+                <div class="cell large-2 medium-auto">
+                    <h4 class="footer__list-title">Учебный центр</h4>
+                    <ul class="footer__list">
+                        <li class="footer__list-item"><a href="#" class="footer__list-link">Курсы</a></li>
+                        <li class="footer__list-item"><a href="#" class="footer__list-link">Расписание</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="grid-x footer__wrapper-mobile show-for-small-only">
+                <ul class="vertical menu accordion-menu" data-accordion-menu data-multi-open="false">
+                    <li><a href="#"><i class="icon-burger"></i> Каталог товаров</a></li>
+                    <li><a href="#">Бренды</a></li>
+                    <li>
+                        <a href="#">О компании</a>
+                        <ul class="menu vertical">
+                            <li><a href="#">Item 1A</a></li>
+                            <li><a href="#">Item 1B</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Покупателям</a>
+                        <ul class="menu vertical">
+                            <li><a href="#">Item 1A</a></li>
+                            <li><a href="#">Item 1B</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Учебный центр</a>
+                        <ul class="menu vertical">
+                            <li><a href="#">Item 1A</a></li>
+                            <li><a href="#">Item 1B</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Контакты</a></li>
+                    <li><a href="#" class="sitemap"><i class="icon-map"></i> Карта сайта</a></li>
+                </ul>
+            </div>
+            <div class="grid-x grid-padding-x">
+                <div class="cell large-12">
+                    <div class="footer__bottom">
+                        <div class="footer__phone">
+                            <i class="icon-phone"></i>
+                            <div class="footer__phone-text">
+                                Интернет-магазин:
+                                <a href="#">8 914 222 33 44</a>
+                            </div>
+                        </div>
+                        <div class="sitemap__block">
+                            <a href="#" class="sitemap__link"><i class="icon-map"></i> Карта сайта</a>
+                        </div>
+                        <div class="copyright">
+                            <div class="copyright__item">© 2020 “Академия Красоты”</div>
+                            <div class="copyright__item">Дизайн и разработка <a href="#">Платформа</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- / Компонент футера -->
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <!-- Compressed JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.2/dist/js/foundation.min.js"></script>
+    <!-- Slick JS -->
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="/js/dist.js"></script>
+</body>
+</html>
