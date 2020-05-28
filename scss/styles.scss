@@ -2737,13 +2737,16 @@ textarea {
             font-size: 14px;
             line-height: 16px;
             padding: 12px;
+
             &.button {
                 width: 212px;
                 margin-right: 1rem;
 
             }
             &.addcart {
-
+                display: flex;
+                cursor: pointer;
+    
                 &:hover {
                     background: #911C2C;
                     color: #FFF;
@@ -2777,6 +2780,44 @@ textarea {
                     color: #FFF;
                 }
             }
+            &.active {
+                background: #911C2C;
+                color: #FFF;
+            }
+            input {
+                &.fa {
+                    border: 0;
+                    background: 0;
+                    color: #FFF;
+                    cursor: pointer;
+                    outline: 0;
+                }
+                &#QUANTITY {
+                    background: 0;
+                    border: 0;
+                    margin: 0;
+                    padding: 0;
+                    font-family: Raleway;
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 16px;
+                    line-height: 19px;
+                    color: #FFFFFF;
+                    width: 25%;
+                    text-align: center;
+                }
+            }
+            .plus,
+            .minus {
+                color: #FFF;
+                font-size: 2rem;
+                line-height: 22px;
+                width: 22px;
+            }
+            .minus {
+                margin-top: -3px;
+                margin-left: auto;
+            }
         }
         &-bottom {
             font-weight: 500;
@@ -2784,6 +2825,7 @@ textarea {
             line-height: 28px;
             color: #8D92A3;
         }
+        
     }
     &__spec {
         border-right: 1px solid #D5E1E8;
