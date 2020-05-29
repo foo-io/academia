@@ -443,8 +443,9 @@
 
                     <!-- НАЧАЛО -->
                         <div class="cell product__card-cart large-12">
-                            <form action="/catalog/manikyur/akrigel_poligel/nail_up_zhidkost_dlya_razglazhivaniya_poligelya_200ml/" method="post" enctype="multipart/form-data" class="add_form product__card-button button addcart">
-                                <input type="submit" name="actionADD2BASKET" value="В корзине" onclick="if (this.value == 'В корзину') this.value = 'В корзине';" class="fa">
+                            <div class="product__card-button button added" style="display: none;"><i class="icon-check"></i> Добавлено!</div>
+                            <form action="#" method="" enctype="multipart/form-data" class="add_form product__card-button button addcart">
+                                <input type="submit" name="actionADD2BASKET" value="В корзину" class="fa">
                                     <a href="javascript:void(0)" class="minus" onclick="if (BX('QUANTITY').value > 1) BX('QUANTITY').value--;">-</a>
                                     <input type="text" name="QUANTITY" value="1" id="QUANTITY">
                                     <a href="javascript:void(0)" class="plus" onclick="BX('QUANTITY').value++;">+</a>
@@ -616,5 +617,21 @@
     <!-- Slick JS -->
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="/js/dist.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('.addcart input[name="actionADD2BASKET"]').click(function (e) {
+                e.preventDefault();
+                $('.addcart').hide();
+                $('.product__card-button.added').show();
+
+                setTimeout(function(){
+                    $('.product__card-button.added').hide();
+                    $('.addcart').show();
+                }, 2000);
+            });
+        });
+    </script>
+
 </body>
 </html>

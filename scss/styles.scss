@@ -2743,6 +2743,21 @@ textarea {
                 margin-right: 1rem;
 
             }
+            &.added {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                cursor: default;
+                line-height: 22px;
+                
+                .icon-check {
+                    margin-right: 6px;
+                }
+                &:hover {
+                    background-color: #911C2C;
+                    color: #fff;
+                }
+            }
             &.addcart {
                 display: flex;
                 cursor: pointer;

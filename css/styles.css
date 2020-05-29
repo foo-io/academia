@@ -3343,6 +3343,29 @@ textarea {
   margin-right: 1rem;
 }
 
+.product__card-button.added {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: default;
+  line-height: 22px;
+}
+
+.product__card-button.added .icon-check {
+  margin-right: 6px;
+}
+
+.product__card-button.added:hover {
+  background-color: #911C2C;
+  color: #fff;
+}
+
 .product__card-button.addcart {
   display: -webkit-box;
   display: -ms-flexbox;
