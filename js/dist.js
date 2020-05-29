@@ -13,7 +13,17 @@ function closeOutsideClick(element, button, closeElement) {
 }
 
 $(document).ready(function() {
-    
+    $('.addcart input[name="actionADD2BASKET"]').click(function (e) {
+        e.preventDefault();
+        $('.addcart').hide();
+        $('.product__card-button.added').show();
+
+        setTimeout(function(){
+            $('.product__card-button.added').hide();
+            $('.addcart').show();
+        }, 2000);
+    });
+
     //! card/table button in catalog
         $('#showTable').click(function () { 
             $('#catalogue').addClass('large-up-1 medium-up-1 grid-table').removeClass('large-up-3 medium-up-2');
