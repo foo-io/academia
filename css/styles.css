@@ -245,10 +245,21 @@ body,
 .card-section__image {
   margin-bottom: 16px;
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-height: 200px;
 }
 
 .card-section__image img {
-  width: 100%;
+  width: auto;
+  max-width: 100%;
 }
 
 .card-section__label {
@@ -392,6 +403,9 @@ body,
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
 }
@@ -441,6 +455,10 @@ body,
 
 .grid-table .card-section__image {
   margin-bottom: 0;
+  width: 30%;
+  min-width: 130px;
+  max-width: 240px;
+  margin-right: 1rem;
 }
 
 .grid-table .card-section__label {

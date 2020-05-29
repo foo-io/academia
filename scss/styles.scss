@@ -49,9 +49,14 @@ body,
     &__image {
         margin-bottom: 16px;
         position: relative;
-
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 200px;
+        
         img {
-            width: 100%;
+            width: auto;
+            max-width: 100%;
         }
     }
     &__label {
@@ -169,6 +174,7 @@ body,
         cursor: pointer;
         display: flex;
         justify-content: center;
+        align-items: center;
         transition: $tansition-setting;
 
         &.favorite {
@@ -202,6 +208,10 @@ body,
 
             &__image {
                 margin-bottom: 0;
+                width: 30%;
+                min-width: 130px;
+                max-width: 240px;
+                margin-right: 1rem;
             }
             &__label {
                 left: 0;
