@@ -1959,6 +1959,7 @@ textarea {
         border-right: 1px solid #D5E1E8;
         padding: 1rem;
         white-space: nowrap;
+        min-width: 175px;
     }
 
     &__item-address {
