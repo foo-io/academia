@@ -1,0 +1,71 @@
+﻿.filter__clear {
+	max-width: 176px;
+	margin-left: auto;
+	border-radius: 50px;
+	color: #8D92A3;
+	height: 42px;
+	justify-content: space-between;
+	padding: 0 1rem;
+
+	.icon-cancel {
+		color: #911C2C;
+		font-weight: bold;
+		font-size: 10px;
+	}
+}
+.comparep	{
+	display: flex;
+	flex-wrap: nowrap;
+	overflow-x: auto;
+	white-space: nowrap;
+	flex-direction: column;
+
+	&__cards {
+		display: flex;
+		width: fit-content;
+		margin-bottom: 2rem;
+		
+		.card {
+			width: 268px;
+			margin-right: 1rem;
+			margin-bottom: 0;
+
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+	}
+
+	&__params {
+		margin-bottom: 1rem;
+		
+		h3 {
+			margin-bottom: 1rem;
+		}
+	}
+
+	&__data {
+		position: relative;
+		
+		&-titles {
+			display: flex;
+			flex-direction: column;
+			position: absolute;
+		}
+		&-title {
+			border-top: 1px solid #D5E1E8;
+			color: #8D92A3;
+			padding: 1rem;
+
+			&:hover {
+				background: #EBF0F5;
+			}
+		}
+		&-item {
+
+		}
+		&-element {
+
+		}
+	}
+}
